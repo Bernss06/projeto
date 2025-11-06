@@ -61,10 +61,6 @@ $this->params['hideFooter'] = true;
             <span>OU</span>
         </div>
 
-        <div class="d-grid">
-            <a href="#" class="btn btn-dark-alt">Continuar como Visitante</a>
-        </div>
-
         <div class="mt-4 text-center small text-muted">
             Já tem uma conta?
             <?= Html::a('Entrar', ['site/login'], ['class' => 'text-gradient']) ?>

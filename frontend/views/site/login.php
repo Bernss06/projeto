@@ -53,13 +53,6 @@ $this->params['hideFooter'] = true;
             <?= Html::submitButton('Entrar', ['class' => 'btn btn-gradient py-2 fw-semibold', 'name' => 'login-button']) ?>
         </div>
 
-        <div class="divider my-4">
-            <span>OU</span>
-        </div>
-
-        <div class="d-grid">
-            <a href="#" class="btn btn-dark-alt">Entrar como Visitante</a>
-        </div>
 
         <div class="mt-4 text-center small text-muted">
             Esqueceu a senha?

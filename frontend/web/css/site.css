@@ -1,103 +1,77 @@
-main > .container, main > .container-fluid
-{
-    padding: 70px 15px 20px;
+body {
+  background-color: #0a0014;
+  color: #eae2ff;
 }
 
-.footer {
-    background-color: #f5f5f5;
-    font-size: .9em;
-    height: 60px;
+.text-gradient {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.footer > .container, .footer > .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
+.hero {
+  background: radial-gradient(circle at top, #140028 0%, #0a0014 100%);
+  color: #eae2ff;
 }
 
-.not-set {
-    color: #c55;
-    font-style: italic;
+.btn-primary {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    content: '';
-    left: 3px;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border: solid 5px transparent;
-    margin: 4px 4px 2px 4px;
-    background: transparent;
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
-a.asc:after {
-    border-bottom: solid 7px #212529;
-    border-top-width: 0;
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #eae2ff;
+  transition: 0.3s;
 }
 
-a.desc:after {
-    border-top: solid 7px #212529;
-    border-bottom-width: 0;
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
-.grid-view th,
-.grid-view td:last-child {
-    white-space: nowrap;
+.btn-outline-primary {
+  border: 1px solid #8e2de2;
+  color: #8e2de2;
 }
 
-.grid-view .filters input,
-.grid-view .filters select {
-    min-width: 50px;
+.btn-outline-primary:hover {
+  background-color: #8e2de2;
+  color: #fff;
 }
 
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
+.feature-card {
+  background-color: #12002b;
+  border: 1px solid rgba(142, 45, 226, 0.2);
+  box-shadow: 0 0 25px rgba(142, 45, 226, 0.15);
+  transition: 0.3s;
 }
 
-.error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
-    margin: 0 0 15px 0;
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(142, 45, 226, 0.3);
 }
 
-/* align the logout "link" (button in form) of the navbar */
-.navbar form > button.logout {
-    padding-top: 7px;
-    color: rgba(255, 255, 255, 0.5);
+.cta-box {
+  background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+  box-shadow: 0 0 40px rgba(142, 45, 226, 0.3);
 }
 
-@media(max-width:767px) {
-    .navbar form > button.logout {
-        display:block;
-        text-align: left;
-        width: 100%;
-        padding: 10px 0;
-    }
+.text-secondary {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
-
-.navbar form > button.logout:focus,
-.navbar form > button.logout:hover {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar form > button.logout:focus {
-    outline: none;
-}
-
-/* style breadcrumb widget as in previous bootstrap versions */
-.breadcrumb {
-    background-color: var(--bs-gray-200);
-    border-radius: .25rem;
-    padding: .75rem 1rem;
-}
-
-.breadcrumb-item > a
-{
-    text-decoration: none;
+.btn-gradient {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
 }

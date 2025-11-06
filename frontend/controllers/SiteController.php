@@ -84,22 +84,22 @@ class SiteController extends Controller
      * @return mixed
      */
     public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+{
+    if (!Yii::$app->user->isGuest) {
+        return $this->redirect(['site/dashboard']);
     }
+
+    $model = new \frontend\models\LoginForm();
+    if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        // ✅ redireciona sempre para o dashboard após login
+        return $this->redirect(['site/dashboard']);
+    }
+
+    $model->password = '';
+    return $this->render('login', [
+        'model' => $model,
+    ]);
+}
 
     /**
      * Logs out the current user.
@@ -256,4 +256,14 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+
+    public function actionDashboard()
+    {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
+
+        return $this->render('dashboard');
+    }
+
 }

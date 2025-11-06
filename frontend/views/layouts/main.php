@@ -26,27 +26,45 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<body class="bg-dark text-light">
+<body>
+<?php $this->beginBody() ?>
+
+<?php if (!($this->params['hideNavBar'] ?? false)) : ?>
 <?php
 NavBar::begin([
-    'brandLabel' => 'MyCollections',
+    'brandLabel' => '<div class="navbar-brand-content">
+        <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="5" height="5" fill="white"/>
+                <rect x="10" y="3" width="5" height="5" fill="white"/>
+                <rect x="17" y="3" width="5" height="5" fill="white"/>
+                <rect x="3" y="10" width="5" height="5" fill="white"/>
+                <rect x="10" y="10" width="5" height="5" fill="white"/>
+                <rect x="17" y="10" width="5" height="5" fill="white"/>
+                <rect x="3" y="17" width="5" height="5" fill="white"/>
+                <rect x="10" y="17" width="5" height="5" fill="white"/>
+                <rect x="17" y="17" width="5" height="5" fill="white"/>
+            </svg>
+        </div>
+        <span class="logo-text"><span class="logo-my">My</span><span class="logo-collections">Collections</span></span>
+    </div>',
     'brandUrl' => Yii::$app->homeUrl,
+    'brandOptions' => ['class' => 'navbar-brand-custom'],
     'options' => [
-        'class' => 'navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary',
+        'class' => 'navbar navbar-expand-lg navbar-custom',
     ],
 ]);
 
-$menuItems = [
-    ['label' => 'Planos', 'url' => ['/site/planos']],
-];
+$menuItems = [];
 
 if (Yii::$app->user->isGuest) {
-    $menuItems[] = ['label' => 'Entrar', 'url' => ['/site/login']];
+    $menuItems[] = ['label' => 'Entrar', 'url' => ['/site/login'], 'linkOptions' => ['class' => 'btn btn-entrar']];
     $menuItems[] = [
-        'label' => 'Começar',
+        'label' => 'Começar <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
         'url' => ['/site/signup'],
-        'linkOptions' => ['class' => 'btn btn-primary px-3 ms-lg-2'],
+        'linkOptions' => ['class' => 'btn btn-comecar'],
         'options' => ['class' => 'nav-item'],
+        'encode' => false,
     ];
 } else {
     $menuItems[] = [
@@ -70,15 +88,17 @@ echo Nav::widget([
 
 NavBar::end();
 ?>
-<?php $this->beginBody() ?>
+<?php endif; ?>
 
 <main>
   <?= $content ?>
 </main>
 
+<?php if (!($this->params['hideFooter'] ?? false)) : ?>
 <footer class="text-center py-4 mt-5 border-top border-secondary">
   <p class="mb-0 text-secondary">&copy; <?= date('Y') ?> MyCollections. Organize suas paixões.</p>
 </footer>
+<?php endif; ?>
 
 <?php $this->endBody() ?>
 </body>

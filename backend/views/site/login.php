@@ -58,7 +58,7 @@ use yii\helpers\Url;
             <a href="forgot-password.html">I forgot my password</a>
         </p>
         <p class="mb-0">
-            <a href=<?= $url = Url::to(['Site/signup']);?> class="text-center">Register a new membership</a>
+            <a href=<?= $url = Url::to(['/site/signup']);?> class="text-center">Register a new membership</a>
         </p>
     </div>
     <!-- /.login-card-body -->

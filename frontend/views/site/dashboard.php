@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+/** @var yii\web\View $this */
+/** @var common\models\Colecao[] $collections */ // <-- Assumindo que o seu model se chama 'Colecao' e vem num array $collections
+
 $this->title = 'Minhas Coleções';
 ?>
 
@@ -17,11 +20,9 @@ $this->title = 'Minhas Coleções';
         </div>
 
         <div>
-            <span class="me-3 text-light">Olá, <strong><?= Html::encode(Yii::$app->user->identity->username ?? 'Utilizador') ?></strong></span>
-            <?= Html::a('Sair', ['site/logout'], [
-                'data-method' => 'post',
-                'class' => 'btn btn-outline-light btn-sm'
-            ]) ?>
+            <a href="<?= Url::to(['site/create']) ?>" class="btn btn-gradient px-4 py-2 fw-semibold">
+                <i class="bi bi-plus-lg me-2"></i> Criar Nova Coleção
+            </a>
         </div>
     </header>
 
@@ -29,36 +30,36 @@ $this->title = 'Minhas Coleções';
         <h3 class="fw-bold mb-4 text-light">As Suas Coleções</h3>
 
         <div class="collections-grid d-flex flex-wrap justify-content-center gap-4 mb-5">
-            <!-- Aqui renderizarias as coleções do utilizador -->
-            <div class="collection-card p-4 rounded-4">
-                <h5 class="fw-semibold mb-1">Monstros</h5>
-                <p class="text-muted mb-2">20 itens</p>
-                <a href="#" class="btn btn-outline-light btn-sm">Ver Coleção</a>
-            </div>
 
-            <div class="collection-card p-4 rounded-4">
-                <h5 class="fw-semibold mb-1">Moedas Antigas</h5>
-                <p class="text-muted mb-2">12 itens</p>
-                <a href="#" class="btn btn-outline-light btn-sm">Ver Coleção</a>
-            </div>
-        </div>
+            <?php if (empty($collections)): ?>
+                
+                <div class="text-light text-opacity-75 mt-4">
+                    <p class="fs-4 mb-1">Ainda não tem coleções.</p>
+                    <p>Comece por <a href="<?= Url::to(['colecao/create']) ?>" class="link-light fw-semibold text-decoration-none">criar a sua primeira coleção</a>.</p>
+                </div>
+            
+            <?php else: ?>
 
-        <div class="dashboard-buttons d-flex flex-wrap justify-content-center gap-3">
-            <a href="#" class="btn btn-gradient px-4 py-2 fw-semibold">
-                <i class="bi bi-plus-lg me-2"></i> Criar Nova Coleção
-            </a>
+                <?php foreach ($collections as $collection): ?>
+                    
+                    <div class="collection-card p-4 rounded-4">
+                        <h5 class="fw-semibold mb-1">
+                            <?= Html::encode($collection->nome) ?>
+                        </h5>
+                        <p class="text-muted mb-2">
+                            <?= count($collection->items) ?> itens
+                        </p>
+                        
+                        <a href="<?= Url::to(['colecao/view', 'id' => $collection->id]) ?>" class="btn btn-outline-light btn-sm">
+                            Ver Coleção
+                        </a>
+                    </div>
+                
+                <?php endforeach; ?>
 
-            <a href="<?= Url::to(['site/public-collections']) ?>" class="btn btn-dark-alt px-4 py-2 fw-semibold">
-                <i class="bi bi-globe2 me-2"></i> Coleções Públicas
-            </a>
+            <?php endif; ?>
 
-            <a href="<?= Url::to(['site/favorites']) ?>" class="btn btn-dark-alt px-4 py-2 fw-semibold">
-                <i class="bi bi-heart-fill me-2"></i> Favoritas
-            </a>
-
-            <a href="<?= Url::to(['site/settings']) ?>" class="btn btn-dark-alt px-4 py-2 fw-semibold">
-                <i class="bi bi-gear-fill me-2"></i> Configurações
-            </a>
         </div>
     </main>
+
 </div>

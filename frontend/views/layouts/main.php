@@ -19,7 +19,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     
@@ -51,7 +51,7 @@ NavBar::begin([
     'brandUrl' => Yii::$app->homeUrl,
     'brandOptions' => ['class' => 'navbar-brand-custom'],
     'options' => [
-        'class' => 'navbar navbar-expand-lg navbar-custom',
+        'class' => 'navbar navbar-expand-lg navbar-custom navbar-dark',
     ],
 ]);
 
@@ -72,10 +72,53 @@ if (Yii::$app->user->isGuest) {
         'encode' => false,
     ];
 } else {
+    // --- INÍCIO DAS ALTERAÇÕES ---
+
+    // "Criar Nova Coleção" - Estilo de botão gradient
     $menuItems[] = [
-        'label' => 'Minhas Coleções',
-        'url' => ['/colecao/index'],
+        'label' => '<i class="bi bi-plus-lg me-2"></i> Criar Nova Coleção',
+        'url' => ['site/create'], // NOTA: Mude para a rota correta, ex: ['/colecao/create']
+        'encode' => false,
+        'linkOptions' => [
+            'class' => 'btn btn-gradient px-4 py-2 fw-semibold'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
+    
+    // "Coleções Públicas" - Estilo de botão dark-alt
+    $menuItems[] = [
+        'label' => '<i class="bi bi-globe2 me-2"></i> Coleções Públicas',
+        'url' => ['site/public'],
+        'encode' => false,
+        'linkOptions' => [
+            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
+    ];
+    
+    // "Favoritas" - Estilo de botão dark-alt
+    $menuItems[] = [
+        'label' => '<i class="bi bi-heart-fill me-2"></i> Favoritas',
+        'url' => ['site/favorites'],
+        'encode' => false,
+        'linkOptions' => [
+            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
+    ];
+    
+    // "Configurações" - Estilo de botão dark-alt
+    $menuItems[] = [
+        'label' => '<i class="bi bi-gear-fill me-2"></i> Configurações',
+        'url' => ['site/settings'],
+        'encode' => false,
+        'linkOptions' => [
+            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
+    ];
+
+    // Item "Sair" que já existia (mantém o estilo 'btn-outline-light')
     $menuItems[] = '<li>'
         . Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex ms-lg-2'])
         . Html::submitButton(
@@ -84,6 +127,8 @@ if (Yii::$app->user->isGuest) {
         )
         . Html::endForm()
         . '</li>';
+    
+    // --- FIM DAS ALTERAÇÕES ---
 }
 
 echo Nav::widget([

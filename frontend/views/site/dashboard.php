@@ -16,7 +16,7 @@ $this->title = 'Minhas Coleções';
             <div class="logo-icon d-flex align-items-center justify-content-center">
                 <i class="bi bi-box-seam"></i>
             </div>
-            <h2 class="fw-bold text-gradient mb-0">Minhas Coleções</h2>
+            <h2 class="fw-bold text-gradient2 mb-0">Minhas Coleções</h2>
         </div>
 
         <div>

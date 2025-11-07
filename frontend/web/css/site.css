@@ -1,20 +1,36 @@
 body {
   background-color: #0e081a !important;
   color: #eae2ff;
-  background: radial-gradient(circle at top, #1a0f2e 0%, #0e081a 100%) !important;
+  background: radial-gradient(circle at center, #230c38 0%, #08030e 100%) !important;
   min-height: 100vh;
 }
 
 html {
   background-color: #0e081a !important;
-  background: radial-gradient(circle at top, #1a0f2e 0%, #0e081a 100%) !important;
+  background: radial-gradient(circle at center, #1a0f2e 0%, #0e081a 100%) !important;
 }
 
 .text-gradient {
     /* 1. O Gradiente como fundo */
     /* Ajuste estas cores para corresponderem exatamente ao seu tema */
-    background: radial-gradient(circle at center, #ad3ee8, #6730a1);
+    background: radial-gradient(circle at center, #c13cff, #5f2a90);
     font-size: 3.7rem;
+    /* 2. Recortar o fundo para o formato do texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Tornar a cor da letra transparente para revelar o fundo */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    /* 4. (Opcional) Garante que se aplica corretamente a tags <span> */
+    display: inline-block;
+}
+.text-gradient2 {
+    /* 1. O Gradiente como fundo */
+    /* Ajuste estas cores para corresponderem exatamente ao seu tema */
+    background: radial-gradient(circle at center, #c13cff, #5f2a90);
+    
     /* 2. Recortar o fundo para o formato do texto */
     -webkit-background-clip: text;
     background-clip: text;
@@ -71,7 +87,7 @@ html {
 
 .cta-wrapper-dark {
     /* Gradiente sutil baseado na sua imagem */
-    background: linear-gradient(to top, #2202373c, #e067f03a);
+    background: linear-gradient(to top, #2202373c, #c800ff33);
     border-radius: 0.5rem; /* Equivalente ao 'rounded' do Bootstrap */
 }
 .hero {

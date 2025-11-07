@@ -73,57 +73,43 @@ if (Yii::$app->user->isGuest) {
     ];
 } else {
     // --- INÍCIO DAS ALTERAÇÕES ---
-
-    // "Criar Nova Coleção" - Estilo de botão gradient
+    
+    // "Coleções Públicas" - Estilo "igual ao sair"
     $menuItems[] = [
-        'label' => '<i class="bi bi-plus-lg me-2"></i> Criar Nova Coleção',
-        'url' => ['site/create'], // NOTA: Mude para a rota correta, ex: ['/colecao/create']
-        'encode' => false,
+        'label' => 'Coleções Públicas', // Ícone removido
+        'url' => ['site/public-collections'],
         'linkOptions' => [
-            'class' => 'btn btn-gradient px-4 py-2 fw-semibold'
+            'class' => 'btn btn-primary' // Classe alterada
         ],
         'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
     
-    // "Coleções Públicas" - Estilo de botão dark-alt
+    // "Favoritas" - Estilo "igual ao sair"
     $menuItems[] = [
-        'label' => '<i class="bi bi-globe2 me-2"></i> Coleções Públicas',
-        'url' => ['site/public'],
-        'encode' => false,
-        'linkOptions' => [
-            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
-        ],
-        'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
-    ];
-    
-    // "Favoritas" - Estilo de botão dark-alt
-    $menuItems[] = [
-        'label' => '<i class="bi bi-heart-fill me-2"></i> Favoritas',
+        'label' => 'Favoritas', // Ícone removido
         'url' => ['site/favorites'],
-        'encode' => false,
         'linkOptions' => [
-            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
+            'class' => 'btn btn-outline-light' // Classe alterada
         ],
         'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
     
-    // "Configurações" - Estilo de botão dark-alt
+    // "Configurações" - Estilo "igual ao sair"
     $menuItems[] = [
-        'label' => '<i class="bi bi-gear-fill me-2"></i> Configurações',
+        'label' => 'Configurações', // Ícone removido
         'url' => ['site/settings'],
-        'encode' => false,
         'linkOptions' => [
-            'class' => 'btn btn-dark-alt px-4 py-2 fw-semibold'
+            'class' => 'btn btn-outline-light' // Classe alterada
         ],
         'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
 
-    // Item "Sair" que já existia (mantém o estilo 'btn-outline-light')
+    // Item "Sair" - Permanece igual
     $menuItems[] = '<li>'
         . Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex ms-lg-2'])
         . Html::submitButton(
             'Sair (' . Yii::$app->user->identity->username . ')',
-            ['class' => 'btn btn-outline-light']
+            ['class' => 'btn btn-outline-danger']
         )
         . Html::endForm()
         . '</li>';

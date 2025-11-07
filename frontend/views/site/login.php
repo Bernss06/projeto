@@ -56,7 +56,7 @@ $this->params['hideFooter'] = true;
 
         <div class="mt-4 text-center small text-muted">
             Esqueceu a senha?
-            <?= Html::a('Redefinir', ['site/request-password-reset'], ['class' => 'text-gradient']) ?>
+            <?= Html::a('Redefinir', ['site/request-password-reset'], ['class' => 'text-gradient2']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

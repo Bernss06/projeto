@@ -60,10 +60,9 @@ $this->params['hideFooter'] = true;
         <div class="divider my-4">
             <span>OU</span>
         </div>
-
         <div class="mt-4 text-center small text-muted">
             Já tem uma conta?
-            <?= Html::a('Entrar', ['site/login'], ['class' => 'text-gradient']) ?>
+            <?= Html::a('Entrar', ['site/login'], ['class' => 'text-gradient2']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

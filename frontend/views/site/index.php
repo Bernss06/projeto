@@ -20,7 +20,7 @@ $this->title = 'Gerencie suas Coleções com Facilidade';
       Crie, organize e compartilhe suas coleções de itens favoritos. De moedas a selos, de cartas a livros – mantenha tudo organizado em um só lugar.
     </p>
     <div>
-      <a href="#" class="btn btn-primary me-2">
+      <a href="/projeto/frontend/web/site/signup" class="btn btn-primary me-2">
         Criar Conta Grátis
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;">
           <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -111,7 +111,7 @@ $this->title = 'Gerencie suas Coleções com Facilidade';
     <div class="p-5 rounded bg-gradient text-light" style="background: linear-gradient(90deg, #8E2DE2, #4A00E0);">
       <h3 class="mb-3">Pronto para começar?</h3>
       <p class="mb-4">Crie sua conta gratuitamente e comece a organizar suas coleções hoje mesmo.</p>
-      <a href="#" class="btn btn-light">Criar Conta Grátis</a>
+      <a href="/projeto/frontend/web/site/signup" class="btn btn-light"> Criar Conta Grátis</a>
     </div>
   </div>
 </section>

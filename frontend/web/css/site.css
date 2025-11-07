@@ -11,11 +11,69 @@ html {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #8e2de2, #4a00e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    /* 1. O Gradiente como fundo */
+    /* Ajuste estas cores para corresponderem exatamente ao seu tema */
+    background: radial-gradient(circle at center, #ad3ee8, #6730a1);
+    font-size: 3.7rem;
+    /* 2. Recortar o fundo para o formato do texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Tornar a cor da letra transparente para revelar o fundo */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    /* 4. (Opcional) Garante que se aplica corretamente a tags <span> */
+    display: inline-block;
+}
+.feature-icon svg {
+    /* Define 'fill' como 'none' por padrão, 
+        para que os ícones que usam 'stroke' (linha) funcionem */
+    fill: none;
+
+    /* Transição suave para o efeito de hover */
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
+/* --- Ícone Roxo (Organize) --- */
+.icon-purple svg {
+    fill: #9B59B6; /* Define a cor de preenchimento do ícone */
+    filter: drop-shadow(0 0 12px #9B59B6); /* Adiciona o glow roxo */
+}
+
+/* --- Ícone Ciano (Compartilhe) --- */
+.icon-cyan svg {
+    stroke: #00BCD4; /* Define a cor da linha do ícone */
+    filter: drop-shadow(0 0 12px #00BCD4); /* Adiciona o glow ciano */
+}
+
+/* --- Ícone Amarelo (Favorite) --- */
+.icon-yellow svg {
+    stroke: #FFC107; /* Define a cor da linha do ícone */
+    filter: drop-shadow(0 0 12px #FFC107); /* Adiciona o glow amarelo */
+}
+
+
+/* --- Efeito Hover (Brilho mais intenso) --- */
+
+.card:hover .icon-purple svg {
+    filter: drop-shadow(0 0 20px #9B59B6) drop-shadow(0 0 10px #9B59B6);
+    transform: scale(1.05); /* Aumenta ligeiramente o ícone */
+}
+.card:hover .icon-cyan svg {
+    filter: drop-shadow(0 0 20px #00BCD4) drop-shadow(0 0 10px #00BCD4);
+    transform: scale(1.05);
+}
+.card:hover .icon-yellow svg {
+    filter: drop-shadow(0 0 20px #FFC107) drop-shadow(0 0 10px #FFC107);
+    transform: scale(1.05);
+}
+
+.cta-wrapper-dark {
+    /* Gradiente sutil baseado na sua imagem */
+    background: linear-gradient(to top, #2202373c, #e067f03a);
+    border-radius: 0.5rem; /* Equivalente ao 'rounded' do Bootstrap */
+}
 .hero {
   background: transparent;
   color: #ffffff;

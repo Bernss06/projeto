@@ -11,13 +11,16 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => 
-        ['api' => [ 'class' => 'backend\modules\api\ModuleAPI', ],],
+    'modules' =>
+        ['api' => ['class' => 'backend\modules\api\ModuleAPI',],],
     'components' => [
-    'view' => [
-         
+        'view' => [
+
         ],
         'request' => [
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
@@ -41,13 +44,27 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => ['class' => 'yii\rest\UrlRule','controller' => 'api/user']
+            'enableStrictParsing' => false,
+            'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/user'],
+                    'pluralize' => false, // cria /users em vez de /user
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                    ],
+                ],
+
+                // Regras normais do backend (mantém estas)
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+            ],
         ],
-        
+
     ],
     'params' => $params,
 ];

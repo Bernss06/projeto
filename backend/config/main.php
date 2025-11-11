@@ -11,7 +11,8 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => 
+        ['api' => [ 'class' => 'backend\modules\api\ModuleAPI', ],],
     'components' => [
     'view' => [
          
@@ -44,8 +45,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            'rules' => ['class' => 'yii\rest\UrlRule','controller' => 'api/user']
         ],
         
     ],

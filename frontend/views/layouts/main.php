@@ -3,9 +3,9 @@
 /** @var \yii\web\View $this */
 /** @var string $content */
 
-use common\widgets\Alert;
+
 use frontend\assets\AppAsset;
-use yii\bootstrap5\Breadcrumbs;
+
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
@@ -46,7 +46,7 @@ NavBar::begin([
                 <rect x="17" y="17" width="5" height="5" fill="white"/>
             </svg>
         </div>
-        <span class="logo-text"><span class="logo-my">My</span><span class="logo-collections">Collections</span></span>
+        <span class="logo-text"><span class="logo-my">Teasure</span><span class="logo-collections">Hub</span></span>
     </div>',
     'brandUrl' => Yii::$app->homeUrl,
     'brandOptions' => ['class' => 'navbar-brand-custom'],

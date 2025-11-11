@@ -26,7 +26,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<body>
+<body class="layout-body">
 <?php $this->beginBody() ?>
 
 <?php if (!($this->params['hideNavBar'] ?? false)) : ?>
@@ -48,7 +48,7 @@ NavBar::begin([
         </div>
         <span class="logo-text"><span class="logo-my">Teasure</span><span class="logo-collections">Hub</span></span>
     </div>',
-    'brandUrl' => Yii::$app->homeUrl,
+    'brandUrl' => Yii::$app->user->isGuest ? Yii::$app->homeUrl : ['/site/dashboard'],
     'brandOptions' => ['class' => 'navbar-brand-custom'],
     'options' => [
         'class' => 'navbar navbar-expand-lg navbar-custom navbar-dark',
@@ -126,7 +126,7 @@ NavBar::end();
 ?>
 <?php endif; ?>
 
-<main>
+<main class="layout-content flex-grow-1">
   <?= $content ?>
 </main>
 

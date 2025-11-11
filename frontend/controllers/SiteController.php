@@ -15,6 +15,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\Colecao;
 
 /**
  * Site controller
@@ -263,7 +264,15 @@ class SiteController extends Controller
             return $this->redirect(['site/login']);
         }
 
-        return $this->render('dashboard');
+        $collections = Colecao::find()
+            ->where(['user_id' => Yii::$app->user->id])
+            ->with('itens')
+            ->orderBy(['updated_at' => SORT_DESC])
+            ->all();
+
+        return $this->render('dashboard', [
+            'collections' => $collections,
+        ]);
     }
 
 }

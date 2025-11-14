@@ -13,6 +13,15 @@ use yii\bootstrap5\NavBar;
 
 
 AppAsset::register($this);
+
+$themeClass = 'theme-dark';
+$identity = Yii::$app->user->identity;
+if ($identity instanceof \yii\db\ActiveRecord) {
+    $themeValue = $identity->hasAttribute('theme') ? $identity->getAttribute('theme') : null;
+    if ($themeValue === 'light') {
+        $themeClass = 'theme-light';
+    }
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -26,7 +35,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<body class="layout-body">
+<body class="layout-body <?= Html::encode($themeClass) ?>">
 <?php $this->beginBody() ?>
 
 <?php if (!($this->params['hideNavBar'] ?? false)) : ?>
@@ -77,7 +86,7 @@ if (Yii::$app->user->isGuest) {
     // "Coleções Públicas" - Estilo "igual ao sair"
     $menuItems[] = [
         'label' => 'Coleções Públicas', // Ícone removido
-        'url' => ['site/public-collections'],
+        'url' => ['colecao/index'],
         'linkOptions' => [
             'class' => 'btn btn-primary' // Classe alterada
         ],
@@ -87,7 +96,7 @@ if (Yii::$app->user->isGuest) {
     // "Favoritas" - Estilo "igual ao sair"
     $menuItems[] = [
         'label' => 'Favoritas', // Ícone removido
-        'url' => ['site/favorites'],
+        'url' => ['colecao/favorites'],
         'linkOptions' => [
             'class' => 'btn btn-outline-light' // Classe alterada
         ],

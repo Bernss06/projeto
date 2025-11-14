@@ -2,7 +2,15 @@
 
 /** @var yii\web\View $this */
 use yii\helpers\Url;
+use yii\helpers\Html;
+use common\models\Colecao;
+
+/** @var Colecao[] $featuredCollections */
+/** @var int[] $favoriteIds */
+
 $this->title = 'Gerencie suas Coleções com Facilidade';
+$userIsGuest = Yii::$app->user->isGuest;
+$favoriteSet = array_flip($favoriteIds ?? []);
 ?>
 
 <section class="hero text-center py-5">
@@ -23,7 +31,7 @@ $this->title = 'Gerencie suas Coleções com Facilidade';
           <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
-      <a href="#" class="btn btn-outline-light">Explorar Coleções Públicas</a>
+      <a href="<?= Url::to(['colecao/index']) ?>" class="btn btn-outline-light">Explorar Coleções Públicas</a>
     </div>
   </div>
 </section>
@@ -84,21 +92,52 @@ $this->title = 'Gerencie suas Coleções com Facilidade';
 
 <section class="collections py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Coleções em Destaque</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-3">
-      <div class="card bg-dark border-secondary">
-    <!--<div class="card-header bg-gradient" style="background: linear-gradient(90deg, #00c6ff, #0072ff);"></div>
-          <div class="card-body text-center">
-            <h5 class="card-title text-light">Monsters</h5>
-            <p class="card-text text-secondary">20 Itens</p>
-            <a href="#" class="btn btn-outline-light btn-sm">Ver Coleção</a>
-          </div>
-        </div>-->
+    <h2 class="text-center mb-4 text-light">Coleções em Destaque</h2>
+    <?php if (empty($featuredCollections)): ?>
+      <div class="text-center text-secondary py-4">
+        Ainda não existem coleções públicas.
       </div>
-    </div>
+    <?php else: ?>
+      <div class="row row-cols-1 row-cols-md-3 g-4 collections-grid justify-content-center">
+        <?php foreach ($featuredCollections as $collection): ?>
+          <div class="col">
+            <div class="card bg-dark border-secondary h-100 rounded-4 shadow-sm overflow-hidden position-relative">
+              <?php if (!$userIsGuest): ?>
+                <?php 
+                $isFavorited = isset($favoriteSet[$collection->id]);
+                $formAction = $isFavorited ? ['colecao/unfavorite', 'id' => $collection->id] : ['colecao/favorite', 'id' => $collection->id];
+                ?>
+                <?= Html::beginForm($formAction, 'post', ['class' => 'favorite-form', 'data-collection-id' => $collection->id]) ?>
+                  <button type="submit" class="favorite-heart <?= $isFavorited ? 'favorited' : '' ?>" aria-label="<?= $isFavorited ? 'Remover dos favoritos' : 'Adicionar aos favoritos' ?>">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="<?= $isFavorited ? '#ff0000' : 'none' ?>" stroke="<?= $isFavorited ? '#ff0000' : '#ffffff' ?>" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </button>
+                <?= Html::endForm() ?>
+              <?php endif; ?>
+              <div class="card-body p-4">
+                <span class="badge bg-gradient text-uppercase mb-3 d-inline-block px-3 py-2 rounded-pill" style="background: linear-gradient(135deg, #8e2de2, #4a00e0); font-size: 0.7rem; letter-spacing: 0.05em;">
+                  Coleção
+                </span>
+                <h4 class="text-light fw-semibold mb-2"><?= Html::encode($collection->nome) ?></h4>
+                <p class="text-secondary small mb-3">
+                  <?= Html::encode($collection->descricao ?: 'Sem descrição disponível.') ?>
+                </p>
+                <div class="d-flex justify-content-between align-items-center text-secondary small">
+                  <span><?= $collection->getFavoritosCount() ?> favoritos</span>
+                  <span><?= Html::encode(Yii::$app->formatter->asDate($collection->updated_at, 'php:d/m/Y')) ?></span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0">
+                <?= Html::a('Ver coleção', ['colecao/view', 'id' => $collection->id], ['class' => 'btn btn-sm btn-gradient w-100 text-uppercase fw-semibold', 'style' => 'font-size: 0.75rem; padding: 0.4rem 0.8rem;']) ?>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
     <div class="text-center mt-4">
-      <a href="#" class="btn btn-outline-primary">Ver Todas as Coleções Públicas</a>
+      <a href="<?= Url::to(['colecao/index']) ?>" class="btn btn-outline-primary">Ver Todas as Coleções Públicas</a>
     </div>
   </div>
 </section>

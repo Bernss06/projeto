@@ -101,6 +101,26 @@ class Colecao extends ActiveRecord
         return $this->hasMany(Item::class, ['colecao_id' => 'id'])->orderBy(['dtaquisicao' => SORT_DESC, 'id' => SORT_DESC]);
     }
 
+    public function getFavoritos()
+    {
+        return $this->hasMany(ColecaoFavorito::class, ['coelcao_id' => 'id']);
+    }
+
+    public function isFavoritedByUser(int $userId): bool
+    {
+        // A tabela favorito não tem user_id, então verificamos apenas se existe na tabela
+        // Nota: Isto significa que todos os utilizadores veem os mesmos favoritos
+        return $this->getFavoritos()->exists();
+    }
+
+    public function getFavoritosCount(): int
+    {
+        if ($this->isRelationPopulated('favoritos')) {
+            return count($this->favoritos);
+        }
+        return (int)$this->getFavoritos()->count();
+    }
+
     public function canEdit(): bool
     {
         if (Yii::$app->user->isGuest) {

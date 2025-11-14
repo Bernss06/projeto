@@ -4387,3 +4387,2381 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1762871497.7128
     'REQUEST_TIME' => 1762871497
 ]
+2025-11-13 09:23:21 [::1][-][huoraa463hpk230rr2evdk1s4l][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Controller.php(318): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#7 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#8 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/user/view', Array)
+#9 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2025-11-13 09:23:21 [::1][-][huoraa463hpk230rr2evdk1s4l][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'os501eb8ffq5m03bl6ev4pjg1b'
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    '_csrf-frontend' => 'e301d18f77b3cad92ddc936b5ec7492aa907d50314cb3cafad5211476827f14ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"V7IOgZyQiZIKbt81cGTHYC4Jk0XTdRJc\";}'
+    'advanced-backend' => 'huoraa463hpk230rr2evdk1s4l'
+    '_csrf-backend' => 'ce8361c63d55e976bff7b797531881faa6ae4c7b07b630909671e46d170c7bd9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"iBkpZsy1e7NiNVK1NFJrc1YMEzX07s_K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/TeasureHub/projeto/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=os501eb8ffq5m03bl6ev4pjg1b; PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; _csrf-frontend=e301d18f77b3cad92ddc936b5ec7492aa907d50314cb3cafad5211476827f14ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V7IOgZyQiZIKbt81cGTHYC4Jk0XTdRJc%22%3B%7D; advanced-backend=huoraa463hpk230rr2evdk1s4l; _csrf-backend=ce8361c63d55e976bff7b797531881faa6ae4c7b07b630909671e46d170c7bd9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22iBkpZsy1e7NiNVK1NFJrc1YMEzX07s_K%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64256'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/user/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/user/3'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763025801.4907
+    'REQUEST_TIME' => 1763025801
+]
+2025-11-13 15:09:03 [::1][-][huoraa463hpk230rr2evdk1s4l][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Controller.php(318): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#7 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#8 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/user/view', Array)
+#9 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2025-11-13 15:09:03 [::1][-][huoraa463hpk230rr2evdk1s4l][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'os501eb8ffq5m03bl6ev4pjg1b'
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    '_csrf-frontend' => 'e301d18f77b3cad92ddc936b5ec7492aa907d50314cb3cafad5211476827f14ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"V7IOgZyQiZIKbt81cGTHYC4Jk0XTdRJc\";}'
+    'advanced-backend' => 'huoraa463hpk230rr2evdk1s4l'
+    '_csrf-backend' => 'ce8361c63d55e976bff7b797531881faa6ae4c7b07b630909671e46d170c7bd9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"iBkpZsy1e7NiNVK1NFJrc1YMEzX07s_K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/TeasureHub/projeto/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'advanced-frontend=os501eb8ffq5m03bl6ev4pjg1b; PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; _csrf-frontend=e301d18f77b3cad92ddc936b5ec7492aa907d50314cb3cafad5211476827f14ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V7IOgZyQiZIKbt81cGTHYC4Jk0XTdRJc%22%3B%7D; advanced-backend=huoraa463hpk230rr2evdk1s4l; _csrf-backend=ce8361c63d55e976bff7b797531881faa6ae4c7b07b630909671e46d170c7bd9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22iBkpZsy1e7NiNVK1NFJrc1YMEzX07s_K%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59035'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/user/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/user/3'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763046543.8949
+    'REQUEST_TIME' => 1763046543
+]
+2025-11-13 17:22:32 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Credenciais inválidas in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\UserController.php:29
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\UserController->auth('admin', '12345678')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Array, 'admin', '12345678')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(58): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Controller.php(318): yii\base\Controller->beforeAction(Object(yii\rest\IndexAction))
+#8 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\rest\IndexAction))
+#9 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('', Array)
+#10 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/user/', Array)
+#11 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2025-11-13 17:22:31 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '6a007e3a393d4ae2c47cffcbe7ea9bedc9d1e2f6ca4d87a290d8bb0e8439210ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"VBa_6Cw2HITIq9_zwt7xN4a0KlR2G98I\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f4bfa912-90cb-49ba-b6bb-a36b3fe8bc29'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=6a007e3a393d4ae2c47cffcbe7ea9bedc9d1e2f6ca4d87a290d8bb0e8439210ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22VBa_6Cw2HITIq9_zwt7xN4a0KlR2G98I%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52159'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/user/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/user/'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763054551.7912
+    'REQUEST_TIME' => 1763054551
+]
+2025-11-13 17:32:56 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/users/". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/users/', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 17:32:56 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '6a007e3a393d4ae2c47cffcbe7ea9bedc9d1e2f6ca4d87a290d8bb0e8439210ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"VBa_6Cw2HITIq9_zwt7xN4a0KlR2G98I\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '934ca85a-61b4-4084-8770-e9b1cd4bd02a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=6a007e3a393d4ae2c47cffcbe7ea9bedc9d1e2f6ca4d87a290d8bb0e8439210ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22VBa_6Cw2HITIq9_zwt7xN4a0KlR2G98I%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '57798'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/users/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/users/'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763055176.4242
+    'REQUEST_TIME' => 1763055176
+]
+2025-11-13 20:24:52 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('index')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/index')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/ind...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:24:51 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0ff5244e-7952-4d1e-92bd-0dc02d631df2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '51414'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065491.9705
+    'REQUEST_TIME' => 1763065491
+]
+2025-11-13 20:26:38 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('index')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/index')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/ind...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:26:38 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '66bdfbb3-3ee7-4ae7-8cca-a27327b49cdf'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63116'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065598.0276
+    'REQUEST_TIME' => 1763065598
+]
+2025-11-13 20:26:50 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('index')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/index')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/ind...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:26:50 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a38e4535-d42d-422f-9901-70e280fe1453'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63123'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065610.3357
+    'REQUEST_TIME' => 1763065610
+]
+2025-11-13 20:27:12 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('index')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/index')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/ind...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:27:12 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '950bc2ea-0268-437e-910e-66dbfc945cfa'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63133'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065632.7209
+    'REQUEST_TIME' => 1763065632
+]
+2025-11-13 20:29:45 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('test')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/test')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/tes...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:29:45 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c89a20d4-63a2-4274-bd9c-45060c95ff8c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60683'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065784.9983
+    'REQUEST_TIME' => 1763065784
+]
+2025-11-13 20:30:55 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('test')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/test')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/tes...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:30:55 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '85a5f801-1f89-481b-9cbc-1c351daec5f2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54808'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065855.8317
+    'REQUEST_TIME' => 1763065855
+]
+2025-11-13 20:31:14 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('test')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/test')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/tes...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:31:14 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'aeb25e78-5928-444e-a8ee-51dbc842b279'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56204'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/test'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763065874.0192
+    'REQUEST_TIME' => 1763065874
+]
+2025-11-13 20:34:03 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('debug')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/debug')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/deb...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:34:03 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '204ef311-793a-4939-99d5-f575787d9ffb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60692'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/debug'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/debug'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066043.4199
+    'REQUEST_TIME' => 1763066043
+]
+2025-11-13 20:44:44 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:44:44 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'afee9a98-1e59-4d99-9546-c46eb9e3eb71'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55147'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066684.6866
+    'REQUEST_TIME' => 1763066684
+]
+2025-11-13 20:44:49 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/10". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:44:49 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '11591d8b-a4f2-476e-a048-d97b2a8e4bcd'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55153'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/10'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066689.8363
+    'REQUEST_TIME' => 1763066689
+]
+2025-11-13 20:44:51 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:44:51 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '4804d27b-7276-48e9-b448-8a1e9a3c30cc'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55153'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066691.837
+    'REQUEST_TIME' => 1763066691
+]
+2025-11-13 20:46:23 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:46:23 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '663c911c-6eeb-499c-a8eb-8fbc0c4871f1'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '57194'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066783.7373
+    'REQUEST_TIME' => 1763066783
+]
+2025-11-13 20:46:34 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:46:34 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9b51202e-4100-4457-a10f-7ae1aad8883e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '51386'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066794.4972
+    'REQUEST_TIME' => 1763066794
+]
+2025-11-13 20:47:08 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:47:08 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f754e239-9fd5-4498-bb39-6c314430e81a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49435'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066828.4033
+    'REQUEST_TIME' => 1763066828
+]
+2025-11-13 20:47:34 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:47:34 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9e149ad8-ac73-46f6-a0f3-c3165b50671e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '61210'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066854.2165
+    'REQUEST_TIME' => 1763066854
+]
+2025-11-13 20:48:15 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 20:48:15 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '080984e6-802d-4aee-8509-dc6e6ae5de27'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56333'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763066895.6333
+    'REQUEST_TIME' => 1763066895
+]
+2025-11-13 20:53:02 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:53:02 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '503ac4ac-954e-474b-9115-2c0102e3f899'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55468'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067182.1875
+    'REQUEST_TIME' => 1763067182
+]
+2025-11-13 20:54:46 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:54:45 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '345ab1a2-da17-4bdf-a30b-0eb0357c5329'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55484'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067285.9564
+    'REQUEST_TIME' => 1763067285
+]
+2025-11-13 20:56:21 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:56:21 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f0f43227-c413-4b81-b86c-a7e9668a21c5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52940'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067381.8165
+    'REQUEST_TIME' => 1763067381
+]
+2025-11-13 20:57:14 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:57:14 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '30ac7ff3-4d4a-4297-96dd-dfcaacb558c6'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60499'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067434.2469
+    'REQUEST_TIME' => 1763067434
+]
+2025-11-13 20:57:58 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:57:58 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '79316b0f-e333-4ee2-ba6a-d96a1a8a16df'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64097'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067478.2579
+    'REQUEST_TIME' => 1763067478
+]
+2025-11-13 20:58:05 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:58:05 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9cec50e2-d155-422b-94b0-45539bacd02b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64097'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067485.8028
+    'REQUEST_TIME' => 1763067485
+]
+2025-11-13 20:58:58 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: O utilizador 2 não tem coleções. in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php:18
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoid('2')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoid', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-13 20:58:58 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '49bf2d94-e1c7-441a-9563-ee401bade00d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56570'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067538.6798
+    'REQUEST_TIME' => 1763067538
+]
+2025-11-13 20:59:02 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: O utilizador 1 não tem coleções. in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php:18
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoid('1')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoid', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-13 20:59:02 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2f86a8a4-0ff6-41c5-ac55-e0fb50f8869d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56570'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/colecao/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/colecao/1'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067542.6322
+    'REQUEST_TIME' => 1763067542
+]
+2025-11-13 20:59:30 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 2 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('2')
+#1 [internal function]: yii\rest\ViewAction->run('2')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 20:59:30 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '4547143b-97ad-40e1-a159-12e56f426cca'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56581'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/2'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763067570.1142
+    'REQUEST_TIME' => 1763067570
+]
+2025-11-13 21:25:27 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 11 in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('11')
+#1 [internal function]: yii\rest\ViewAction->run('11')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/vie...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-13 21:25:27 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'id' => '11'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7dd2a24d-d2db-4f9c-a31f-f4779b9cf3e0'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '50324'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763069127.335
+    'REQUEST_TIME' => 1763069127
+]
+2025-11-13 21:25:46 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/user/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/use...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 21:25:46 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2b1b8569-2f85-40a0-93ed-fed748c25e2b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '57244'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763069146.6513
+    'REQUEST_TIME' => 1763069146
+]
+2025-11-13 21:26:57 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/user/11". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/use...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-13 21:26:57 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0dd7897a-081a-49a2-b401-a85f03ce9464'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60734'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763069217.3227
+    'REQUEST_TIME' => 1763069217
+]
+2025-11-13 21:27:43 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userid' in 'where clause' in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(249): yii\db\Command->queryAll()
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#5 D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php(14): yii\db\ActiveQuery->all()
+#6 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoporuser('11')
+#7 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoporuser', Array)
+#10 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#11 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userid' in 'where clause'
+The SQL being executed was: SELECT * FROM `colecao` WHERE `userid`='11' in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(249): yii\db\Command->queryAll()
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#5 D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php(14): yii\db\ActiveQuery->all()
+#6 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoporuser('11')
+#7 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoporuser', Array)
+#10 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#11 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'userid' in 'where clause'
+)
+
+2025-11-13 21:27:43 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'userid' => '11'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0260c5dd-d5dd-4aaa-92eb-4a134d21ffb7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '65170'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/user/11'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763069263.1418
+    'REQUEST_TIME' => 1763069263
+]
+2025-11-13 21:29:01 [::1][-][2d3mql047luqrg5okdp4294fon][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: O utilizador 10 não possui coleções. in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php:20
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoporuser('10')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoporuser', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-13 21:29:00 [::1][-][2d3mql047luqrg5okdp4294fon][info][application] $_GET = [
+    'userid' => '10'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4elbHKA09cpV9r6zxw3BIpbumg4HUm1_\";}'
+    'advanced-backend' => '2d3mql047luqrg5okdp4294fon'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'b0c8e2c0-6045-4771-a523-f24baad9971d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf-backend=a602e819cf394077fa02e315166567b6a22cfacc69cd73a30fce816f60610742a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224elbHKA09cpV9r6zxw3BIpbumg4HUm1_%22%3B%7D; advanced-backend=2d3mql047luqrg5okdp4294fon'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '57831'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/user/10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/user/10'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763069340.9875
+    'REQUEST_TIME' => 1763069340
+]

@@ -9,8 +9,9 @@ class UserController extends ActiveController
 {
     public $modelClass = 'common\models\User';
 
+
     // Autenticação - Basic Auth
-    public function behaviors()
+    /*public function behaviors()
     {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
@@ -42,6 +43,6 @@ class UserController extends ActiveController
         if (!Yii::$app->user->can('admin')) {
             throw new \yii\web\ForbiddenHttpException('Acesso restrito a administradores');
         }
-    }
+    }*/
     // Autenticação - Basic Auth
 }

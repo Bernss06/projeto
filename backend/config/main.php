@@ -50,18 +50,37 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                // Users
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => ['api/user'],
                     'pluralize' => false, // cria /users em vez de /user
+                    'extraPatterns' => [
+                    ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',
                     ],
                 ],
 
+                //Coleções
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/colecao'],
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET count' => 'count',
+                        'GET count/{userid}' => 'countporuser',
+                        'GET user/{userid}' => 'colecaoporuser',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                        '{userid}' => '<userid:\\d+>',
+                    ],
+                ],
+
                 // Regras normais do backend (mantém estas)
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
 

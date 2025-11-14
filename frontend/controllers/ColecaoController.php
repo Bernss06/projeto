@@ -91,6 +91,7 @@ class ColecaoController extends Controller
 
     public function actionCreate()
     {
+        
         $model = new Colecao();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

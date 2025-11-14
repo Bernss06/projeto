@@ -6765,3 +6765,343 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1763069340.9875
     'REQUEST_TIME' => 1763069340
 ]
+2025-11-14 17:25:24 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Warning 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 43093 bytes' 
+
+in C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php:152
+
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): yii\web\ErrorHandler->handleError(code: '2', message: ''unserialize():...', file: ''C:\\\\wamp64\\\\ww...', line: '152')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): ::unserialize(data: ''<<<<<<< HEAD\\r...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile(indexFile: ''C:\\\\wamp64\\\\ww...', summary: '['tag' => '6917...')
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(183): yii\debug\LogTarget->export()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect(messages: '[]', final: 'TRUE')
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Logger.php(225): yii\log\Dispatcher->dispatch(messages: '[]', final: 'TRUE')
+#6 {main}
+2025-11-14 17:25:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'dark-mode' => 'true'
+    'advanced-backend' => '01f8c48f5515bf34634667d404a3c752'
+    '_identity-backend' => '141e02a240c74cf5fc76e528169e50ec17c9e3562488a374b1a81fe7db6be36aa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[12,\"bHhSvUlgpG5bMiFd90wHwVAoACKp8FtQ\",2592000]\";}'
+    '_csrf-backend' => '7030d5264a8ce549e5a7a6f3576844658b0950e16636776daec7b4000717c73ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JoW7zBtW3d7xe5QXuGQ1LTNJmLsuX3_3\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    'success' => 'Thank you for registration. Please check your inbox for verification email.'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; dark-mode=true; advanced-backend=01f8c48f5515bf34634667d404a3c752; _identity-backend=141e02a240c74cf5fc76e528169e50ec17c9e3562488a374b1a81fe7db6be36aa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%22bHhSvUlgpG5bMiFd90wHwVAoACKp8FtQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=7030d5264a8ce549e5a7a6f3576844658b0950e16636776daec7b4000717c73ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JoW7zBtW3d7xe5QXuGQ1LTNJmLsuX3_3%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '58710'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763141124.5749
+    'REQUEST_TIME' => 1763141124
+]
+2025-11-14 17:25:24 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Warning 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 43093 bytes' 
+
+in C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php:152
+
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): yii\web\ErrorHandler->handleError(code: '2', message: ''unserialize():...', file: ''C:\\\\wamp64\\\\ww...', line: '152')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): ::unserialize(data: ''<<<<<<< HEAD\\r...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile(indexFile: ''C:\\\\wamp64\\\\ww...', summary: '['tag' => '6917...')
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(183): yii\debug\LogTarget->export()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect(messages: '[]', final: 'TRUE')
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Logger.php(225): yii\log\Dispatcher->dispatch(messages: '[]', final: 'TRUE')
+#6 {main}
+2025-11-14 17:25:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'dark-mode' => 'true'
+    '_csrf-backend' => '7030d5264a8ce549e5a7a6f3576844658b0950e16636776daec7b4000717c73ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JoW7zBtW3d7xe5QXuGQ1LTNJmLsuX3_3\";}'
+    'advanced-backend' => 'bae09d263e741e6a5f792f36148cb0a3'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    'success' => 'Thank you for registration. Please check your inbox for verification email.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; dark-mode=true; _csrf-backend=7030d5264a8ce549e5a7a6f3576844658b0950e16636776daec7b4000717c73ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JoW7zBtW3d7xe5QXuGQ1LTNJmLsuX3_3%22%3B%7D; advanced-backend=bae09d263e741e6a5f792f36148cb0a3'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '58710'
+    'REDIRECT_URL' => '/projeto/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763141124.7755
+    'REQUEST_TIME' => 1763141124
+]
+2025-11-14 17:29:35 [::1][17][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Warning 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 43093 bytes' 
+
+in C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php:152
+
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): yii\web\ErrorHandler->handleError(code: '2', message: ''unserialize():...', file: ''C:\\\\wamp64\\\\ww...', line: '152')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): ::unserialize(data: ''<<<<<<< HEAD\\r...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile(indexFile: ''C:\\\\wamp64\\\\ww...', summary: '['tag' => '6917...')
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(183): yii\debug\LogTarget->export()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect(messages: '[]', final: 'TRUE')
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Logger.php(225): yii\log\Dispatcher->dispatch(messages: '[]', final: 'TRUE')
+#6 {main}
+2025-11-14 17:29:34 [::1][17][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'uo_ktAnnQ3DaKHM0Yo-vZoAjkJPbAE4sFbd-SNBPQeDoyLaAfqF2ALkZHGBTovwjxhak6u91AEEk-gg_5BoWuQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'Bernas2006?'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'dark-mode' => 'true'
+    'advanced-backend' => 'bae09d263e741e6a5f792f36148cb0a3'
+    '_csrf-backend' => '2c071e1bdbe30c326ed3c6b8e9fa343e37a575923c0ce17ccbe5412c0724439aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RGR4wF5pc1oT1-SEF54y4uNm1Mvw4UWY\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    'success' => 'Thank you for registration. Please check your inbox for verification email.'
+    '__id' => 17
+    '__authKey' => 'NITiGVTWn1HViIR79PeHrsXF_F8FEQUn'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '202'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; dark-mode=true; advanced-backend=bae09d263e741e6a5f792f36148cb0a3; _csrf-backend=2c071e1bdbe30c326ed3c6b8e9fa343e37a575923c0ce17ccbe5412c0724439aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RGR4wF5pc1oT1-SEF54y4uNm1Mvw4UWY%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59424'
+    'REDIRECT_URL' => '/projeto/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763141374.8949
+    'REQUEST_TIME' => 1763141374
+]
+2025-11-14 17:29:36 [::1][17][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Warning 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 43093 bytes' 
+
+in C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php:152
+
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): yii\web\ErrorHandler->handleError(code: '2', message: ''unserialize():...', file: ''C:\\\\wamp64\\\\ww...', line: '152')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(152): ::unserialize(data: ''<<<<<<< HEAD\\r...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile(indexFile: ''C:\\\\wamp64\\\\ww...', summary: '['tag' => '6917...')
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\LogTarget.php(183): yii\debug\LogTarget->export()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect(messages: '[]', final: 'TRUE')
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\log\Logger.php(225): yii\log\Dispatcher->dispatch(messages: '[]', final: 'TRUE')
+#6 {main}
+2025-11-14 17:29:35 [::1][17][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'dark-mode' => 'true'
+    'advanced-backend' => '536d19f8c2088c23020ab9c8eb7e2762'
+    '_identity-backend' => 'f699f0fab0c3190f79b1bbb494835887a2700bca0a40deed44e13c34d3a779cfa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[17,\"NITiGVTWn1HViIR79PeHrsXF_F8FEQUn\",2592000]\";}'
+    '_csrf-backend' => 'c76700294672daf5adae53645efa781fa18263820081c4d4a1a96337d4740247a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"B-iOshTOxo9qhv5jaUjiDpiiAqWAn5_E\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    'success' => 'Thank you for registration. Please check your inbox for verification email.'
+    '__id' => 17
+    '__authKey' => 'NITiGVTWn1HViIR79PeHrsXF_F8FEQUn'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; dark-mode=true; advanced-backend=536d19f8c2088c23020ab9c8eb7e2762; _identity-backend=f699f0fab0c3190f79b1bbb494835887a2700bca0a40deed44e13c34d3a779cfa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B17%2C%22NITiGVTWn1HViIR79PeHrsXF_F8FEQUn%22%2C2592000%5D%22%3B%7D; _csrf-backend=c76700294672daf5adae53645efa781fa18263820081c4d4a1a96337d4740247a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22B-iOshTOxo9qhv5jaUjiDpiiAqWAn5_E%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59424'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763141375.9155
+    'REQUEST_TIME' => 1763141375
+]

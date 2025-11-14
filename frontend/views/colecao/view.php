@@ -42,7 +42,7 @@ $this->title = $model->nome;
                             <?= Html::endForm() ?>
                         <?php endif; ?>
                     <?php endif; ?>
-                    <?= Html::a('Voltar', [$model->canEdit() ? 'mine' : 'index'], ['class' => 'btn btn-dark-alt']) ?>
+                    <?= Html::a('Voltar', [$model->canEdit() ? 'site/dashboard' : 'site/index'], ['class' => 'btn btn-dark-alt']) ?>
                 </div>
             </div>
 

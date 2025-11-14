@@ -22,7 +22,7 @@ return [
             'namespace' => 'common\fixtures',
         ],
         'rbac' => [
-            'class' => 'yii\rbac\ShellController',
+            'class' => 'console\controllers\RbacController',
         ],
     
     ],

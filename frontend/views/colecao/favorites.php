@@ -18,7 +18,7 @@ $favoriteSet = array_flip($favoriteIds);
         </div>
         <div class="d-flex gap-2">
             <?= Html::a('Coleções Públicas', ['colecao/index'], ['class' => 'btn btn-dark-alt']) ?>
-            <?= Html::a('Minhas Coleções', ['colecao/mine'], ['class' => 'btn btn-gradient']) ?>
+            <?= Html::a('Minhas Coleções', ['site/dashboard'], ['class' => 'btn btn-gradient']) ?>
         </div>
     </div>
 

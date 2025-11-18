@@ -95,7 +95,7 @@ class SiteController extends Controller
         $favoriteIds = [];
         if (!Yii::$app->user->isGuest) {
             $favoriteIds = \common\models\ColecaoFavorito::find()
-                ->select('coelcao_id')
+                ->select('colecao_id')
                 ->column();
         }
 
@@ -172,7 +172,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
+    
     /**
      * Signs user up.
      *

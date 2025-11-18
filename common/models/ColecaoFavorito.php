@@ -9,7 +9,7 @@ use yii\db\ActiveRecord;
  * Nota: A tabela favorito não tem user_id, então não podemos ter favoritos por utilizador
  * 
  * @property int $id
- * @property int $coelcao_id (typo na BD: deveria ser colecao_id)
+ * @property int $colecao_id (typo na BD: deveria ser colecao_id)
  *
  * @property Colecao $colecao
  */
@@ -23,15 +23,15 @@ class ColecaoFavorito extends ActiveRecord
     public function rules()
     {
         return [
-            [['coelcao_id'], 'required'],
-            [['coelcao_id'], 'integer'],
-            [['coelcao_id'], 'exist', 'targetClass' => Colecao::class, 'targetAttribute' => ['coelcao_id' => 'id']],
+            [['colecao_id'], 'required'],
+            [['colecao_id'], 'integer'],
+            [['colecao_id'], 'exist', 'targetClass' => Colecao::class, 'targetAttribute' => ['colecao_id' => 'id']],
         ];
     }
 
     public function getColecao()
     {
-        return $this->hasOne(Colecao::class, ['id' => 'coelcao_id']);
+        return $this->hasOne(Colecao::class, ['id' => 'colecao_id']);
     }
 }
 

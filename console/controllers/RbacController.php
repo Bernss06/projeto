@@ -13,9 +13,9 @@ class RbacController extends Controller
         $auth = Yii::$app->authManager;
         $auth->removeAll();
         
-        // ============================================
-        // CRIAR RULES (Regras dinâmicas)
-        // ============================================
+        // =================================//
+        // CRIAR RULES (Regras dinâmicas)   //
+        // =================================//
         
         // Rule: Verificar se o utilizador é dono da coleção
         $ruleColecaoOwner = new \common\rbac\ColecaoOwnerRule();
@@ -25,9 +25,9 @@ class RbacController extends Controller
         $ruleItemOwner = new \common\rbac\ItemOwnerRule();
         $auth->add($ruleItemOwner);
         
-        // ============================================
-        // CRIAR PERMISSÕES DO FRONTEND
-        // ============================================
+        // ===============================//
+        // CRIAR PERMISSÕES DO FRONTEND   //
+        // ===============================//
         
         // Permissões de Coleções
         $createColecao = $auth->createPermission('createColecao');
@@ -77,9 +77,9 @@ class RbacController extends Controller
         $viewOwnItem->ruleName = $ruleItemOwner->name;
         $auth->add($viewOwnItem);
         
-        // ============================================
-        // CRIAR PERMISSÕES DO BACKEND
-        // ============================================
+        // ===============================//
+        // CRIAR PERMISSÕES DO BACKEND    //
+        // ===============================//
         
         $accessBackend = $auth->createPermission('accessBackend');
         $accessBackend->description = 'Aceder ao painel administrativo';
@@ -97,9 +97,9 @@ class RbacController extends Controller
         $manageAllItems->description = 'Gerir todos os itens';
         $auth->add($manageAllItems);
         
-        // ============================================
-        // CRIAR PAPÉIS (ROLES)
-        // ============================================
+        // =======================//
+        // CRIAR PAPÉIS (ROLES)   //
+        // =======================//   
         
         // Papel: Colecionador (utilizador normal)
         $colecionador = $auth->createRole('colecionador');
@@ -130,9 +130,9 @@ class RbacController extends Controller
         $auth->addChild($admin, $manageAllColecoes);
         $auth->addChild($admin, $manageAllItems);
         
-        // ============================================
-        // ATRIBUIR PAPÉIS A UTILIZADORES
-        // ============================================
+        // =================================//
+        // ATRIBUIR PAPÉIS A UTILIZADORES   //
+        // =================================//
         
         // Atribuir papel admin ao utilizador com ID 1
         $auth->assign($admin, 1);

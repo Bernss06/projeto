@@ -69,7 +69,7 @@ class Colecao extends \yii\db\ActiveRecord
      */
     public function getFavoritos()
     {
-        return $this->hasMany(Favorito::class, ['coelcao_id' => 'id']);
+        return $this->hasMany(Favorito::class, ['colecao_id' => 'id']);
     }
 
     /**

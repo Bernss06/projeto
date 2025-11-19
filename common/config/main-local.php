@@ -4,7 +4,7 @@ return [
     'components' => [
         'db' => [
             'class' => \yii\db\Connection::class,
-            'dsn' => 'mysql:host=http://127.22.21.231/;dbname=projeto',
+            'dsn' => 'mysql:host=127.22.21.231;dbname=projeto',
             'username' => 'grupo-d-t-mysql',
             'password' => '#%Wz@nCaWTRL',
             'charset' => 'utf8',

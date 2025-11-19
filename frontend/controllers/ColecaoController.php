@@ -48,7 +48,7 @@ class ColecaoController extends Controller
 
         // A tabela favorito não tem user_id, então mostramos todos os favoritos
         $favoriteIds = ColecaoFavorito::find()
-            ->select('coelcao_id')
+            ->select('colecao_id')
             ->column();
 
         return $this->render('index', [
@@ -137,10 +137,10 @@ class ColecaoController extends Controller
         }
 
         // A tabela favorito não tem user_id, então verificamos apenas se já existe
-        $favorito = ColecaoFavorito::findOne(['coelcao_id' => $colecao->id]);
+        $favorito = ColecaoFavorito::findOne(['colecao_id' => $colecao->id]);
         if (!$favorito) {
             $favorito = new ColecaoFavorito([
-                'coelcao_id' => $colecao->id,
+                'colecao_id' => $colecao->id,
             ]);
             $favorito->save();
             Yii::$app->session->setFlash('success', 'Coleção adicionada aos favoritos.');
@@ -155,7 +155,7 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
 
-        $favorito = ColecaoFavorito::findOne(['coelcao_id' => $id]);
+        $favorito = ColecaoFavorito::findOne(['colecao_id' => $id]);
         if ($favorito) {
             $favorito->delete();
             Yii::$app->session->setFlash('success', 'Coleção removida dos favoritos.');
@@ -171,7 +171,7 @@ class ColecaoController extends Controller
         }
 
         // A tabela favorito não tem user_id, então mostramos todas as coleções favoritas
-        $favoritoIds = ColecaoFavorito::find()->select('coelcao_id')->column();
+        $favoritoIds = ColecaoFavorito::find()->select('colecao_id')->column();
         $collections = Colecao::find()
             ->where(['status' => 1, 'id' => $favoritoIds]) // Apenas públicas que estão nos favoritos
             ->with(['favoritos'])

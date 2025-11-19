@@ -31,9 +31,9 @@ class Favorito extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['coelcao_id'], 'required'],
-            [['coelcao_id'], 'integer'],
-            [['coelcao_id'], 'exist', 'skipOnError' => true, 'targetClass' => Colecao::class, 'targetAttribute' => ['coelcao_id' => 'id']],
+            [['colecao_id'], 'required'],
+            [['colecao_id'], 'integer'],
+            [['colecao_id'], 'exist', 'skipOnError' => true, 'targetClass' => Colecao::class, 'targetAttribute' => ['colecao_id' => 'id']],
         ];
     }
 

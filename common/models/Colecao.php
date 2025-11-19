@@ -103,7 +103,7 @@ class Colecao extends ActiveRecord
 
     public function getFavoritos()
     {
-        return $this->hasMany(ColecaoFavorito::class, ['coelcao_id' => 'id']);
+        return $this->hasMany(ColecaoFavorito::class, ['colecao_id' => 'id']);
     }
 
     public function isFavoritedByUser(int $userId): bool

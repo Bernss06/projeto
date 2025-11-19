@@ -44,7 +44,7 @@ class Favorito extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'coelcao_id' => 'Coelcao ID',
+            'colecao_id' => 'Coelcao ID',
         ];
     }
 
@@ -55,7 +55,7 @@ class Favorito extends \yii\db\ActiveRecord
      */
     public function getCoelcao()
     {
-        return $this->hasOne(Colecao::class, ['id' => 'coelcao_id']);
+        return $this->hasOne(Colecao::class, ['id' => 'colecao_id']);
     }
 
 }

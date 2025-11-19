@@ -6765,3 +6765,2365 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1763069340.9875
     'REQUEST_TIME' => 1763069340
 ]
+2025-11-14 14:24:06 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: O utilizador 10 não possui coleções. in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php:20
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ColecaoController->actionColecaoporuser('10')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('colecaoporuser', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/col...', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 14:24:06 [::1][-][-][info][application] $_GET = [
+    'userid' => '10'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'e11e4d0f-024f-4323-a5ac-aad71351fcd8'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59387'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/user/10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/user/10'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763130246.4571
+    'REQUEST_TIME' => 1763130246
+]
+2025-11-14 14:29:22 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ColecaoController' in file: D:\wamp64\www\TeasureHub\projeto/backend/modules/api/controllers/ColecaoController.php. Namespace missing? in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('colecao')
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('count')
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('colecao/count')
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#6 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 14:29:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'e1a2f33d-1975-4fee-a2d4-89101f4880dd'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '53757'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763130562.0163
+    'REQUEST_TIME' => 1763130562
+]
+2025-11-14 14:52:21 [::1][-][-][error][Error] Error: Class "backend\modules\api\controllers\Yii" not found in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ItemController.php:13
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ItemController->actionDebug()
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('debug', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/debug', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 14:52:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '85bc4b16-acca-4971-8a8a-21a6af36f203'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '243'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59807'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/item/debug'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/item/debug'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763131941.8343
+    'REQUEST_TIME' => 1763131941
+]
+2025-11-14 14:52:39 [::1][-][-][error][Error] Error: Class "backend\modules\api\controllers\Yii" not found in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ItemController.php:13
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ItemController->actionDebug()
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('debug', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/debug', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 14:52:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fa37c818-df6a-4a6e-b0b5-4bed807784ac'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '243'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64060'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/item/debug'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/item/debug'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763131959.1925
+    'REQUEST_TIME' => 1763131959
+]
+2025-11-14 14:56:27 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: A coleção 0 não possui itens registrados. in D:\wamp64\www\TeasureHub\projeto\backend\modules\api\controllers\ColecaoController.php:54
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ColecaoController->actionItensporcolecao('0')
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('itensporcolecao', Array)
+#4 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/ite...', Array)
+#5 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 14:56:27 [::1][-][-][info][application] $_GET = [
+    'colecaoid' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fc2de492-397f-439f-86bc-dbcb6f207551'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '61489'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/itens/0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/itens/0'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763132187.5055
+    'REQUEST_TIME' => 1763132187
+]
+2025-11-14 15:00:18 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/colecao/count/itens/-1". in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/colecao/cou...', Array)
+#1 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TeasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TeasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 15:00:18 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'bf7ce8d7-a297-4bc5-83c8-0127b65cc572'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TeasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '53202'
+    'REDIRECT_URL' => '/TeasureHub/projeto/backend/web/api/colecao/count/itens/-1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TeasureHub/projeto/backend/web/api/colecao/count/itens/-1'
+    'SCRIPT_NAME' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TeasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763132418.4447
+    'REQUEST_TIME' => 1763132418
+]
+2025-11-14 15:54:50 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/item/4 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('4', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/4', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 15:54:50 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c2f1cf4c-9472-4139-8354-84e87efb005b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63337'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/item/4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/item/4'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763135690.6107
+    'REQUEST_TIME' => 1763135690
+]
+2025-11-14 15:55:13 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/item/5 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('5', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/5', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 15:55:13 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'de51f8fa-6fd3-4198-a920-2fcde05d4ec7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63350'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763135713.8609
+    'REQUEST_TIME' => 1763135713
+]
+2025-11-14 15:55:21 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/item/4 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('4', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/4', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 15:55:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a4c8e090-514b-4bde-9fcf-907f54000dbf'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63350'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/item/4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/item/4'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763135721.7906
+    'REQUEST_TIME' => 1763135721
+]
+2025-11-14 16:00:40 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 0 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('0')
+#1 [internal function]: yii\rest\ViewAction->run('0')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/item/view', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 16:00:40 [::1][-][-][info][application] $_GET = [
+    'id' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '6d3f9377-4a6b-4594-b212-20dd808cd300'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64418'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/item/0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/item/0'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763136040.7756
+    'REQUEST_TIME' => 1763136040
+]
+2025-11-14 16:02:37 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/use". in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/use', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 16:02:37 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'cf4b9632-3904-4267-b1b6-2580939d909d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '62664'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/use'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/use'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763136156.9966
+    'REQUEST_TIME' => 1763136156
+]
+2025-11-14 16:42:35 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/categoria/1 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('1', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/categoria/1', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 16:42:35 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f9df56cf-4a54-4722-8f65-ef4ab6edffac'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56221'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138555.388
+    'REQUEST_TIME' => 1763138555
+]
+2025-11-14 16:42:48 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/categoria/1 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('1', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/categoria/1', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 16:42:48 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7f039ed4-5d8c-4570-9f45-a0361d01e5a5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56228'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138568.4553
+    'REQUEST_TIME' => 1763138568
+]
+2025-11-14 16:43:15 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/categoria/1 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('1', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/categoria/1', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 16:43:15 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'e06953e2-a365-45f0-8815-9a84462a287f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56239'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138595.5443
+    'REQUEST_TIME' => 1763138595
+]
+2025-11-14 16:43:19 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/categoria/1 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('1', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/categoria/1', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-14 16:43:19 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '1334397d-d352-41c6-8237-8554ef93bd0f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56239'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/categoria/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138599.7934
+    'REQUEST_TIME' => 1763138599
+]
+2025-11-14 16:43:42 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 0 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('0')
+#1 [internal function]: yii\rest\ViewAction->run('0')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/categoria/v...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 16:43:42 [::1][-][-][info][application] $_GET = [
+    'id' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '3bee3228-8e32-482a-86eb-ec82d98dbe45'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59382'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/categoria/0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/categoria/0'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138622.0235
+    'REQUEST_TIME' => 1763138622
+]
+2025-11-14 16:45:55 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php:149
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php(117): yii\rest\IndexAction->prepareDataProvider()
+#1 [internal function]: yii\rest\IndexAction->run()
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 16:45:55 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '833821b9-b5f2-4de2-a63d-258e4dbb16f5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '65389'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138755.7767
+    'REQUEST_TIME' => 1763138755
+]
+2025-11-14 16:46:28 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php:149
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php(117): yii\rest\IndexAction->prepareDataProvider()
+#1 [internal function]: yii\rest\IndexAction->run()
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 16:46:28 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'b5453bab-0de2-499a-a383-73eeb9ca8a00'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '65400'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763138788.9314
+    'REQUEST_TIME' => 1763138788
+]
+2025-11-14 17:07:41 [::1][-][-][error][Error] Error: Class "common\models\ComentarioUser" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php:149
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php(117): yii\rest\IndexAction->prepareDataProvider()
+#1 [internal function]: yii\rest\IndexAction->run()
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 17:07:41 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'd08f550c-e277-43e3-b256-9f1599ed5604'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52966'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140061.7472
+    'REQUEST_TIME' => 1763140061
+]
+2025-11-14 17:07:51 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php:149
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php(117): yii\rest\IndexAction->prepareDataProvider()
+#1 [internal function]: yii\rest\IndexAction->run()
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 17:07:51 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '6b56e050-e0ac-46b8-b0c7-53a4f38c7198'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52973'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140071.8004
+    'REQUEST_TIME' => 1763140071
+]
+2025-11-14 17:08:18 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:89
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('1')
+#1 [internal function]: yii\rest\ViewAction->run('1')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 17:08:18 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '957a99f1-14b7-4072-8c24-7eee4a5a955f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52980'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140098.2612
+    'REQUEST_TIME' => 1763140098
+]
+2025-11-14 17:08:21 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php:149
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\IndexAction.php(117): yii\rest\IndexAction->prepareDataProvider()
+#1 [internal function]: yii\rest\IndexAction->run()
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 17:08:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '8d9a3aab-1d50-45f4-ba6d-b0df2546bf8c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52986'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140101.0187
+    'REQUEST_TIME' => 1763140101
+]
+2025-11-14 17:16:50 [::1][-][-][error][Error] Error: Class "common\models\Comentario" not found in D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php:15
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('1')
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 17:16:50 [::1][-][-][info][application] $_GET = [
+    'itemid' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '421bcfc0-1f40-4f30-afc1-cdcc9ab150ef'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '53288'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140610.4396
+    'REQUEST_TIME' => 1763140610
+]
+2025-11-14 17:17:52 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\modules\api\controllers\ComentarioController' in file: D:\wamp64\www\TreasureHub\projeto/backend/modules/api/controllers/ComentarioController.php. Namespace missing? in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\BaseYii.php:299
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\modules...')
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(664): class_exists('backend\\modules...')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('comentario')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(615): yii\base\Module->createController('poritem')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('comentario/pori...')
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-14 17:17:52 [::1][-][-][info][application] $_GET = [
+    'itemid' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '3eab002b-5dec-4273-ac67-c08f59481f25'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '58114'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140672.0319
+    'REQUEST_TIME' => 1763140672
+]
+2025-11-14 17:18:54 [::1][-][-][error][Error] Error: Class "common\models\ComentarioUser" not found in D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php:15
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('1')
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 17:18:54 [::1][-][-][info][application] $_GET = [
+    'itemid' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '58fdf424-1ff0-47a7-9ccb-ba227f588950'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52923'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763140734.4492
+    'REQUEST_TIME' => 1763140734
+]
+2025-11-14 17:25:20 [::1][-][-][error][Error] Error: Class "common\models\ComentarioUser" not found in D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php:15
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('1')
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-14 17:25:20 [::1][-][-][info][application] $_GET = [
+    'itemid' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '3443d7be-9aaf-40c0-963f-e79e9c8b60cd'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64281'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/1'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763141120.952
+    'REQUEST_TIME' => 1763141120
+]
+2025-11-18 13:42:54 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 5 in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\Action.php:103
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\ViewAction.php(27): yii\rest\Action->findModel('5')
+#1 [internal function]: yii\rest\ViewAction->run('5')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2025-11-18 13:42:47 [::1][-][-][info][application] $_GET = [
+    'id' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'be9ec4b9-14ef-46c2-bf8b-86fff84cf9cb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54776'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763473365.6608
+    'REQUEST_TIME' => 1763473365
+]
+2025-11-18 13:43:01 [::1][-][-][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('app\\common\\mode...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('app\\common\\mode...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 13:43:01 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'cfb1d5a7-ac29-4ba0-84bc-76eeebf6c1e3'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '53905'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763473381.3644
+    'REQUEST_TIME' => 1763473381
+]
+2025-11-18 14:06:38 [::1][-][-][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('app\\common\\mode...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('app\\common\\mode...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 14:06:38 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '28a7d064-6354-43a3-90b4-4e427780a579'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49858'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763474798.7937
+    'REQUEST_TIME' => 1763474798
+]
+2025-11-18 14:06:59 [::1][-][-][error][Error] Error: Class "backend\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('backend\\common\\...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('backend\\common\\...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 14:06:59 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f23dd910-c569-40bf-9b06-1738a3b9446d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '61914'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763474819.6279
+    'REQUEST_TIME' => 1763474819
+]
+2025-11-18 14:07:05 [::1][-][-][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('app\\common\\mode...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('app\\common\\mode...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 14:07:05 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '083b5eb8-61d6-42ce-b15a-f6aeeb471609'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '61920'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763474825.8397
+    'REQUEST_TIME' => 1763474825
+]
+2025-11-18 14:07:34 [::1][-][-][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('app\\common\\mode...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('app\\common\\mode...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 14:07:34 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'eccf60d4-b2a8-4b4d-9156-7d8ad5aa8bb4'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60817'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763474854.2399
+    'REQUEST_TIME' => 1763474854
+]
+2025-11-18 14:08:26 [::1][-][-][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php:447
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(395): yii\db\BaseActiveRecord->createRelationQuery('app\\common\\mode...', Array, false)
+#1 D:\wamp64\www\TreasureHub\projeto\common\models\ComentarioUser.php(86): yii\db\BaseActiveRecord->hasOne('app\\common\\mode...', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): common\models\ComentarioUser->getUser()
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(181): yii\db\BaseActiveRecord->getRelation('user')
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(148): yii\db\ActiveQuery->normalizeRelations(Object(common\models\ComentarioUser), Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(243): yii\db\ActiveQuery->findWith(Array, Array)
+#6 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\Query.php(251): yii\db\ActiveQuery->populate(Array)
+#7 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveQuery.php(152): yii\db\Query->all(NULL)
+#8 D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php(19): yii\db\ActiveQuery->all()
+#9 [internal function]: backend\modules\api\controllers\ComentarioController->actionPoritem('5')
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('poritem', Array)
+#13 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#14 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2025-11-18 14:08:26 [::1][-][-][info][application] $_GET = [
+    'itemid' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '4f1fccbc-f87a-494b-8c6f-b65c7cd27654'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_COOKIE' => '_csrf-backend=f3c759d4c3c20f821fc3b51dd88e8e22472c856ee78242762c2e280a4da07193a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uUVwQjydu1pt1SDS-9wN7RHHkFaoDZZ4%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '62519'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/item/5'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763474906.2721
+    'REQUEST_TIME' => 1763474906
+]
+2025-11-18 15:06:38 [::1][-][-][error][yii\web\HttpException:500] yii\web\ServerErrorHttpException: Erro ao salvar relação do comentário. in D:\wamp64\www\TreasureHub\projeto\backend\modules\api\controllers\ComentarioController.php:47
+Stack trace:
+#0 [internal function]: backend\modules\api\controllers\ComentarioController->actionAddcomentario()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('addcomentario', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/comentario/...', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-18 15:06:31 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.49.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'e9b84563-073f-48f1-b994-7a3a4b5aa14c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '94'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49783'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/comentario/add'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/comentario/add'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763478390.5485
+    'REQUEST_TIME' => 1763478390
+]
+2025-11-18 15:31:05 [::1][-][-][error][Error] Error: Class "common\models\favorito" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\rest\CreateAction.php:47
+Stack trace:
+#0 [internal function]: yii\rest\CreateAction->run()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Action.php(102): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\Action->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('create', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/favorito/cr...', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-18 15:31:05 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.49.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '04703232-6c3a-4449-ac43-96ac51cb7606'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '86'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59857'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/favorito'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/favorito'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763479865.7695
+    'REQUEST_TIME' => 1763479865
+]
+2025-11-19 19:49:12 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: api/gosto/user in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('user', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/gosto/user', Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-19 19:49:12 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.49.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '46cf8e3d-4ad3-4bf9-b4cb-018c0debdb86'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '86'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '62778'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/api/gosto/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/api/gosto/user'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1763581752.0508
+    'REQUEST_TIME' => 1763581752
+]

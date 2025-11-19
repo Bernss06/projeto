@@ -13,8 +13,10 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
+use common\models\User;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\UserSettingsForm;
 use common\models\Colecao;
 
 /**
@@ -30,12 +32,17 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'settings'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
                         'allow' => true,
                         'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['settings'],
+                        'allow' => true,
+                        'roles' => ['@'],
                     ],
                     [
                         'actions' => ['logout'],
@@ -76,7 +83,26 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        // Buscar 3 coleções públicas aleatórias
+        $featuredCollections = Colecao::find()
+            ->where(['status' => 1]) // Apenas públicas
+            ->orderBy(new \yii\db\Expression('RAND()'))
+            ->limit(3)
+            ->with(['favoritos'])
+            ->all();
+
+        // Obter IDs de favoritos se o utilizador estiver autenticado
+        $favoriteIds = [];
+        if (!Yii::$app->user->isGuest) {
+            $favoriteIds = \common\models\ColecaoFavorito::find()
+                ->select('coelcao_id')
+                ->column();
+        }
+
+        return $this->render('index', [
+            'featuredCollections' => $featuredCollections,
+            'favoriteIds' => $favoriteIds,
+        ]);
     }
 
     /**
@@ -272,6 +298,27 @@ class SiteController extends Controller
 
         return $this->render('dashboard', [
             'collections' => $collections,
+        ]);
+    }
+
+    public function actionSettings()
+    {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
+
+        /** @var User $user */
+        $user = Yii::$app->user->identity;
+        $model = new UserSettingsForm($user);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', 'Configurações atualizadas com sucesso.');
+            return $this->redirect(['dashboard']);
+        }
+
+        return $this->render('settings', [
+            'model' => $model,
+            'user' => $user,
         ]);
     }
 

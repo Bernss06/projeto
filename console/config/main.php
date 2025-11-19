@@ -20,7 +20,11 @@ return [
         'fixture' => [
             'class' => \yii\console\controllers\FixtureController::class,
             'namespace' => 'common\fixtures',
-          ],
+        ],
+        'rbac' => [
+            'class' => 'console\controllers\RbacController',
+        ],
+    
     ],
     'components' => [
         'log' => [

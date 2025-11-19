@@ -25,8 +25,8 @@ $this->params['hideFooter'] = true;
             </svg>
         </div>
         <h2 class="login-logo-text fw-bold">
-            <span class="logo-minhas">Minhas</span>
-            <span class="logo-colecoes">Coleções</span>
+            <span class="logo-minhas">Teasure</span>
+            <span class="logo-colecoes">Hub</span>
         </h2>
     </div>
 

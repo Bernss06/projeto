@@ -1,11 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 /** @var yii\web\View $this */
 /** @var common\models\Colecao $model */
 /** @var common\models\Item[] $items */
+/** @var bool $isFavorited */
 
 $this->title = $model->nome;
 ?>
@@ -16,7 +16,7 @@ $this->title = $model->nome;
                 <div>
                     <h1 class="fw-bold text-gradient2 mb-1"><?= Html::encode($this->title) ?></h1>
                     <p class="text-secondary mb-0">
-                        <?= $model->is_public ? 'Coleção pública' : 'Coleção privada' ?> &middot;
+                        <?= $model->isPublic() ? 'Coleção pública' : 'Coleção privada' ?> &middot;
                         <?= Html::encode(Yii::$app->formatter->asDatetime($model->updated_at, 'php:d M Y \\à\\s H:i')) ?>
                     </p>
                 </div>
@@ -31,14 +31,24 @@ $this->title = $model->nome;
                             ],
                         ]) ?>
                     <?php endif; ?>
-                    <?= Html::a('Voltar', [$model->canEdit() ? 'mine' : 'index'], ['class' => 'btn btn-dark-alt']) ?>
+                    <?php if (!$model->canEdit() && !Yii::$app->user->isGuest && $model->isPublic()): ?>
+                        <?php if ($isFavorited): ?>
+                            <?= Html::beginForm(['colecao/unfavorite', 'id' => $model->id], 'post', ['class' => 'd-inline']) ?>
+                                <?= Html::submitButton('Remover dos Favoritos', ['class' => 'btn btn-outline-danger']) ?>
+                            <?= Html::endForm() ?>
+                        <?php else: ?>
+                            <?= Html::beginForm(['colecao/favorite', 'id' => $model->id], 'post', ['class' => 'd-inline']) ?>
+                                <?= Html::submitButton('Adicionar aos Favoritos', ['class' => 'btn btn-outline-light']) ?>
+                            <?= Html::endForm() ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?= Html::a('Voltar', [$model->canEdit() ? 'site/dashboard' : 'site/index'], ['class' => 'btn btn-dark-alt']) ?>
                 </div>
             </div>
 
             <div class="d-flex align-items-center justify-content-between mb-3">
                 <h2 class="h4 fw-bold text-light mb-0">Itens da Coleção</h2>
                 <div class="d-flex gap-2">
-                    <?= Html::a('Ver lista completa', ['item/index', 'colecaoId' => $model->id], ['class' => 'btn btn-outline-light']) ?>
                     <?php if ($model->canEdit()): ?>
                         <?= Html::a('Adicionar Item', ['item/create', 'colecaoId' => $model->id], ['class' => 'btn btn-gradient']) ?>
                     <?php endif; ?>

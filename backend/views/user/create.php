@@ -13,6 +13,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <p>
+        <?= Html::a('Back to List', ['index'], ['class' => 'btn btn-outline-primary']) ?>
+    </p>
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>

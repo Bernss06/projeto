@@ -26531,3 +26531,1352 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1763499002.9209
     'REQUEST_TIME' => 1763499002
 ]
+2025-11-18 21:32:45 [::1][1][e693eafd218a02d5cbad7a93fb9447ae][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+The SQL being executed was: DELETE FROM `user` WHERE `id`=3 in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `us...')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+)
+
+2025-11-18 21:32:45 [::1][1][e693eafd218a02d5cbad7a93fb9447ae][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'mhIScCKWh64AHHqZ-3DOtaXB2etKxdGeN4j3wFEaz5XiZHkqT8m-6mplOfiBBZuM4Ie-tDCAvdRn7cbwHFD-7Q=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'e693eafd218a02d5cbad7a93fb9447ae'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '94c1e98004e5e02136a77bf79dcb4bfaa921b170e93fbd7dbb4f927bee859695a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xvkZm_9DjyCazuU9EFg_zElJPe10MJ1x\";}'
+    'sidebar-collapse' => 'false'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=e693eafd218a02d5cbad7a93fb9447ae; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=94c1e98004e5e02136a77bf79dcb4bfaa921b170e93fbd7dbb4f927bee859695a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xvkZm_9DjyCazuU9EFg_zElJPe10MJ1x%22%3B%7D; sidebar-collapse=false'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '61766'
+    'REDIRECT_URL' => '/projeto/backend/web/user/delete'
+    'REDIRECT_QUERY_STRING' => 'id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=3'
+    'REQUEST_URI' => '/projeto/backend/web/user/delete?id=3'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763501565.6942
+    'REQUEST_TIME' => 1763501565
+]
+2025-11-19 14:39:45 [::1][1][e693eafd218a02d5cbad7a93fb9447ae][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-19 14:39:45 [::1][1][e693eafd218a02d5cbad7a93fb9447ae][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'e693eafd218a02d5cbad7a93fb9447ae'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '94c1e98004e5e02136a77bf79dcb4bfaa921b170e93fbd7dbb4f927bee859695a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xvkZm_9DjyCazuU9EFg_zElJPe10MJ1x\";}'
+    'sidebar-collapse' => 'false'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=e693eafd218a02d5cbad7a93fb9447ae; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=94c1e98004e5e02136a77bf79dcb4bfaa921b170e93fbd7dbb4f927bee859695a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xvkZm_9DjyCazuU9EFg_zElJPe10MJ1x%22%3B%7D; sidebar-collapse=false'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64399'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763563185.2187
+    'REQUEST_TIME' => 1763563185
+]
+2025-11-19 14:40:35 [::1][1][f355aeb03230b9e5083354612dc6a5f8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+The SQL being executed was: DELETE FROM `user` WHERE `id`=3 in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `us...')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+)
+
+2025-11-19 14:40:35 [::1][1][f355aeb03230b9e5083354612dc6a5f8][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'fHYBxIBys5QsOXvv6P-uWlKIaALbQhsOKBJrLltm9ZoZQTGGswP123sJGNy_oOozYMRbTp0pb19DU11gODa44w=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => 'f355aeb03230b9e5083354612dc6a5f8'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=f355aeb03230b9e5083354612dc6a5f8; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49674'
+    'REDIRECT_URL' => '/projeto/backend/web/user/delete'
+    'REDIRECT_QUERY_STRING' => 'id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=3'
+    'REQUEST_URI' => '/projeto/backend/web/user/delete?id=3'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763563235.7043
+    'REQUEST_TIME' => 1763563235
+]
+2025-11-19 14:40:58 [::1][1][f355aeb03230b9e5083354612dc6a5f8][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-19 14:40:58 [::1][1][f355aeb03230b9e5083354612dc6a5f8][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => 'f355aeb03230b9e5083354612dc6a5f8'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=f355aeb03230b9e5083354612dc6a5f8; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59459'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763563258.1579
+    'REQUEST_TIME' => 1763563258
+]
+2025-11-19 14:41:01 [::1][1][f355aeb03230b9e5083354612dc6a5f8][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-19 14:41:00 [::1][1][f355aeb03230b9e5083354612dc6a5f8][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => 'f355aeb03230b9e5083354612dc6a5f8'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=f355aeb03230b9e5083354612dc6a5f8; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59459'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763563260.9729
+    'REQUEST_TIME' => 1763563260
+]
+2025-11-19 14:41:02 [::1][1][f355aeb03230b9e5083354612dc6a5f8][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-19 14:41:02 [::1][1][f355aeb03230b9e5083354612dc6a5f8][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => 'f355aeb03230b9e5083354612dc6a5f8'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=f355aeb03230b9e5083354612dc6a5f8; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=13678158064f4c168b9a9271758e6d757c97c19381ac566fcdf25f84f6347a48a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22e70B3qFOW0c3W_Di2L3LFktQkA6NcPMy%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59459'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763563262.5583
+    'REQUEST_TIME' => 1763563262
+]
+2025-11-19 15:56:09 [::1][1][55052e1108e0eefe84b98e8870f4ce4c][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+The SQL being executed was: DELETE FROM `user` WHERE `id`=3 in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `us...')
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `us...')
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(408): yii\db\Command->execute()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(771): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(730): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\projeto\backend\controllers\UserController.php(114): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\UserController->actionDelete('3')
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/delete', Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`projeto`.`colecao`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+)
+
+2025-11-19 15:56:09 [::1][1][55052e1108e0eefe84b98e8870f4ce4c][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = [
+    '_csrf-backend' => 'hLN1wjnwxeaUlvYIOPyNwYGWIpkNPzlfGREUC0kgPGTP_SGDe7ifgMTbw04NmOSR290U1UdweDlrdiFHJ2RwJg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '55052e1108e0eefe84b98e8870f4ce4c'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0c6524de037e36ed6a04232c14bf26fe98ce9bf4a64e9a94ca168fc4a9ff0549a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"KNTABHZfPM5F5diPZK6LJOAfrg5LnDLB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=55052e1108e0eefe84b98e8870f4ce4c; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0c6524de037e36ed6a04232c14bf26fe98ce9bf4a64e9a94ca168fc4a9ff0549a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22KNTABHZfPM5F5diPZK6LJOAfrg5LnDLB%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64429'
+    'REDIRECT_URL' => '/projeto/backend/web/user/delete'
+    'REDIRECT_QUERY_STRING' => 'id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=3'
+    'REQUEST_URI' => '/projeto/backend/web/user/delete?id=3'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763567769.0358
+    'REQUEST_TIME' => 1763567769
+]
+2025-11-21 15:45:57 [::1][1][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-21 15:45:57 [::1][1][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '51217'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763739957.2275
+    'REQUEST_TIME' => 1763739957
+]
+2025-11-21 15:45:58 [::1][1][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index3.html in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index3.html', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user/index3.htm...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-21 15:45:58 [::1][1][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index3.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '51217'
+    'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763739958.525
+    'REQUEST_TIME' => 1763739958
+]
+2025-11-21 15:47:26 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'grupo-d-t-mysql'@'localhost' (using password: YES) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'grupo-d-t-mysql', Object(SensitiveParameterValue), NULL)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#40 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'grupo-d-t-mysql'@'localhost' (using password: YES) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#16 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#23 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#31 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#39 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#40 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'grupo-d-t-mysql'@'localhost' (using password: YES)
+)
+
+2025-11-21 15:47:26 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49731'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763740046.7476
+    'REQUEST_TIME' => 1763740046
+]
+2025-11-21 15:49:43 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=172....', 'grupo-d-t-mysql', Object(SensitiveParameterValue), NULL)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#40 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#16 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#23 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#31 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#39 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#40 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu
+)
+
+2025-11-21 15:49:35 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '49196'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763740175.8131
+    'REQUEST_TIME' => 1763740175
+]
+2025-11-21 15:56:14 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=172....', 'grupo-d-t-mysql', Object(SensitiveParameterValue), NULL)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#40 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\projeto\common\models\User.php(119): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#16 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#23 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#31 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#39 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#40 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Uma tentativa de ligação falhou porque o componente ligado não respondeu
+corretamente após um período de tempo, ou a ligação estabelecida falhou
+porque o anfitrião ligado não respondeu
+)
+
+2025-11-21 15:56:06 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54534'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763740566.1712
+    'REQUEST_TIME' => 1763740566
+]

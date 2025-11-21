@@ -6,9 +6,11 @@ use yii\widgets\ActiveForm;
 /** @var yii\web\View $this */
 /** @var common\models\Item $model */
 /** @var common\models\Colecao $colecao */
+/** @var array $categories */
+
+$this->title = Yii::t("app","Adicionar Item");
 ?>
 
-/** @var array $categories */
 
 <?php $form = ActiveForm::begin([
     'options' => ['class' => 'item-form needs-validation', 'enctype' => 'multipart/form-data'],

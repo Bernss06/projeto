@@ -110,6 +110,40 @@ class User extends ActiveRecord implements IdentityInterface
         return false;
     }
 
+    /**
+     * Delete all user collections and items before deleting the user
+     */
+    public function beforeDelete()
+    {
+        if (!parent::beforeDelete()) {
+            return false;
+        }
+
+        // Get all user collections
+        $colecoes = Colecao::find()->where(['user_id' => $this->id])->all();
+
+        foreach ($colecoes as $colecao) {
+            // Delete all items in each collection
+            Item::deleteAll(['colecao_id' => $colecao->id]);
+            
+            // Delete collection favorites
+            ColecaoFavorito::deleteAll(['colecao_id' => $colecao->id]);
+            
+            // Delete the collection
+            $colecao->delete();
+        }
+
+        return true;
+    }
+
+    /**
+     * Get user collections
+     */
+    public function getColecoes()
+    {
+        return $this->hasMany(Colecao::class, ['user_id' => 'id']);
+    }
+
 
     /**
      * {@inheritdoc}

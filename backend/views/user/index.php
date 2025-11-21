@@ -57,7 +57,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'php:Y-m-d H:i:s'],
                 'value' => function($model) {
                     return date('Y-m-d H:i:s', $model->created_at);
-                }
+                },
+                'filter' => false, // Disable filter for this column
             ],
             [
                 'class' => ActionColumn::className(),

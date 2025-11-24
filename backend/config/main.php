@@ -54,8 +54,9 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => ['api/user'],
-                    'pluralize' => false, // cria /users em vez de /user
+                    'pluralize' => false,
                     'extraPatterns' => [
+                        'GET count' => 'count',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',
@@ -70,11 +71,72 @@ return [
                     'extraPatterns' => [
                         'GET count' => 'count',
                         'GET count/{userid}' => 'countporuser',
+                        'GET count/itens/{colecaoid}' => 'countitenscolecao',
                         'GET user/{userid}' => 'colecaoporuser',
+                        'GET itens/{colecaoid}' => 'itensporcolecao',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',
                         '{userid}' => '<userid:\\d+>',
+                        '{colecaoid}' => '<colecaoid:\\d+>',
+                    ],
+                ],
+
+                //Itens Coleção
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/item'],
+                    'pluralize' => false,
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                    ],
+                ],
+
+                //Categoria
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/categoria'],
+                    'pluralize' => false,
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                    ],
+                ],
+
+                //Comentario
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/comentario'],
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET item/{itemid}'   => 'poritem',
+                        'POST add'            => 'addcomentario',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                        '{itemid}' => '<itemid:\d+>',
+                    ],
+                ],
+
+                //Favorito
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/favorito'],
+                    'pluralize' => false,
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                    ],
+                ],
+
+                //Gosto
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/gosto'],
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET count' => 'count',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
                     ],
                 ],
 

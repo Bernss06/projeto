@@ -1,7 +1,7 @@
 <?php
 
 namespace backend\modules\api\controllers;
-
+use Yii;
 use yii\rest\ActiveController;
 
 class ColecaoController extends ActiveController
@@ -36,6 +36,35 @@ class ColecaoController extends ActiveController
             ->count();
 
         return ['count' => $count];
+    }
+
+    // Contagem de Itens em cada Coleção
+    public function actionCountitenscolecao($colecaoid){
+        $model = \common\models\Item::class;
+
+        $count = $model::find()
+            ->where(['colecao_id' => $colecaoid])
+            ->count();
+
+        return ['count' => $count];
+    }
+
+    // Itens presentes em cada Coleção
+    public function actionItensporcolecao($colecaoid){
+        $model = \common\models\Item::class;
+
+        $itens = $model::find()
+            ->where(['colecao_id' => $colecaoid])
+            ->asArray()
+            ->all();
+
+        if (!empty($itens)) {
+            return $itens;
+        }
+
+        throw new \yii\web\NotFoundHttpException(
+            "A coleção $colecaoid não possui itens registrados."
+        );
     }
 
 

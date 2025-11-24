@@ -55,7 +55,7 @@ NavBar::begin([
                 <rect x="17" y="17" width="5" height="5" fill="white"/>
             </svg>
         </div>
-        <span class="logo-text"><span class="logo-my">Teasure</span><span class="logo-collections">Hub</span></span>
+        <span class="logo-text"><span class="logo-my">Treasure</span><span class="logo-collections">Hub</span></span>
     </div>',
     'brandUrl' => Yii::$app->user->isGuest ? Yii::$app->homeUrl : ['/site/dashboard'],
     'brandOptions' => ['class' => 'navbar-brand-custom'],

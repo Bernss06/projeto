@@ -27880,6 +27880,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1763740566.1712
     'REQUEST_TIME' => 1763740566
 ]
+<<<<<<< HEAD
 2025-11-21 16:15:27 [::1][-][5a158e708cb5bf7b1c81dd81b2f64d82][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Uma tentativa de ligação falhou porque o componente ligado não respondeu
 corretamente após um período de tempo, ou a ligação estabelecida falhou
 porque o anfitrião ligado não respondeu in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:722
@@ -28231,21 +28232,51 @@ Stack trace:
 #1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
 #2 {main}
 2025-11-21 16:21:50 [::1][1][5a158e708cb5bf7b1c81dd81b2f64d82][info][application] $_GET = []
+=======
+2025-11-21 16:57:30 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "colecao/index". in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php:564
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/index', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2025-11-21 16:57:30 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = []
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
 
 $_POST = []
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'sidebar-collapse' => 'false'
     'advanced-backend' => '5a158e708cb5bf7b1c81dd81b2f64d82'
     '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
     '_csrf-backend' => '0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg\";}'
+=======
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__returnUrl' => 'http://localhost/projeto/backend/web/'
+=======
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     '__id' => 1
     '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
 ]
@@ -28264,22 +28295,37 @@ $_SERVER = [
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_SEC_FETCH_DEST' => 'document'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/projeto/backend/web/user/index'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
     'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
     'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=5a158e708cb5bf7b1c81dd81b2f64d82; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=0d2a2efd6cabcfb823445f3fd763b83157ac9dda1a10d2f4764da23db7d0bc9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22I6s3K4PYMNAgbNO9GlsruiGzRVIPixqg%22%3B%7D'
     'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/wamp64/www'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -28288,10 +28334,21 @@ $_SERVER = [
     'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
     'REMOTE_PORT' => '50860'
     'REDIRECT_URL' => '/projeto/backend/web/user/index3.html'
+=======
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '52707'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/index'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
+<<<<<<< HEAD
     'REQUEST_URI' => '/projeto/backend/web/user/index3.html'
     'SCRIPT_NAME' => '/projeto/backend/web/index.php'
     'PHP_SELF' => '/projeto/backend/web/index.php'
@@ -28989,55 +29046,912 @@ $_POST = [
         'username' => 'User1'
         'password' => 'Bernas2006?'
         'rememberMe' => '1'
+=======
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763744250.2812
+    'REQUEST_TIME' => 1763744250
+]
+2025-11-21 17:18:37 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:18:37 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'VeTgBkrOMxcrFQ9_pIH-WPcSzvWp7G_Vt8sCkLpHjAovjoxTK5d0JmlvNw3-t85ru1-6vO2mIILhgVLRgx_8Mw=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     ]
 ]
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'sidebar-collapse' => 'false'
     'advanced-backend' => 'e051eb4b8a864c416173035894610733'
     '_csrf-backend' => '21288d370e77c69e32e0357ef4a6e81ffa33f7e21230bb28d03fd4f20c119eb7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Hzxyc2e9VZJICKiD8hQol8T6Ey2nE3dK\";}'
+=======
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
+=======
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
 ]
 
 $_SERVER = [
     'REDIRECT_STATUS' => '200'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59793'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763745517.6847
+    'REQUEST_TIME' => 1763745517
+]
+2025-11-21 17:19:02 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:19:02 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'hsg0x9P-jO6qEgcByitVj0TrG4ub68BfsbKzWUCn_QD8oliSsqfL3-hoP3OQHWW8CKZvwt-hjwjn-OMYef-NOQ=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60999'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763745542.4419
+    'REQUEST_TIME' => 1763745542
+]
+2025-11-21 17:21:01 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:21:01 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'b1fcmXI_mVvNnOtGZvfoJdem74YZxAdpIKvoTLoR-jkVPbDME2beao_m0zQ8wdgWm-ubz12OSD524bgNg0mKAA=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '50305'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763745661.9067
+    'REQUEST_TIME' => 1763745661
+]
+2025-11-21 17:21:10 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:21:10 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Ji937oLf_eVIaEnTU-Pq7rQ_KbOWUCvlo5kvk4XUfx9cRRu744a61AoScaEJ1drd-HJd-tIaZLL103_SvIwPJg=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59565'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763745670.7762
+    'REQUEST_TIME' => 1763745670
+]
+2025-11-21 17:32:02 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:32:02 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => '2VOiTCNBJbeC5BSkMz4gQ5KPRrZC6waIYGQ3PH3J9UqjOc4ZQhhihsCeLNZpCBBw3sIy_wahSd82Lmd9RJGFcw=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '50188'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746322.3552
+    'REQUEST_TIME' => 1763746322
+]
+2025-11-21 17:33:48 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "app\common\models\User" not found in D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php:303
+Stack trace:
+#0 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(181): yii\validators\ExistValidator->createQuery('app\\common\\mode...', Array)
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(app\common\models\Colecao), 'user_id')
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\ExistValidator->validateAttribute(Object(app\common\models\Colecao), 'user_id')
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Model.php(389): yii\validators\Validator->validateAttributes(Object(app\common\models\Colecao), Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(680): yii\base\Model->validate(Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(691): yii\db\ActiveRecord->update(true, NULL)
+#6 D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php(96): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\ColecaoController->actionUpdate('10')
+#8 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('update', Array)
+#11 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/update', Array)
+#12 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2025-11-21 17:33:48 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = [
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Gg9GfoFok_0HY9V7nxa4xCGAO_XxhftVp6CTmpHzHd9gZSor4DHUzEUZ7QnFIIj3bc1PvLXPtALx6sPbqKtt5g=='
+    'Colecao' => [
+        'nome' => 'Japan'
+        'descricao' => 'Descricao nova'
+        'user_id' => '3'
+        'status' => '1'
+        'created_at' => '0000-00-00 00:00:00'
+        'updated_at' => '0000-00-00 00:00:00'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '309'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '55153'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/update'
+    'REDIRECT_QUERY_STRING' => 'id=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=10'
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/update?id=10'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746428.6568
+    'REQUEST_TIME' => 1763746428
+]
+2025-11-21 17:34:53 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "backend\controllers\PostSearch" not found in D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php:41
+Stack trace:
+#0 [internal function]: backend\controllers\ColecaoController->actionIndex()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-21 17:34:53 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '56513'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746493.4015
+    'REQUEST_TIME' => 1763746493
+]
+2025-11-21 17:34:57 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "backend\controllers\PostSearch" not found in D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php:41
+Stack trace:
+#0 [internal function]: backend\controllers\ColecaoController->actionIndex()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-21 17:34:56 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54560'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746496.9678
+    'REQUEST_TIME' => 1763746496
+]
+2025-11-21 17:35:08 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "common\models\PostSearch" not found in D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php:41
+Stack trace:
+#0 [internal function]: backend\controllers\ColecaoController->actionIndex()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-21 17:35:08 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'CONTENT_LENGTH' => '202'
+=======
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
     'HTTP_SEC_CH_UA_MOBILE' => '?0'
     'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_ORIGIN' => 'http://localhost'
     'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+=======
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_SEC_FETCH_DEST' => 'document'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
     'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
     'HTTP_COOKIE' => 'sidebar-collapse=false; advanced-backend=e051eb4b8a864c416173035894610733; _csrf-backend=21288d370e77c69e32e0357ef4a6e81ffa33f7e21230bb28d03fd4f20c119eb7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Hzxyc2e9VZJICKiD8hQol8T6Ey2nE3dK%22%3B%7D'
     'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/wamp64/www'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -29055,4 +29969,105 @@ $_SERVER = [
     'PHP_SELF' => '/projeto/backend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1764003137.3757
     'REQUEST_TIME' => 1764003137
+=======
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '50958'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746508.5907
+    'REQUEST_TIME' => 1763746508
+]
+2025-11-21 17:35:10 [::1][1][a795b4k7mie91utfrk4r4pmf5o][error][Error] Error: Class "common\models\PostSearch" not found in D:\wamp64\www\TreasureHub\projeto\backend\controllers\ColecaoController.php:41
+Stack trace:
+#0 [internal function]: backend\controllers\ColecaoController->actionIndex()
+#1 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#4 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('colecao/index', Array)
+#5 D:\wamp64\www\TreasureHub\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\wamp64\www\TreasureHub\projeto\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-11-21 17:35:10 [::1][1][a795b4k7mie91utfrk4r4pmf5o][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '685lm7i3nd8v0opu2jbr5nlbpo'
+    '_csrf' => 'c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DHdIl-M9BmVq4srZp27cL5wfi83XIHzk\";}'
+    'advanced-frontend' => 'llh6de0cnu6udu08dqds3m1dkl'
+    '_identity-frontend' => '03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"2ESety9xU6Peqgv17wgC2XrmSr1FHKLi\",2592000]\";}'
+    '_csrf-frontend' => '4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK\";}'
+    'advanced-backend' => 'a795b4k7mie91utfrk4r4pmf5o'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => '87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/treasureHub/projeto/backend/web/site/login'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/TreasureHub/projeto/backend/web/user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=685lm7i3nd8v0opu2jbr5nlbpo; _csrf=c5080c405bb3473178bcce91eb5f1c18488557145d3f73d9aa1f65ac54b602a2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DHdIl-M9BmVq4srZp27cL5wfi83XIHzk%22%3B%7D; advanced-frontend=llh6de0cnu6udu08dqds3m1dkl; _identity-frontend=03b711dc422ec62114775197bc8a227e3db04f707b68fed5f67054a41e2d1ca2a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%222ESety9xU6Peqgv17wgC2XrmSr1FHKLi%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4473a12ceb1f7374fab9a882e1516602c93df0d1ba0b7bfaaaa3610e9a9a691da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WsN5oZ4fYGwpuf2x1CWZdgdkWUX5cCKK%22%3B%7D; advanced-backend=a795b4k7mie91utfrk4r4pmf5o; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=87019d49dc47557213198fdf654dabdaa476745f7517414a1de9484ac83c6642a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zjlUaYG1Bz8rZ603LMtIDJOWVJPA9Xp9%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\guilh\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;D:\\Xampp\\php;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;D:\\Wamp\\bin\\php\\php8.3.14;D:\\ComposerSetup;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TreasureHub/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '63118'
+    'REDIRECT_URL' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TreasureHub/projeto/backend/web/colecao/index'
+    'SCRIPT_NAME' => '/TreasureHub/projeto/backend/web/index.php'
+    'PHP_SELF' => '/TreasureHub/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1763746510.7574
+    'REQUEST_TIME' => 1763746510
+>>>>>>> bde5d051ced5563461110d54f5cb9d9ccc43baa0
 ]

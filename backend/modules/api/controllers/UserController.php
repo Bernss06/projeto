@@ -9,6 +9,13 @@ class UserController extends ActiveController
 {
     public $modelClass = 'common\models\User';
 
+    // Contagem de Users no Total
+    public function actionCount(){
+        $model = new $this->modelClass;
+        $recs = $model::find()->all();
+        return ['count'=>count($recs)];
+    }
+
 
     // Autenticação - Basic Auth
     /*public function behaviors()

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var common\models\User $model */
 
-$this->title = $model->id;
+$this->title = $model->username;
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Are you sure you want to delete this user?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -31,14 +31,32 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
             'email:email',
-            'status',
-            'created_at',
-            'updated_at',
-            'verification_token',
+            [
+                'attribute' => 'status',
+                'value' => function($model) {
+                    switch($model->status) {
+                        case \common\models\User::STATUS_ACTIVE:
+                            return 'Active';
+                        case \common\models\User::STATUS_INACTIVE:
+                            return 'Inactive';
+                        case \common\models\User::STATUS_DELETED:
+                            return 'Deleted';
+                        default:
+                            return 'Unknown';
+                    }
+                }
+            ],
+            [
+                'attribute' => 'created_at',
+                'format' => ['date', 'php:Y-m-d H:i:s'],
+                'value' => date('Y-m-d H:i:s', $model->created_at),
+            ],
+            [
+                'attribute' => 'updated_at',
+                'format' => ['date', 'php:Y-m-d H:i:s'],
+                'value' => date('Y-m-d H:i:s', $model->updated_at),
+            ],
         ],
     ]) ?>
 

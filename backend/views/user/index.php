@@ -31,14 +31,34 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            //'email:email',
-            //'status',
-            //'created_at',
-            //'updated_at',
-            //'verification_token',
+            'email:email',
+            [
+                'attribute' => 'status',
+                'value' => function($model) {
+                    switch($model->status) {
+                        case User::STATUS_ACTIVE:
+                            return 'Active';
+                        case User::STATUS_INACTIVE:
+                            return 'Inactive';
+                        case User::STATUS_DELETED:
+                            return 'Deleted';
+                        default:
+                            return 'Unknown';
+                    }
+                },
+                'filter' => [
+                    User::STATUS_ACTIVE => 'Active',
+                    User::STATUS_INACTIVE => 'Inactive',
+                    User::STATUS_DELETED => 'Deleted',
+                ],
+            ],
+            [
+                'attribute' => 'created_at',
+                'format' => ['date', 'php:Y-m-d H:i:s'],
+                'value' => function($model) {
+                    return date('Y-m-d H:i:s', $model->created_at);
+                }
+            ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, User $model, $key, $index, $column) {

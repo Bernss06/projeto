@@ -9,11 +9,8 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="<?=$assetDir?>/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-            </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block"><?= Yii::$app->user->identity->username; ?></a>
             </div>
         </div>
 
@@ -49,6 +46,9 @@
                     ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
+                    ['label' => 'ADMINISTRATION', 'header' => true],
+                    ['label' => 'User Management', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Gestão de Coleções', 'icon' => 'users', 'url' => ['/colecao/index'], 'visible' => !Yii::$app->user->isGuest],
                     ['label' => 'MULTI LEVEL EXAMPLE', 'header' => true],
                     ['label' => 'Level1'],
                     [

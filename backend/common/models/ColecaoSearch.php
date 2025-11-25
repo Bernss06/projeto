@@ -32,6 +32,14 @@ class ColecaoSearch extends Colecao
     }
 
     /**
+     * Bypass parent beforeValidate to prevent status overwrite
+     */
+    public function beforeValidate()
+    {
+        return true;
+    }
+
+    /**
      * Creates data provider instance with search query applied
      *
      * @param array $params
@@ -48,6 +56,9 @@ class ColecaoSearch extends Colecao
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+        // Explicitly unset status to avoid default value of 0 from model
+        $this->status = null;
 
         $this->load($params, $formName);
 

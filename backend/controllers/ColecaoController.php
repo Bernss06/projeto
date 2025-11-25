@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use common\models\Colecao;
-use app\common\models\PostSearch;
+use app\common\models\ColecaoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -47,7 +47,7 @@ class ColecaoController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new PostSearch();
+        $searchModel = new ColecaoSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [

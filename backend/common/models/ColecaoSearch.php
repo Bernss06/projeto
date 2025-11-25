@@ -4,7 +4,7 @@ namespace app\common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\common\models\Colecao;
+use common\models\Colecao;
 
 /**
  * ColecaoSearch represents the model behind the search form of `app\common\models\Colecao`.
@@ -12,7 +12,7 @@ use app\common\models\Colecao;
 class ColecaoSearch extends Colecao
 {
     /**
-     * {@inheritdoc}
+     * {@inheritdoc}    
      */
     public function rules()
     {

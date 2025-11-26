@@ -1,6 +1,6 @@
 <?php
 
-use app\common\models\Colecao;
+use common\models\Colecao;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
@@ -30,7 +30,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome',
             'descricao',
             'user_id',
-            'status',
+            [
+                'attribute' => 'status',
+                'value' => function ($model) {
+                    return $model->status == 1 ? 'Pública' : 'Privada';
+                },
+                'filter' => [
+                    1 => 'Pública',
+                    0 => 'Privada',
+                ],
+            ],
             //'created_at',
             //'updated_at',
             [

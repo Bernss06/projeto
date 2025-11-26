@@ -10,7 +10,6 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use common\models\User;
@@ -183,7 +182,7 @@ class SiteController extends Controller
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
             Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
-            return $this->goHome();
+             return $this->redirect(['site/dashboard']);
         }
 
         return $this->render('signup', [
@@ -196,6 +195,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
     public function actionRequestPasswordReset()
     {
         $model = new PasswordResetRequestForm();
@@ -213,6 +213,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    */
 
     /**
      * Resets password.
@@ -221,6 +222,7 @@ class SiteController extends Controller
      * @return mixed
      * @throws BadRequestHttpException
      */
+    /*
     public function actionResetPassword($token)
     {
         try {
@@ -239,6 +241,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    */
 
     /**
      * Verify email address
@@ -268,6 +271,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
     public function actionResendVerificationEmail()
     {
         $model = new ResendVerificationEmailForm();
@@ -283,6 +287,7 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+    */
 
     public function actionDashboard()
     {

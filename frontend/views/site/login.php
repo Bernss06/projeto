@@ -42,8 +42,8 @@ $this->params['hideFooter'] = true;
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
         <?= $form->field($model, 'username', [
-            'inputOptions' => ['placeholder' => 'seu@email.com', 'class' => 'form-control custom-input']
-        ])->label('Email') ?>
+            'inputOptions' => ['placeholder' => 'Utilizador', 'class' => 'form-control custom-input']
+        ])->label('Utilizador') ?>
 
         <?= $form->field($model, 'password', [
             'inputOptions' => ['placeholder' => '••••••••', 'class' => 'form-control custom-input']

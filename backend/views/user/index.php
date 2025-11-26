@@ -17,9 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -57,7 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'php:Y-m-d H:i:s'],
                 'value' => function($model) {
                     return date('Y-m-d H:i:s', $model->created_at);
-                }
+                },
+                'filter' => false, // Disable filter for this column
             ],
             [
                 'class' => ActionColumn::className(),

@@ -140,6 +140,20 @@ return [
                     ],
                 ],
 
+                // Trocas
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/agenda'],
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET user/{userid}' => 'trocasporuser'
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                        '{userid}' => '<userid:\\d+>',
+                    ],
+                ],
+
                 // Regras normais do backend (mantém estas)
                 //'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',

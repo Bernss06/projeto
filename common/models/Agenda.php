@@ -6,18 +6,19 @@ use common\models\Item;
 use common\models\User;
 
 /**
- * This is the model class for table "comentario_user".
+ * This is the model class for table "agenda".
  *
  * @property int $id
+ * @property int $estado
  * @property int $user_id
  * @property int $item_id
- * @property int $comentario_id
+ * @property string $created_at
+ * @property string $updated_at
  *
- * @property Comentario $comentario
  * @property Item $item
  * @property User $user
  */
-class ComentarioUser extends \yii\db\ActiveRecord
+class Agenda extends \yii\db\ActiveRecord
 {
 
 
@@ -26,7 +27,7 @@ class ComentarioUser extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'comentario_user';
+        return 'agenda';
     }
 
     /**
@@ -35,9 +36,9 @@ class ComentarioUser extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'item_id', 'comentario_id'], 'required'],
-            [['user_id', 'item_id', 'comentario_id'], 'integer'],
-            [['comentario_id'], 'exist', 'skipOnError' => true, 'targetClass' => Comentario::class, 'targetAttribute' => ['comentario_id' => 'id']],
+            [['estado', 'user_id', 'item_id', 'updated_at'], 'required'],
+            [['estado', 'user_id', 'item_id'], 'integer'],
+            [['created_at', 'updated_at'], 'safe'],
             [['item_id'], 'exist', 'skipOnError' => true, 'targetClass' => Item::class, 'targetAttribute' => ['item_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -50,20 +51,12 @@ class ComentarioUser extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'estado' => 'Estado',
             'user_id' => 'User ID',
             'item_id' => 'Item ID',
-            'comentario_id' => 'Comentario ID',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
-    }
-
-    /**
-     * Gets query for [[Comentario]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getComentario()
-    {
-        return $this->hasOne(Comentario::class, ['id' => 'comentario_id']);
     }
 
     /**

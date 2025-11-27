@@ -8,7 +8,7 @@ $this->title = 'Gestão de Utilizadores';
 <div class="site-index">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h3 text-gray-800">👥 Utilizadores Registados</h1>
-        <?php // echo Html::a('Criar Utilizador', ['create'], ['class' => 'btn btn-success']) ?>
+        
     </div>
 
     <?= ListView::widget([

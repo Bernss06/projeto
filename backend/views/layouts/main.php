@@ -9,6 +9,7 @@ use yii\helpers\Html;
 \hail812\adminlte3\assets\AdminLteAsset::register($this);
 \backend\assets\AppAsset::register($this);
 $this->registerCssFile('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/chart.js');
 
 $assetDir = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 

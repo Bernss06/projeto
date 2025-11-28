@@ -82,7 +82,7 @@ class Item extends ActiveRecord
         if ($this->categoria_id === null || (int)$this->categoria_id === 0) {
             return 'Sem categoria';
         }
-        return $this->categoria?->nome ?? 'Sem categoria';
+        return $this->categoria->nome ?? 'Sem categoria';
     }
 
     public function getImagemUrl(): string

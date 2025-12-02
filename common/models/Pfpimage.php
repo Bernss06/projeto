@@ -57,4 +57,19 @@ class Pfpimage extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function afterDelete()
+    {
+        parent::afterDelete();
+
+        if ($this->nome && $this->nome !== 'pfppadrao.png') {
+            $path = Yii::getAlias('@frontend/web/uploads/pfp/') . $this->nome;
+            if (file_exists($path)) {
+                @unlink($path);
+            }
+        }
+    }
 }

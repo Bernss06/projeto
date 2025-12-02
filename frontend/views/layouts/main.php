@@ -81,7 +81,7 @@ if (Yii::$app->user->isGuest) {
         'encode' => false,
     ];
 } else {
-    // --- INÍCIO DAS ALTERAÇÕES ---
+    
     
     // "Coleções Públicas" - Estilo "igual ao sair"
     $menuItems[] = [
@@ -123,7 +123,7 @@ if (Yii::$app->user->isGuest) {
         . Html::endForm()
         . '</li>';
     
-    // --- FIM DAS ALTERAÇÕES ---
+    
 }
 
 echo Nav::widget([

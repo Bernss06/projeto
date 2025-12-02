@@ -42,6 +42,8 @@ $this->title = 'Configurações';
                     ],
                 ]); ?>
 
+                <?= $form->errorSummary($model, ['class' => 'alert alert-danger']) ?>
+
                 <div class="text-center mb-5">
                     <div class="position-relative d-inline-block">
                         <?php 
@@ -59,7 +61,13 @@ $this->title = 'Configurações';
                 </div>
 
                 <div class="d-none">
-                    <?= $form->field($model, 'profileImage')->fileInput(['accept' => 'image/*']) ?>
+                    <?= $form->field($model, 'profileImage', [
+                        'template' => "{input}",
+                        'options' => ['class' => 'mb-0']
+                    ])->fileInput(['accept' => 'image/*', 'id' => 'usersettingsform-profileimage']) ?>
+                </div>
+                <div class="text-center text-danger mb-3">
+                    <?= Html::error($model, 'profileImage') ?>
                 </div>
 
                 <?= $form->field($model, 'username')->textInput(['placeholder' => 'Seu nome']) ?>

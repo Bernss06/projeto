@@ -41,7 +41,7 @@ class UserSettingsForm extends Model
             ['username', 'unique', 'targetClass' => User::class, 'filter' => ['<>', 'id', $this->user->id], 'message' => 'Este nome já está em uso.'],
             [['password', 'password_repeat'], 'string', 'min' => 6],
             ['password_repeat', 'compare', 'compareAttribute' => 'password', 'skipOnEmpty' => true],
-            [['profileImage'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
+            [['profileImage'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg', 'maxSize' => 1024 * 1024 * 10],
         ];
     }
 
@@ -75,12 +75,28 @@ class UserSettingsForm extends Model
         // Handle Profile Image Upload
         if ($this->profileImage) {
             $path = Yii::getAlias('@frontend/web/uploads/pfp/');
+            
+            // Debug Log
+            $logMsg = date('Y-m-d H:i:s') . " - Tentativa de upload\n";
+            $logMsg .= "Path: " . $path . "\n";
+            $logMsg .= "File: " . $this->profileImage->name . "\n";
+            
             if (!file_exists($path)) {
-                mkdir($path, 0777, true);
+                if (!mkdir($path, 0777, true)) {
+                    $logMsg .= "Erro: Falha ao criar diretoria\n";
+                    file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
+                    $this->addError('profileImage', 'Erro ao criar pasta de upload.');
+                    return false;
+                }
             }
 
             $filename = uniqid() . '.' . $this->profileImage->extension;
-            if ($this->profileImage->saveAs($path . $filename)) {
+            $fullPath = $path . $filename;
+            $logMsg .= "FullPath: " . $fullPath . "\n";
+
+            if ($this->profileImage->saveAs($fullPath)) {
+                $logMsg .= "Sucesso: saveAs retornou true\n";
+                
                 // Update or create Pfpimage record
                 $pfp = $this->user->pfpimage;
                 if (!$pfp) {
@@ -94,8 +110,20 @@ class UserSettingsForm extends Model
                 }
 
                 $pfp->nome = $filename;
-                $pfp->save();
+                if (!$pfp->save()) {
+                    $logMsg .= "Erro: Falha ao guardar na BD. Erros: " . json_encode($pfp->errors) . "\n";
+                    file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
+                    $this->addError('profileImage', 'Erro ao guardar a imagem na base de dados.');
+                    return false;
+                }
+                $logMsg .= "Sucesso: Guardado na BD\n";
+            } else {
+                $logMsg .= "Erro: saveAs retornou false. Erro PHP: " . error_get_last()['message'] . "\n";
+                file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
+                $this->addError('profileImage', 'Erro ao guardar o ficheiro na pasta de uploads. Verifique as permissões.');
+                return false;
             }
+            file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
         }
 
         return $this->user->save(false);

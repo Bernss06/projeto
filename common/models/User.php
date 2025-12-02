@@ -157,10 +157,18 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function getProfilePictureUrl()
     {
-        $filename = 'pfppadrao.png';
+        $default = ($this->username == 'admin') ? 'admin.png':'pfppadrao.png';
+        $filename = $default;
+
         if ($this->pfpimage && !empty($this->pfpimage->nome)) {
-            $filename = $this->pfpimage->nome;
+            // If the image in DB is 'pfppadrao.png', we use the calculated default (which is 'admin.png' for admin)
+            if ($this->pfpimage->nome === 'pfppadrao.png') {
+                $filename = $default;
+            } else {
+                $filename = $this->pfpimage->nome;
+            }
         }
+        
         // Assuming uploads are in the frontend web folder, accessible via a shared alias or relative path
         // For backend, we might need to point to the frontend uploads URL
         return Yii::getAlias('@web/../../frontend/web/uploads/pfp/' . $filename);

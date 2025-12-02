@@ -65,7 +65,7 @@ class Pfpimage extends \yii\db\ActiveRecord
     {
         parent::afterDelete();
 
-        if ($this->nome && $this->nome !== 'pfppadrao.png') {
+        if ($this->nome && $this->nome !== 'pfppadrao.png' && $this->nome !== 'admin.png') {
             $path = Yii::getAlias('@frontend/web/uploads/pfp/') . $this->nome;
             if (file_exists($path)) {
                 @unlink($path);

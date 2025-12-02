@@ -76,15 +76,8 @@ class UserSettingsForm extends Model
         if ($this->profileImage) {
             $path = Yii::getAlias('@frontend/web/uploads/pfp/');
             
-            // Debug Log
-            $logMsg = date('Y-m-d H:i:s') . " - Tentativa de upload\n";
-            $logMsg .= "Path: " . $path . "\n";
-            $logMsg .= "File: " . $this->profileImage->name . "\n";
-            
             if (!file_exists($path)) {
                 if (!mkdir($path, 0777, true)) {
-                    $logMsg .= "Erro: Falha ao criar diretoria\n";
-                    file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
                     $this->addError('profileImage', 'Erro ao criar pasta de upload.');
                     return false;
                 }
@@ -92,11 +85,8 @@ class UserSettingsForm extends Model
 
             $filename = uniqid() . '.' . $this->profileImage->extension;
             $fullPath = $path . $filename;
-            $logMsg .= "FullPath: " . $fullPath . "\n";
 
             if ($this->profileImage->saveAs($fullPath)) {
-                $logMsg .= "Sucesso: saveAs retornou true\n";
-                
                 // Update or create Pfpimage record
                 $pfp = $this->user->pfpimage;
                 if (!$pfp) {
@@ -104,26 +94,23 @@ class UserSettingsForm extends Model
                     $pfp->user_id = $this->user->id;
                 }
                 
-                // Delete old image if it's not the default one
-                if ($pfp->nome && $pfp->nome !== 'pfppadrao.png' && file_exists($path . $pfp->nome)) {
-                    unlink($path . $pfp->nome);
-                }
+                // Old image deletion logic removed to preserve history
+                // if ($pfp->nome && $pfp->nome !== 'pfppadrao.png' && file_exists($path . $pfp->nome)) {
+                //    unlink($path . $pfp->nome);
+                // }
 
                 $pfp->nome = $filename;
+                
+                $pfp->nome = $filename;
+                
                 if (!$pfp->save()) {
-                    $logMsg .= "Erro: Falha ao guardar na BD. Erros: " . json_encode($pfp->errors) . "\n";
-                    file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
                     $this->addError('profileImage', 'Erro ao guardar a imagem na base de dados.');
                     return false;
                 }
-                $logMsg .= "Sucesso: Guardado na BD\n";
             } else {
-                $logMsg .= "Erro: saveAs retornou false. Erro PHP: " . error_get_last()['message'] . "\n";
-                file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
                 $this->addError('profileImage', 'Erro ao guardar o ficheiro na pasta de uploads. Verifique as permissões.');
                 return false;
             }
-            file_put_contents(Yii::getAlias('@frontend/web/debug_pfp.log'), $logMsg, FILE_APPEND);
         }
 
         return $this->user->save(false);

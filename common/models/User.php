@@ -144,6 +144,28 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasMany(Colecao::class, ['user_id' => 'id']);
     }
 
+    /**
+     * Get user profile image
+     */
+    public function getPfpimage()
+    {
+        return $this->hasOne(Pfpimage::class, ['user_id' => 'id']);
+    }
+
+    /**
+     * Get profile picture URL (returns default if not set)
+     */
+    public function getProfilePictureUrl()
+    {
+        $filename = 'pfppadrao.png';
+        if ($this->pfpimage && !empty($this->pfpimage->nome)) {
+            $filename = $this->pfpimage->nome;
+        }
+        // Assuming uploads are in the frontend web folder, accessible via a shared alias or relative path
+        // For backend, we might need to point to the frontend uploads URL
+        return Yii::getAlias('@web/../../frontend/web/uploads/pfp/' . $filename);
+    }
+
 
     /**
      * {@inheritdoc}

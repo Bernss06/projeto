@@ -316,9 +316,12 @@ class SiteController extends Controller
         $user = Yii::$app->user->identity;
         $model = new UserSettingsForm($user);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', 'Configurações atualizadas com sucesso.');
-            return $this->redirect(['dashboard']);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->profileImage = \yii\web\UploadedFile::getInstance($model, 'profileImage');
+            if ($model->save()) {
+                Yii::$app->session->setFlash('success', 'Configurações atualizadas com sucesso.');
+                return $this->redirect(['dashboard']);
+            }
         }
 
         return $this->render('settings', [

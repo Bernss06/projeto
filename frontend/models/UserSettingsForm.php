@@ -14,6 +14,8 @@ class UserSettingsForm extends Model
     public $password_repeat;
     public $theme;
 
+    public $profileImage;
+
     private User $user;
 
     public function __construct(User $user, $config = [])
@@ -39,6 +41,7 @@ class UserSettingsForm extends Model
             ['username', 'unique', 'targetClass' => User::class, 'filter' => ['<>', 'id', $this->user->id], 'message' => 'Este nome já está em uso.'],
             [['password', 'password_repeat'], 'string', 'min' => 6],
             ['password_repeat', 'compare', 'compareAttribute' => 'password', 'skipOnEmpty' => true],
+            [['profileImage'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
         ];
     }
 
@@ -67,6 +70,32 @@ class UserSettingsForm extends Model
 
         if ($this->password) {
             $this->user->setPassword($this->password);
+        }
+
+        // Handle Profile Image Upload
+        if ($this->profileImage) {
+            $path = Yii::getAlias('@frontend/web/uploads/pfp/');
+            if (!file_exists($path)) {
+                mkdir($path, 0777, true);
+            }
+
+            $filename = uniqid() . '.' . $this->profileImage->extension;
+            if ($this->profileImage->saveAs($path . $filename)) {
+                // Update or create Pfpimage record
+                $pfp = $this->user->pfpimage;
+                if (!$pfp) {
+                    $pfp = new \common\models\Pfpimage();
+                    $pfp->user_id = $this->user->id;
+                }
+                
+                // Delete old image if it's not the default one
+                if ($pfp->nome && $pfp->nome !== 'pfppadrao.png' && file_exists($path . $pfp->nome)) {
+                    unlink($path . $pfp->nome);
+                }
+
+                $pfp->nome = $filename;
+                $pfp->save();
+            }
         }
 
         return $this->user->save(false);

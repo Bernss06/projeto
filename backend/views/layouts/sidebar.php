@@ -8,17 +8,23 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel -->
+        <?php if (!Yii::$app->user->isGuest): ?>
         <div class="user-panel mt-4 pb-3 mb-4 d-flex align-items-center">
             <div class="image">
                 <div class="user-avatar">
-                    <?= strtoupper(substr(Yii::$app->user->identity->username, 0, 1)) ?>
+                    <?php 
+                    /** @var \common\models\User $identity */
+                    $identity = Yii::$app->user->identity;
+                    ?>
+                    <img src="<?= $identity->getProfilePictureUrl() ?>" class="img-circle elevation-2" alt="User Image" style="width: 45px; height: 45px; object-fit: cover;">
                 </div>
             </div>
             <div class="info">
-                <a href="#" class="d-block font-weight-semibold"><?= Yii::$app->user->identity->username ?></a>
+                <a href="#" class="d-block font-weight-semibold"><?= $identity->username ?></a>
                 <small class="text-muted">Administrator</small>
             </div>
         </div>
+        <?php endif; ?>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">

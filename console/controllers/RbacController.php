@@ -13,18 +13,7 @@ class RbacController extends Controller
         $auth = Yii::$app->authManager;
         $auth->removeAll();
         
-        // =================================//
-        // CRIAR RULES (Regras dinâmicas)   //
-        // =================================//
-        
-        // Rule: Verificar se o utilizador é dono da coleção
-        $ruleColecaoOwner = new \common\rbac\ColecaoOwnerRule();
-        $auth->add($ruleColecaoOwner);
-        
-        // Rule: Verificar se o utilizador é dono do item (através da coleção)
-        $ruleItemOwner = new \common\rbac\ItemOwnerRule();
-        $auth->add($ruleItemOwner);
-        
+
         // ===============================//
         // CRIAR PERMISSÕES DO FRONTEND   //
         // ===============================//
@@ -36,17 +25,17 @@ class RbacController extends Controller
         
         $updateOwnColecao = $auth->createPermission('updateOwnColecao');
         $updateOwnColecao->description = 'Atualizar própria coleção';
-        $updateOwnColecao->ruleName = $ruleColecaoOwner->name;
+
         $auth->add($updateOwnColecao);
         
         $deleteOwnColecao = $auth->createPermission('deleteOwnColecao');
         $deleteOwnColecao->description = 'Eliminar própria coleção';
-        $deleteOwnColecao->ruleName = $ruleColecaoOwner->name;
+
         $auth->add($deleteOwnColecao);
         
         $viewOwnColecao = $auth->createPermission('viewOwnColecao');
         $viewOwnColecao->description = 'Ver própria coleção (privada)';
-        $viewOwnColecao->ruleName = $ruleColecaoOwner->name;
+
         $auth->add($viewOwnColecao);
         
         $viewPublicColecao = $auth->createPermission('viewPublicColecao');
@@ -64,17 +53,17 @@ class RbacController extends Controller
         
         $updateOwnItem = $auth->createPermission('updateOwnItem');
         $updateOwnItem->description = 'Atualizar próprio item';
-        $updateOwnItem->ruleName = $ruleItemOwner->name;
+
         $auth->add($updateOwnItem);
         
         $deleteOwnItem = $auth->createPermission('deleteOwnItem');
         $deleteOwnItem->description = 'Eliminar próprio item';
-        $deleteOwnItem->ruleName = $ruleItemOwner->name;
+
         $auth->add($deleteOwnItem);
         
         $viewOwnItem = $auth->createPermission('viewOwnItem');
         $viewOwnItem->description = 'Ver próprio item';
-        $viewOwnItem->ruleName = $ruleItemOwner->name;
+
         $auth->add($viewOwnItem);
         
         // ===============================//

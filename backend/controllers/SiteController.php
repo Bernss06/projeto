@@ -78,7 +78,7 @@ class SiteController extends Controller
         
         // 2. Dados para o gráfico: Um gráfico por utilizador (Top 4 utilizadores mais recentes)
         $users = \common\models\User::find()
-            ->limit(4)
+            ->limit(10)
             ->orderBy(['created_at' => SORT_DESC])
             ->all();
 

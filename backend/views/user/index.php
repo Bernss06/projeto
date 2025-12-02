@@ -28,6 +28,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'username',
+            [
+                'label' => 'Profile Picture',
+                'format' => 'html',
+                'value' => function($model) {
+                    /** @var \common\models\User $model */
+                    return Html::img($model->getProfilePictureUrl(), ['width' => '80', 'height' => '80', 'class' => 'img-circle', 'style' => 'object-fit: cover;']);
+                },
+            ],
             'email:email',
             [
                 'attribute' => 'status',
@@ -54,6 +62,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'php:Y-m-d H:i:s'],
                 'value' => function($model) {
                     return date('Y-m-d H:i:s', $model->created_at);
+                },
+                'filter' => false, // Disable filter for this column
+            ],
+            [
+                'attribute' => 'updated_at',
+                'format' => ['date', 'php:Y-m-d H:i:s'],
+                'value' => function($model) {
+                    return date('Y-m-d H:i:s', $model->updated_at);
                 },
                 'filter' => false, // Disable filter for this column
             ],

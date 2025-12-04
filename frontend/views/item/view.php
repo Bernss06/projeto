@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 
 $this->title = $model->nome;
 $colecao = $model->colecao;
-$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['colecao/mine']];
+$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['site/dashboard']];
 $this->params['breadcrumbs'][] = ['label' => $colecao->nome, 'url' => ['colecao/view', 'id' => $colecao->id]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

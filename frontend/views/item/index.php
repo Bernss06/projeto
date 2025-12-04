@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Itens da Coleção';
-$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['colecao/mine']];
+$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['site/dashboard']];
 $this->params['breadcrumbs'][] = ['label' => $colecao->nome, 'url' => ['colecao/view', 'id' => $colecao->id]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

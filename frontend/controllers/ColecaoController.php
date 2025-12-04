@@ -57,18 +57,10 @@ class ColecaoController extends Controller
         ]);
     }
 
-    public function actionMine(): string
+    public function actionMine(): Response
     {
-        $query = Colecao::find()->andWhere(['user_id' => Yii::$app->user->id]);
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => ['pageSize' => 12],
-            'sort' => ['defaultOrder' => ['updated_at' => SORT_DESC]],
-        ]);
-
-        return $this->render('mine', [
-            'dataProvider' => $dataProvider,
-        ]);
+        // As coleções são exibidas no dashboard
+        return $this->redirect(['site/dashboard']);
     }
 
     public function actionView(int $id): string
@@ -122,7 +114,7 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
         $model->delete();
-        return $this->redirect(['mine']);
+        return $this->redirect(['site/dashboard']);
     }
 
     public function actionFavorite(int $id): Response

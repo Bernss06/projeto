@@ -91,6 +91,25 @@ class Colecao extends ActiveRecord
         return true;
     }
 
+    /**
+     * Delete all related items and favoritos before deleting the collection
+     * to prevent foreign key constraint violations.
+     */
+    public function beforeDelete()
+    {
+        if (!parent::beforeDelete()) {
+            return false;
+        }
+
+        // Delete all items in this collection
+        Item::deleteAll(['colecao_id' => $this->id]);
+
+        // Delete all favoritos for this collection
+        ColecaoFavorito::deleteAll(['colecao_id' => $this->id]);
+
+        return true;
+    }
+
     public function isPublic(): bool
     {
         return (int)$this->status === 1;

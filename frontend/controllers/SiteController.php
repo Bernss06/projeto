@@ -94,6 +94,7 @@ class SiteController extends Controller
         $favoriteIds = [];
         if (!Yii::$app->user->isGuest) {
             $favoriteIds = \common\models\ColecaoFavorito::find()
+                ->where(['user_id' => Yii::$app->user->id])
                 ->select('colecao_id')
                 ->column();
         }

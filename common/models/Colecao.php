@@ -125,11 +125,17 @@ class Colecao extends ActiveRecord
         return $this->hasMany(ColecaoFavorito::class, ['colecao_id' => 'id']);
     }
 
+    /**
+     * Verifica se a coleção foi favoritada por um utilizador específico
+     * 
+     * @param int $userId ID do utilizador
+     * @return bool
+     */
     public function isFavoritedByUser(int $userId): bool
     {
-        // A tabela favorito não tem user_id, então verificamos apenas se existe na tabela
-        // Nota: Isto significa que todos os utilizadores veem os mesmos favoritos
-        return $this->getFavoritos()->exists();
+        return ColecaoFavorito::find()
+            ->where(['colecao_id' => $this->id, 'user_id' => $userId])
+            ->exists();
     }
 
     public function getFavoritosCount(): int

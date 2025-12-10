@@ -18,13 +18,46 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Back to List', ['index'], ['class' => 'btn btn-outline-primary']) ?>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this user?',
-                'method' => 'post',
-            ],
-        ]) ?>
+        
+        <?php if ($model->status == \common\models\User::STATUS_ACTIVE): ?>
+            <?= Html::a('Deactivate', ['deactivate', 'id' => $model->id], [
+                'class' => 'btn btn-warning',
+                'data' => [
+                    'confirm' => 'Are you sure you want to deactivate this user?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+            <?= Html::a('Soft Delete', ['delete', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => 'Are you sure you want to soft delete this user? The user will not be able to login.',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php elseif ($model->status == \common\models\User::STATUS_INACTIVE): ?>
+            <?= Html::a('Activate', ['activate', 'id' => $model->id], [
+                'class' => 'btn btn-success',
+                'data' => [
+                    'confirm' => 'Are you sure you want to activate this user?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+            <?= Html::a('Soft Delete', ['delete', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => 'Are you sure you want to soft delete this user? The user will not be able to login.',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php elseif ($model->status == \common\models\User::STATUS_DELETED): ?>
+            <?= Html::a('Activate', ['activate', 'id' => $model->id], [
+                'class' => 'btn btn-success',
+                'data' => [
+                    'confirm' => 'Are you sure you want to reactivate this user?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php endif; ?>
     </p>
 
     <?= DetailView::widget([

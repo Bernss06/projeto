@@ -34,6 +34,8 @@ class UserController extends Controller
                     'class' => VerbFilter::className(),
                     'actions' => [
                         'delete' => ['POST'],
+                        'activate' => ['POST'],
+                        'deactivate' => ['POST'],
                     ],
                 ],
             ]
@@ -95,7 +97,7 @@ class UserController extends Controller
     }
 
     /**
-     * Deletes an existing User model.
+     * Soft deletes an existing User model by setting status to DELETED.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id
      * @return \yii\web\Response
@@ -103,9 +105,56 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->status = User::STATUS_DELETED;
+        
+        if ($model->save(false)) {
+            \Yii::$app->session->setFlash('success', 'User has been soft deleted successfully.');
+        } else {
+            \Yii::$app->session->setFlash('error', 'Failed to delete user.');
+        }
 
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Activates a user by setting status to ACTIVE.
+     * @param int $id
+     * @return \yii\web\Response
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionActivate($id)
+    {
+        $model = $this->findModel($id);
+        $model->status = User::STATUS_ACTIVE;
+        
+        if ($model->save(false)) {
+            \Yii::$app->session->setFlash('success', 'User has been activated successfully.');
+        } else {
+            \Yii::$app->session->setFlash('error', 'Failed to activate user.');
+        }
+
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+
+    /**
+     * Deactivates a user by setting status to INACTIVE.
+     * @param int $id
+     * @return \yii\web\Response
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionDeactivate($id)
+    {
+        $model = $this->findModel($id);
+        $model->status = User::STATUS_INACTIVE;
+        
+        if ($model->save(false)) {
+            \Yii::$app->session->setFlash('success', 'User has been deactivated successfully.');
+        } else {
+            \Yii::$app->session->setFlash('error', 'Failed to deactivate user.');
+        }
+
+        return $this->redirect(['view', 'id' => $model->id]);
     }
 
     /**

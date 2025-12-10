@@ -39,17 +39,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'email:email',
             [
                 'attribute' => 'status',
+                'format' => 'raw',
                 'value' => function($model) {
-                    switch($model->status) {
-                        case User::STATUS_ACTIVE:
-                            return 'Active';
-                        case User::STATUS_INACTIVE:
-                            return 'Inactive';
-                        case User::STATUS_DELETED:
-                            return 'Deleted';
-                        default:
-                            return 'Unknown';
-                    }
+                    /** @var \common\models\User $model */
+                    return $model->getStatusBadge();
                 },
                 'filter' => [
                     User::STATUS_ACTIVE => 'Active',

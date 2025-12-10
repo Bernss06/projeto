@@ -174,6 +174,42 @@ class User extends ActiveRecord implements IdentityInterface
         return Yii::getAlias('@web/../../frontend/web/uploads/pfp/' . $filename);
     }
 
+    /**
+     * Get human-readable status label
+     * @return string
+     */
+    public function getStatusLabel()
+    {
+        switch($this->status) {
+            case self::STATUS_ACTIVE:
+                return 'Active';
+            case self::STATUS_INACTIVE:
+                return 'Inactive';
+            case self::STATUS_DELETED:
+                return 'Deleted';
+            default:
+                return 'Unknown';
+        }
+    }
+
+    /**
+     * Get Bootstrap badge HTML for status
+     * @return string
+     */
+    public function getStatusBadge()
+    {
+        switch($this->status) {
+            case self::STATUS_ACTIVE:
+                return '<span class="badge bg-success">Active</span>';
+            case self::STATUS_INACTIVE:
+                return '<span class="badge bg-warning">Inactive</span>';
+            case self::STATUS_DELETED:
+                return '<span class="badge bg-danger">Deleted</span>';
+            default:
+                return '<span class="badge bg-secondary">Unknown</span>';
+        }
+    }
+
 
     /**
      * {@inheritdoc}

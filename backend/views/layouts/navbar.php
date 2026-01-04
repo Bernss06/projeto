@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 
+/** @var \common\models\User $identity */
+$identity = Yii::$app->user->identity;
 ?>
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -18,8 +20,8 @@ use yii\helpers\Html;
     <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item mr-2">
             <span class="user-badge">
-                <i class="far fa-user-circle mr-1"></i>
-                <?= Yii::$app->user->identity->username ?>
+                <img src="<?= $identity->getProfilePictureUrl() ?>" class="img-circle elevation-1 mr-1" alt="User Image" style="width: 25px; height: 25px; object-fit: cover;">
+                <?= $identity->username ?>
             </span>
         </li>
         <li class="nav-item">

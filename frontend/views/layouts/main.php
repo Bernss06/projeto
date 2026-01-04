@@ -102,7 +102,18 @@ if (Yii::$app->user->isGuest) {
         ],
         'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
-    
+
+    // "Histórico de Trocas"
+    $menuItems[] = [
+        'label' => 'Histórico de Trocas',
+        'url' => ['site/historicotrocas'],
+        'linkOptions' => [
+            'class' => 'btn btn-outline-light'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2']
+    ];
+
+
     // "Configurações" - Estilo "igual ao sair"
     $menuItems[] = [
         'label' => 'Configurações', // Ícone removido

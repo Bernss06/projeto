@@ -17,7 +17,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\UserSettingsForm;
 use common\models\Colecao;
-
+use common\models\Troca;
 /**
  * Site controller
  */
@@ -305,6 +305,28 @@ class SiteController extends Controller
             'collections' => $collections,
         ]);
     }
+
+    public function actionHistoricotrocas()
+    {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
+
+        $trocas = Troca::find()
+            ->where([
+                'or',
+                ['user_origem_id' => Yii::$app->user->id],
+                ['user_destino_id' => Yii::$app->user->id],
+            ])
+            ->orderBy(['data_troca' => SORT_DESC])
+            ->all();
+
+
+        return $this->render('historicotrocas', [
+            'trocas' => $trocas,
+        ]);
+    }
+
 
     public function actionSettings()
     {

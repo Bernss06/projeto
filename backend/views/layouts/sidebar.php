@@ -34,6 +34,7 @@
                     ['label' => 'ADMINISTRAÇÃO', 'header' => true],
                     ['label' => 'Gestão de Utilizadores', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => !Yii::$app->user->isGuest],
                     ['label' => 'Gestão de Coleções', 'icon' => 'layer-group', 'url' => ['/colecao/index'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Gestão de Itens', 'icon' => 'cubes', 'url' => ['/item/index'], 'visible' => !Yii::$app->user->isGuest],
                 ],
             ]);
             ?>

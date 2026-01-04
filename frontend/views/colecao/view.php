@@ -89,13 +89,51 @@ $this->title = $model->nome;
                                     <?php if ($item->nota): ?>
                                         <p class="card-text text-muted small fst-italic">“<?= Html::encode($item->nota) ?>”</p>
                                     <?php endif; ?>
+
+                                    <div class="d-flex justify-content-end align-items-center gap-2 mt-2">
+                                        <div class="small text-light fw-bold"><?= $item->getLikesCount() ?> likes</div>
+                                        <?php 
+                                        $isLiked = !Yii::$app->user->isGuest && $item->isLikedBy(Yii::$app->user->id);
+                                        ?>
+                                        <?php if (!Yii::$app->user->isGuest): ?>
+                                             <?php if ($isLiked): ?>
+                                                  <?= Html::a(
+                                                      '<svg width="24" height="24" viewBox="0 0 24 24" fill="#ed4956" stroke="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>',
+                                                      ['item/unlike', 'id' => $item->id],
+                                                      [
+                                                          'class' => 'btn btn-link p-0 text-decoration-none',
+                                                          'data' => ['method' => 'post'],
+                                                          'title' => 'Remover gosto'
+                                                      ]
+                                                  ) ?>
+                                             <?php else: ?>
+                                                  <?= Html::a(
+                                                      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>',
+                                                      ['item/like', 'id' => $item->id],
+                                                      [
+                                                          'class' => 'btn btn-link p-0 text-decoration-none',
+                                                          'data' => ['method' => 'post'],
+                                                          'title' => 'Gostar'
+                                                      ]
+                                                  ) ?>
+                                             <?php endif; ?>
+                                        <?php else: ?>
+                                             <button class="btn btn-link p-0 text-decoration-none" disabled title="Faça login para gostar">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
+                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                                </svg>
+                                             </button>
+                                        <?php endif; ?>
+                                    </div>
+                                    
+
                                 </div>
                                 <div class="card-footer border-0 bg-transparent d-flex gap-2 flex-wrap">
-                                    <?= Html::a('Ver', ['item/view', 'id' => $item->id], ['class' => 'btn btn-sm btn-outline-light flex-grow-1']) ?>
+                                    <?= Html::a('Ver', ['item/view', 'id' => $item->id], ['class' => 'btn btn-sm btn-outline-light flex-grow-1 d-flex justify-content-center align-items-center']) ?>
                                     <?php if ($model->canEdit()): ?>
-                                        <?= Html::a('Editar', ['item/update', 'id' => $item->id], ['class' => 'btn btn-sm btn-gradient flex-grow-1']) ?>
+                                        <?= Html::a('Editar', ['item/update', 'id' => $item->id], ['class' => 'btn btn-sm btn-gradient flex-grow-1 d-flex justify-content-center align-items-center']) ?>
                                         <?= Html::a('Apagar', ['item/delete', 'id' => $item->id], [
-                                            'class' => 'btn btn-sm btn-outline-danger',
+                                            'class' => 'btn btn-sm btn-outline-danger flex-grow-1 d-flex justify-content-center align-items-center',
                                             'data' => [
                                                 'confirm' => 'Tem a certeza que quer apagar este item?',
                                                 'method' => 'post',

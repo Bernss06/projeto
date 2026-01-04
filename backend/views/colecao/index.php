@@ -29,7 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nome',
             'descricao',
-            'user_id',
+            [
+                'attribute' => 'user_id',
+                'label' => 'Utilizador',
+                'value' => 'user.username',
+            ],
             [
                 'attribute' => 'status',
                 'value' => function ($model) {

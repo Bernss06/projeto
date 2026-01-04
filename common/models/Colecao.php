@@ -115,6 +115,14 @@ class Colecao extends ActiveRecord
         return (int)$this->status === 1;
     }
 
+    /**
+     * Get the user that owns the collection.
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::class, ['id' => 'user_id']);
+    }
+
     public function getItens()
     {
         return $this->hasMany(Item::class, ['colecao_id' => 'id'])->orderBy(['dtaquisicao' => SORT_DESC, 'id' => SORT_DESC]);

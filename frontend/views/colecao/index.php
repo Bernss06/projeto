@@ -42,10 +42,18 @@ $favoriteSet = array_flip($favoriteIds);
                             $formAction = $isFavorited ? ['colecao/unfavorite', 'id' => $collection->id] : ['colecao/favorite', 'id' => $collection->id];
                             ?>
                             <?= Html::beginForm($formAction, 'post', ['class' => 'favorite-form', 'data-collection-id' => $collection->id]) ?>
-                                <button type="submit" class="favorite-heart <?= $isFavorited ? 'favorited' : '' ?>" aria-label="<?= $isFavorited ? 'Remover dos favoritos' : 'Adicionar aos favoritos' ?>">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="<?= $isFavorited ? '#ff0000' : 'none' ?>" stroke="<?= $isFavorited ? '#ff0000' : '#ffffff' ?>" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                    </svg>
+                                <button type="submit" class="btn btn-link p-0 text-decoration-none" aria-label="<?= $isFavorited ? 'Remover dos favoritos' : 'Adicionar aos favoritos' ?>">
+                                    <?php if ($isFavorited): ?>
+                                        <!-- Solid Yellow Star -->
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <?php else: ?>
+                                        <!-- Outline White Star -->
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <?php endif; ?>
                                 </button>
                             <?= Html::endForm() ?>
                         <?php endif; ?>

@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use common\models\Colecao;
-use app\common\models\ColecaoSearch;
+use common\models\ColecaoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

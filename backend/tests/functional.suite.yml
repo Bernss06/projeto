@@ -3,6 +3,8 @@ actor: FunctionalTester
 modules:
   enabled:
     - Yii2:
-        part: [orm, fixtures] # Garante que estas partes estão ativas
         entryScript: index-test.php
-    - Db
+    - backend\tests\Helper\Functional
+    - REST:
+        depends: Yii2
+        part: [Json]

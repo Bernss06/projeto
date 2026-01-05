@@ -6,7 +6,7 @@ use yii\rest\ActiveController;
 
 class AgendaController extends ActiveController
 {
-    public $modelClass = 'common\models\Agenda';
+    public $modelClass = 'common\models\Troca';
 
     public function actionTrocasporuser($userid){
         $model = $this->modelClass;

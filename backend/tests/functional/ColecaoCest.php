@@ -9,8 +9,10 @@ class ColecaoCest
 {
     public function _before(FunctionalTester $I)
     {
+        // cleanup handled by Yii2 module transaction rollback
+        
         // Precisamos estar logados para mexer nas coleções (Backend)
-        $id = $I->haveInDatabase('user', [
+        $I->haveRecord(User::class, [
             'username' => 'admin_cols',
             'email' => 'cols@teste.com',
             'password_hash' => \Yii::$app->security->generatePasswordHash('admin123'),
@@ -19,45 +21,39 @@ class ColecaoCest
             'updated_at' => time(),
         ]);
         
-        $I->amLoggedInAs($id);
+        $user = User::findByUsername('admin_cols');
+        $auth = \Yii::$app->authManager;
+        $auth->assign($auth->getPermission('accessBackend'), $user->id);
+        $auth->assign($auth->getPermission('manageAllColecoes'), $user->id);
+        $auth->assign($auth->getRole('admin'), $user->id);
+        
+        $I->amLoggedInAs($user->id);
     }
 
-    // TESTE 3: Criar uma Nova Coleção
-    public function criarColecao(FunctionalTester $I)
+    // TESTE 3: Criar e Listar uma Nova Coleção
+    public function criarEListarColecao(FunctionalTester $I)
     {
-        $I->amOnPage('/colecao/create');
-        $I->see('Create Colecao'); // Título padrão do Gii
+        // 1. Criar
+        $I->amOnPage('?r=colecao/create');
+        $I->see('Create Colecao');
         
-        $I->fillField('Nome', 'Minha Coleção Rara');
-        $I->fillField('Descrição', 'Coleção de teste automatizado');
-        // Se houver checkbox de pública:
-        // $I->checkOption('#colecao-is_public'); 
+        $I->fillField('Colecao[nome]', 'Minha Coleção Rara');
+        $I->fillField('Colecao[descricao]', 'Coleção de teste automatizado');
+        $I->click('Save'); 
         
-        $I->click('Save'); // Botão padrão
-        
-        $I->see('Minha Coleção Rara'); // Deve aparecer na página de view
+        $I->see('Minha Coleção Rara'); // View page
+
+        // 2. Listar
+        $I->amOnPage('?r=colecao/index');
+        $I->see('Minha Coleção Rara');
     }
 
     // TESTE 4: Validar Campos Obrigatórios (Coleção)
     public function tentarCriarColecaoVazia(FunctionalTester $I)
     {
-        $I->amOnPage('/colecao/create');
-        $I->click('Save'); // Tenta salvar vazio
+        $I->amOnPage('?r=colecao/create');
+        $I->click('Save'); 
         
-        $I->see('Nome cannot be blank'); // Mensagem de erro padrão
-    }
-
-    // TESTE 5: Listar Coleções
-    public function verListaDeColecoes(FunctionalTester $I)
-    {
-        // Cria uma coleção via BD para garantir que há algo para ver
-        $I->haveInDatabase('colecao', [
-            'nome' => 'Coleção Existente',
-            'user_id' => $I->grabFromDatabase('user', 'id', ['username' => 'admin_cols']),
-            'status' => 1
-        ]);
-
-        $I->amOnPage('/colecao/index');
-        $I->see('Coleção Existente');
+        $I->see('Nome cannot be blank'); 
     }
 }

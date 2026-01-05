@@ -24,16 +24,25 @@ class TrocaController extends Controller
             throw new NotFoundHttpException('Item não encontrado.');
         }
 
+        // Impedir pedir troca do próprio item
+        if ($item->colecao->user_id == Yii::$app->user->id) {
+            Yii::$app->session->setFlash('error', 'Não pode pedir troca do seu próprio item.');
+            return $this->redirect(['colecao/view', 'id' => $item->colecao_id]);
+        }
+
         $troca = new Troca();
-        $troca->user_origem_id = Yii::$app->user->id;
-        $troca->user_destino_id = $item->colecao->user_id;
-        $troca->item_recebido_id = $item->id;
-        $troca->status = 'pendente';
-        $troca->data_troca = date('Y-m-d H:i:s');
+        $troca->user_id = Yii::$app->user->id; // Quem pede
+        $troca->item_id = $item->id; // Item pedido
+        $troca->estado = Troca::STATUS_PENDENTE;
+        $troca->created_at = date('Y-m-d H:i:s');
+        $troca->updated_at = date('Y-m-d H:i:s');
 
-        $troca->save(false);
+        if ($troca->save()) {
+            Yii::$app->session->setFlash('success', 'Pedido de troca enviado!');
+        } else {
+            Yii::$app->session->setFlash('error', 'Erro ao enviar pedido de troca.');
+        }
 
-        Yii::$app->session->setFlash('success', 'Pedido de troca enviado!');
         return $this->redirect(['site/historicotrocas']);
     }
 
@@ -48,16 +57,17 @@ class TrocaController extends Controller
             throw new NotFoundHttpException('Troca não encontrada.');
         }
 
-        // Apenas participantes podem ver
-        if (
-            $troca->user_origem_id !== Yii::$app->user->id &&
-            $troca->user_destino_id !== Yii::$app->user->id
-        ) {
-            throw new NotFoundHttpException();
+        // Determinar quem pode ver: Requester ou Owner
+        $isRequester = $troca->user_id === Yii::$app->user->id;
+        $isOwner = $troca->item->colecao->user_id === Yii::$app->user->id;
+
+        if (!$isRequester && !$isOwner) {
+            throw new NotFoundHttpException('Não tem permissão para ver esta troca.');
         }
 
         return $this->render('view', [
             'troca' => $troca,
+            'isOwner' => $isOwner,
         ]);
     }
 
@@ -67,16 +77,16 @@ class TrocaController extends Controller
     public function actionAceitar($id)
     {
         $troca = Troca::findOne($id);
+        if (!$troca) { throw new NotFoundHttpException(); }
 
-        if (
-            !$troca ||
-            $troca->user_destino_id !== Yii::$app->user->id ||
-            $troca->status !== 'pendente'
-        ) {
-            throw new NotFoundHttpException();
+        $isOwner = $troca->item->colecao->user_id === Yii::$app->user->id;
+
+        if (!$isOwner || $troca->estado != Troca::STATUS_PENDENTE) {
+            throw new NotFoundHttpException('Não permitido.');
         }
 
-        $troca->status = 'aceite';
+        $troca->estado = Troca::STATUS_ACEITE;
+        $troca->updated_at = date('Y-m-d H:i:s');
         $troca->save(false);
 
         return $this->redirect(['site/historicotrocas']);
@@ -88,16 +98,16 @@ class TrocaController extends Controller
     public function actionRecusar($id)
     {
         $troca = Troca::findOne($id);
+        if (!$troca) { throw new NotFoundHttpException(); }
 
-        if (
-            !$troca ||
-            $troca->user_destino_id !== Yii::$app->user->id ||
-            $troca->status !== 'pendente'
-        ) {
-            throw new NotFoundHttpException();
+        $isOwner = $troca->item->colecao->user_id === Yii::$app->user->id;
+
+        if (!$isOwner || $troca->estado != Troca::STATUS_PENDENTE) {
+            throw new NotFoundHttpException('Não permitido.');
         }
 
-        $troca->status = 'recusada';
+        $troca->estado = Troca::STATUS_RECUSADA;
+        $troca->updated_at = date('Y-m-d H:i:s');
         $troca->save(false);
 
         return $this->redirect(['site/historicotrocas']);

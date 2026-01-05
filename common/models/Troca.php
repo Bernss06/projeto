@@ -7,77 +7,64 @@ use yii\db\ActiveRecord;
 
 class Troca extends ActiveRecord
 {
+    const STATUS_PENDENTE = 0;
+    const STATUS_ACEITE = 1;
+    const STATUS_RECUSADA = 2;
+
     /**
      * Nome da tabela no banco de dados
      */
     public static function tableName()
     {
-        return 'troca';
+        return 'agenda';
     }
 
     /**
-     * Relação com o utilizador que iniciou a troca
+     * Regras de validação (importante para o save funcionar)
      */
-    public function getUtilizadorOrigem()
+    public function rules()
     {
-        return $this->hasOne(User::class, ['id' => 'user_origem_id']);
+        return [
+            [['estado', 'user_id', 'item_id'], 'required'],
+            [['estado', 'user_id', 'item_id'], 'integer'],
+            [['created_at', 'updated_at'], 'safe'],
+        ];
     }
 
     /**
-     * Relação com o utilizador que recebeu o pedido de troca
+     * Utilizador que fez o pedido (Requester)
      */
-    public function getUtilizadorDestino()
+    public function getUser()
     {
-        return $this->hasOne(User::class, ['id' => 'user_destino_id']);
+        return $this->hasOne(User::class, ['id' => 'user_id']);
     }
 
     /**
-     * Relação com o item enviado pelo utilizador de origem
+     * Item que está a ser pedido
      */
-    public function getItemEnviado()
+    public function getItem()
     {
-        return $this->hasOne(Item::class, ['id' => 'item_enviado_id']);
+        return $this->hasOne(Item::class, ['id' => 'item_id']);
     }
 
     /**
-     * Relação com o item que será recebido pelo utilizador de origem
+     * Dono do item (Quem recebe o pedido)
      */
-    public function getItemRecebido()
+    public function getProprietarioItem()
     {
-        return $this->hasOne(Item::class, ['id' => 'item_recebido_id']);
+        return $this->hasOne(User::class, ['id' => 'user_id'])
+            ->via('item', function ($query) {
+                $query->joinWith('colecao');
+            });
+        // Simplificação: Acesso direto via item->colecao->user
     }
 
-    /**
-     * Retorna o utilizador parceiro (o outro user na troca)
-     * @return User|null
-     */
-    public function getUtilizadorParceiro()
+    public function getStatusLabel()
     {
-        if ($this->user_origem_id == Yii::$app->user->id) {
-            return $this->utilizadorDestino;
+        switch ($this->estado) {
+            case self::STATUS_ACEITE: return 'aceite';
+            case self::STATUS_RECUSADA: return 'recusada';
+            default: return 'pendente';
         }
-        return $this->utilizadorOrigem;
-    }
-
-    /**
-     * Retorna o username do parceiro, ou null se não existir
-     * @return string|null
-     */
-    public function getParceiroUsername()
-    {
-        return $this->utilizadorParceiro ? $this->utilizadorParceiro->username : null;
-    }
-
-    /**
-     * Retorna o username do utilizador que recusou a troca
-     * @return string|null
-     */
-    public function getRecusouUsername()
-    {
-        if ($this->status === 'recusada') {
-            // Quem recusou é sempre o destinatário
-            return $this->utilizadorDestino ? $this->utilizadorDestino->username : null;
-        }
-        return null;
     }
 }

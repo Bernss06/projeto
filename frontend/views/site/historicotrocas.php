@@ -45,6 +45,12 @@ $this->title = 'Histórico de Trocas';
             <div class="d-flex flex-column gap-4">
 
                 <?php foreach ($trocas as $troca): ?>
+                    <?php 
+                        $isRequester = $troca->user_id === Yii::$app->user->id;
+                        // $isOwner = !$isRequester; 
+                        $otherUser = $isRequester ? $troca->proprietarioItem : $troca->user;
+                        $item = $troca->item;
+                    ?>
                     <div class="card bg-dark border-secondary rounded-4 shadow-sm hover-shadow px-3 py-4"
                          style="border-color: rgba(142,45,226,0.25) !important;">
 
@@ -53,44 +59,45 @@ $this->title = 'Histórico de Trocas';
                             <div>
                                 <span class="badge bg-gradient text-uppercase mb-2 px-3 py-2 rounded-pill"
                                       style="background: linear-gradient(135deg, #8e2de2, #4a00e0); font-size: 0.75rem;">
-                                    Troca Nº <?= $troca->id ?>
+                                    Pedido Nº <?= $troca->id ?>
                                 </span>
 
                                 <h5 class="fw-bold text-light mb-1">
-                                    <?= Html::encode($troca->itemEnviado->nome ?? '—') ?>
-                                    <i class="bi bi-arrow-left-right mx-2 text-gradient2"></i>
-                                    <?= Html::encode($troca->itemRecebido->nome ?? '—') ?>
+                                    <?php if ($isRequester): ?>
+                                        Pediu <span class="text-gradient2"><?= Html::encode($item->nome ?? '—') ?></span>
+                                    <?php else: ?>
+                                        Pedido de <span class="text-gradient2"><?= Html::encode($item->nome ?? '—') ?></span>
+                                    <?php endif; ?>
                                 </h5>
 
                                 <p class="text-secondary mb-1">
                                     <i class="bi bi-calendar3 me-2"></i>
-                                    <?= Yii::$app->formatter->asDate($troca->data_troca) ?>
+                                    <?= Yii::$app->formatter->asDate($troca->created_at) ?>
                                 </p>
 
-                                <?php if ($troca->utilizadorParceiro): ?>
+                                <?php if ($otherUser): ?>
                                     <p class="text-secondary mb-1">
                                         <i class="bi bi-person-gear me-2"></i>
-                                        <?php if ($troca->status === 'pendente'): ?>
-                                            Pedido enviado a:
+                                        <?php if ($isRequester): ?>
+                                            A: <span class="text-light fw-semibold"><?= Html::encode($otherUser->username) ?></span>
                                         <?php else: ?>
-                                            Com quem trocou:
+                                            De: <span class="text-light fw-semibold"><?= Html::encode($otherUser->username) ?></span>
                                         <?php endif; ?>
-                                        <span class="text-light fw-semibold">
-                                            <?= Html::encode($troca->utilizadorParceiro->username) ?>
-                                        </span>
                                     </p>
                                 <?php endif; ?>
                             </div>
 
                             <div class="d-flex flex-column text-end">
 
-                                <?php if (!empty($troca->status)): ?>
-                                    <span class="badge
-                                        <?= $troca->status === 'concluída' ? 'bg-success' : ($troca->status === 'recusada' ? 'bg-danger' : 'bg-warning') ?>
-                                        px-3 py-2 rounded-pill mb-2 text-uppercase fw-semibold">
-                                        <?= Html::encode($troca->status) ?>
-                                    </span>
-                                <?php endif; ?>
+                                <?php 
+                                    $statusLabel = $troca->getStatusLabel();
+                                    $badgeClass = 'bg-warning';
+                                    if ($troca->estado == \common\models\Troca::STATUS_ACEITE) $badgeClass = 'bg-success';
+                                    if ($troca->estado == \common\models\Troca::STATUS_RECUSADA) $badgeClass = 'bg-danger';
+                                ?>
+                                <span class="badge <?= $badgeClass ?> px-3 py-2 rounded-pill mb-2 text-uppercase fw-semibold">
+                                    <?= Html::encode($statusLabel) ?>
+                                </span>
 
                                 <a href="<?= Url::to(['troca/view', 'id' => $troca->id]) ?>"
                                    class="btn btn-sm btn-gradient text-uppercase fw-semibold mt-2"

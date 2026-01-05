@@ -314,12 +314,13 @@ class SiteController extends Controller
         }
 
         $trocas = Troca::find()
+            ->joinWith(['item.colecao']) // Necessary to check owner
             ->where([
                 'or',
-                ['user_origem_id' => Yii::$app->user->id],
-                ['user_destino_id' => Yii::$app->user->id],
+                ['agenda.user_id' => Yii::$app->user->id], // Requester
+                ['colecao.user_id' => Yii::$app->user->id], // Owner (Receiver)
             ])
-            ->orderBy(['data_troca' => SORT_DESC])
+            ->orderBy(['created_at' => SORT_DESC])
             ->all();
 
 

@@ -1,6 +1,9 @@
+# backend/tests/unit.suite.yml
 suite_namespace: backend\tests\unit
 actor: UnitTester
 modules:
   enabled:
-    - Yii2
     - Asserts
+    - Yii2:
+        part: [orm, fixtures] # <--- ESTA LINHA É OBRIGATÓRIA PARA O seeRecord
+        entryScript: index-test.php

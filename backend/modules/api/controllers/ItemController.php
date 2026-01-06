@@ -2,24 +2,23 @@
 
 namespace backend\modules\api\controllers;
 use Yii;
+use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 
 class ItemController extends ActiveController
 {
     public $modelClass = 'common\models\Item';
 
-    //public function actionDebug()
-    //{
-    //    try {
-    //        $data = Yii::$app->request->post();
-    //        return ['received' => $data];
-    //    } catch (\Throwable $e) {
-    //        return [
-    //            'error' => $e->getMessage(),
-    //            'file' => $e->getFile(),
-    //            'line' => $e->getLine()
-    //        ];
-    //    }
-    //}
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['authenticator'] = [
+            'class' => QueryParamAuth::class,
+            'tokenParam' => 'token',
+        ];
+
+        return $behaviors;
+    }
 
 }

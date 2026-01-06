@@ -2,11 +2,24 @@
 
 namespace backend\modules\api\controllers;
 use Yii;
+use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 
 class ColecaoController extends ActiveController
 {
     public $modelClass = 'common\models\Colecao';
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['authenticator'] = [
+            'class' => QueryParamAuth::class,
+            'tokenParam' => 'token',
+        ];
+
+        return $behaviors;
+    }
 
     // Pegar as Coleções de um utilizador pelo seu Id
     public function actionColecaoporuser($userid){

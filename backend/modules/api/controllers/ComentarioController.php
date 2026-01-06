@@ -2,11 +2,24 @@
 
 namespace backend\modules\api\controllers;
 
+use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 
 class ComentarioController extends ActiveController
 {
     public $modelClass = 'common\models\ComentarioUser';
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['authenticator'] = [
+            'class' => QueryParamAuth::class,
+            'tokenParam' => 'token',
+        ];
+
+        return $behaviors;
+    }
 
     //Pegar comentário pelo Id do item
     public function actionPoritem($itemid)

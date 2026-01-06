@@ -4,6 +4,7 @@ namespace common\models;
 
 use common\models\Item;
 use common\models\User;
+use app\mosquitto\phpMQTT;
 
 /**
  * This is the model class for table "agenda".
@@ -57,6 +58,50 @@ class Agenda extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $data = new \stdClass();
+        $data->id = $this->id;
+        $data->estado = $this->estado;
+        $data->user_id = $this->user_id;
+        $data->item_id = $this->item_id;
+
+        $json = json_encode($data);
+
+        if ($insert)
+            $this->publishMosquitto("INSERT", $json);
+        else
+            $this->publishMosquitto("UPDATE", $json);
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+
+        $data = new \stdClass();
+        $data->id = $this->id;
+
+        $json = json_encode($data);
+
+        $this->publishMosquitto("DELETE", $json);
+    }
+
+    public function publishMosquitto($topic, $msg)
+    {
+        $server = "127.0.0.1";
+        $port = 1883;
+        $client_id = "php-publisher";
+
+        $mqtt = new \app\mosquitto\phpMQTT($server, $port, $client_id);
+
+        if ($mqtt->connect()) {
+            $mqtt->publish($topic, $msg, 0);
+            $mqtt->close();
+        }
     }
 
     /**

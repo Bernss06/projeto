@@ -18,6 +18,14 @@ $this->params['breadcrumbs'][] = 'Update';
         <?= Html::a('Back to List', ['index'], ['class' => 'btn btn-outline-primary']) ?>
     </p>
 
+    <div class="text-center mb-4">
+        <?= Html::img($model->getProfilePictureUrl(), [
+            'class' => 'img-circle elevation-2', 
+            'style' => 'width: 120px; height: 120px; object-fit: cover;',
+            'alt' => 'User Image'
+        ]) ?>
+    </div>
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>

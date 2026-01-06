@@ -45,7 +45,7 @@ use yii\widgets\ActiveForm;
 
 <div class="d-flex flex-wrap gap-2 mt-4">
     <?= Html::submitButton($model->isNewRecord ? 'Criar' : 'Guardar', ['class' => 'btn btn-gradient px-4']) ?>
-    <?= Html::a('Cancelar', ['mine'], ['class' => 'btn btn-dark-alt px-4']) ?>
+    <?= Html::a('Cancelar', ['site/dashboard'], ['class' => 'btn btn-dark-alt px-4']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>

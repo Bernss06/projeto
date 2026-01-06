@@ -56,7 +56,24 @@ class SignupForm extends Model
         $user->generateAuthKey();
         $user->generateEmailVerificationToken();
 
-        return $user->save() && $this->sendEmail($user);
+        if ($user->save()) {
+            // Criar imagem de perfil padrão
+            $pfp = new \common\models\Pfpimage();
+            $pfp->user_id = $user->id;
+            $pfp->nome = 'pfppadrao.png';
+            $pfp->save();
+
+            // Atribuir role de colecionador por defeito
+            $auth = Yii::$app->authManager;
+            $colecionadorRole = $auth->getRole('colecionador');
+            if ($colecionadorRole) {
+                $auth->assign($colecionadorRole, $user->id);
+            }
+
+            return $this->sendEmail($user);
+        }
+
+        return null;
     }
 
     /**

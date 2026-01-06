@@ -2,8 +2,8 @@
 
 namespace common\models;
 
-use app\common\models\Item;
-use app\common\models\User;
+use common\models\Item;
+use common\models\User;
 
 /**
  * This is the model class for table "gosto".
@@ -30,10 +30,18 @@ class Gosto extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public static function primaryKey()
+    {
+        return ['id'];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
-            [['id', 'item_id', 'user_id'], 'required'],
+            [['item_id', 'user_id'], 'required'],
             [['id', 'item_id', 'user_id'], 'integer'],
             [['item_id'], 'exist', 'skipOnError' => true, 'targetClass' => Item::class, 'targetAttribute' => ['item_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],

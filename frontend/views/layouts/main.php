@@ -81,7 +81,7 @@ if (Yii::$app->user->isGuest) {
         'encode' => false,
     ];
 } else {
-    // --- INÍCIO DAS ALTERAÇÕES ---
+    
     
     // "Coleções Públicas" - Estilo "igual ao sair"
     $menuItems[] = [
@@ -102,7 +102,18 @@ if (Yii::$app->user->isGuest) {
         ],
         'options' => ['class' => 'nav-item ms-lg-2'] // Adiciona margem ao <li>
     ];
-    
+
+    // "Histórico de Trocas"
+    $menuItems[] = [
+        'label' => 'Histórico de Trocas',
+        'url' => ['site/historicotrocas'],
+        'linkOptions' => [
+            'class' => 'btn btn-outline-light'
+        ],
+        'options' => ['class' => 'nav-item ms-lg-2']
+    ];
+
+
     // "Configurações" - Estilo "igual ao sair"
     $menuItems[] = [
         'label' => 'Configurações', // Ícone removido
@@ -123,7 +134,7 @@ if (Yii::$app->user->isGuest) {
         . Html::endForm()
         . '</li>';
     
-    // --- FIM DAS ALTERAÇÕES ---
+    
 }
 
 echo Nav::widget([

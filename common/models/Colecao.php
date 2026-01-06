@@ -138,9 +138,36 @@ class Colecao extends ActiveRecord
         return true;
     }
 
+    /**
+     * Delete all related items and favoritos before deleting the collection
+     * to prevent foreign key constraint violations.
+     */
+    public function beforeDelete()
+    {
+        if (!parent::beforeDelete()) {
+            return false;
+        }
+
+        // Delete all items in this collection
+        Item::deleteAll(['colecao_id' => $this->id]);
+
+        // Delete all favoritos for this collection
+        ColecaoFavorito::deleteAll(['colecao_id' => $this->id]);
+
+        return true;
+    }
+
     public function isPublic(): bool
     {
         return (int)$this->status === 1;
+    }
+
+    /**
+     * Get the user that owns the collection.
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::class, ['id' => 'user_id']);
     }
 
     public function getItens()
@@ -153,11 +180,17 @@ class Colecao extends ActiveRecord
         return $this->hasMany(ColecaoFavorito::class, ['colecao_id' => 'id']);
     }
 
+    /**
+     * Verifica se a coleção foi favoritada por um utilizador específico
+     * 
+     * @param int $userId ID do utilizador
+     * @return bool
+     */
     public function isFavoritedByUser(int $userId): bool
     {
-        // A tabela favorito não tem user_id, então verificamos apenas se existe na tabela
-        // Nota: Isto significa que todos os utilizadores veem os mesmos favoritos
-        return $this->getFavoritos()->exists();
+        return ColecaoFavorito::find()
+            ->where(['colecao_id' => $this->id, 'user_id' => $userId])
+            ->exists();
     }
 
     public function getFavoritosCount(): int

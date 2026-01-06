@@ -46,10 +46,14 @@ class ColecaoController extends Controller
             ->orderBy(['updated_at' => SORT_DESC])
             ->all();
 
-        // A tabela favorito não tem user_id, então mostramos todos os favoritos
-        $favoriteIds = ColecaoFavorito::find()
-            ->select('colecao_id')
-            ->column();
+        // Obter IDs de favoritos do utilizador atual
+        $favoriteIds = [];
+        if (!Yii::$app->user->isGuest) {
+            $favoriteIds = ColecaoFavorito::find()
+                ->where(['user_id' => Yii::$app->user->id])
+                ->select('colecao_id')
+                ->column();
+        }
 
         return $this->render('index', [
             'collections' => $collections,
@@ -57,18 +61,10 @@ class ColecaoController extends Controller
         ]);
     }
 
-    public function actionMine(): string
+    public function actionMine(): Response
     {
-        $query = Colecao::find()->andWhere(['user_id' => Yii::$app->user->id]);
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => ['pageSize' => 12],
-            'sort' => ['defaultOrder' => ['updated_at' => SORT_DESC]],
-        ]);
-
-        return $this->render('mine', [
-            'dataProvider' => $dataProvider,
-        ]);
+        // As coleções são exibidas no dashboard
+        return $this->redirect(['site/dashboard']);
     }
 
     public function actionView(int $id): string
@@ -122,7 +118,7 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
         $model->delete();
-        return $this->redirect(['mine']);
+        return $this->redirect(['site/dashboard']);
     }
 
     public function actionFavorite(int $id): Response
@@ -136,14 +132,20 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
 
-        // A tabela favorito não tem user_id, então verificamos apenas se já existe
-        $favorito = ColecaoFavorito::findOne(['colecao_id' => $colecao->id]);
+        // Verificar se o utilizador já favoritou esta coleção
+        $favorito = ColecaoFavorito::findOne([
+            'colecao_id' => $colecao->id,
+            'user_id' => Yii::$app->user->id
+        ]);
+        
         if (!$favorito) {
             $favorito = new ColecaoFavorito([
                 'colecao_id' => $colecao->id,
             ]);
-            $favorito->save();
-            Yii::$app->session->setFlash('success', 'Coleção adicionada aos favoritos.');
+            // user_id será definido automaticamente no beforeSave
+            if ($favorito->save()) {
+                Yii::$app->session->setFlash('success', 'Coleção adicionada aos favoritos.');
+            }
         }
 
         return $this->redirect(Yii::$app->request->referrer ?: ['index']);
@@ -155,7 +157,12 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
 
-        $favorito = ColecaoFavorito::findOne(['colecao_id' => $id]);
+        // Remover apenas o favorito do utilizador atual
+        $favorito = ColecaoFavorito::findOne([
+            'colecao_id' => $id,
+            'user_id' => Yii::$app->user->id
+        ]);
+        
         if ($favorito) {
             $favorito->delete();
             Yii::$app->session->setFlash('success', 'Coleção removida dos favoritos.');
@@ -170,10 +177,14 @@ class ColecaoController extends Controller
             throw new NotFoundHttpException('Página não encontrada.');
         }
 
-        // A tabela favorito não tem user_id, então mostramos todas as coleções favoritas
-        $favoritoIds = ColecaoFavorito::find()->select('colecao_id')->column();
+        // Obter IDs de coleções favoritadas pelo utilizador atual
+        $favoritoIds = ColecaoFavorito::find()
+            ->where(['user_id' => Yii::$app->user->id])
+            ->select('colecao_id')
+            ->column();
+            
         $collections = Colecao::find()
-            ->where(['status' => 1, 'id' => $favoritoIds]) // Apenas públicas que estão nos favoritos
+            ->where(['status' => 1, 'id' => $favoritoIds]) // Apenas públicas que estão nos favoritos do user
             ->with(['favoritos'])
             ->all();
 

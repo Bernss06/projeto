@@ -1,5 +1,10 @@
 suite_namespace: backend\tests\functional
 actor: FunctionalTester
 modules:
-    enabled:
-        - Yii2
+  enabled:
+    - Yii2:
+        entryScript: index-test.php
+    - backend\tests\Helper\Functional
+    - REST:
+        depends: Yii2
+        part: [Json]

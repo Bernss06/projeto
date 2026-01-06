@@ -144,6 +144,72 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasMany(Colecao::class, ['user_id' => 'id']);
     }
 
+    /**
+     * Get user profile image
+     */
+    public function getPfpimage()
+    {
+        return $this->hasOne(Pfpimage::class, ['user_id' => 'id']);
+    }
+
+    /**
+     * Get profile picture URL (returns default if not set)
+     */
+    public function getProfilePictureUrl()
+    {
+        $default = ($this->username == 'admin') ? 'admin.png':'pfppadrao.png';
+        $filename = $default;
+
+        if ($this->pfpimage && !empty($this->pfpimage->nome)) {
+            // If the image in DB is 'pfppadrao.png', we use the calculated default (which is 'admin.png' for admin)
+            if ($this->pfpimage->nome === 'pfppadrao.png') {
+                $filename = $default;
+            } else {
+                $filename = $this->pfpimage->nome;
+            }
+        }
+        
+        // Assuming uploads are in the frontend web folder, accessible via a shared alias or relative path
+        // For backend, we might need to point to the frontend uploads URL
+        return Yii::getAlias('@web/../../frontend/web/uploads/pfp/' . $filename);
+    }
+
+    /**
+     * Get human-readable status label
+     * @return string
+     */
+    public function getStatusLabel()
+    {
+        switch($this->status) {
+            case self::STATUS_ACTIVE:
+                return 'Active';
+            case self::STATUS_INACTIVE:
+                return 'Inactive';
+            case self::STATUS_DELETED:
+                return 'Deleted';
+            default:
+                return 'Unknown';
+        }
+    }
+
+    /**
+     * Get Bootstrap badge HTML for status
+     * @return string
+     */
+    public function getStatusBadge()
+    {
+        switch($this->status) {
+            case self::STATUS_ACTIVE:
+                return '<span class="badge bg-success">Active</span>';
+            case self::STATUS_INACTIVE:
+                return '<span class="badge bg-warning">Inactive</span>';
+            case self::STATUS_DELETED:
+                return '<span class="badge bg-danger">Deleted</span>';
+            default:
+                return '<span class="badge bg-secondary">Unknown</span>';
+        }
+    }
+
 
     /**
      * {@inheritdoc}

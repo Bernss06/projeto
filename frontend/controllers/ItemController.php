@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use common\models\Categoria;
 use common\models\Colecao;
+use common\models\Gosto;
 use common\models\Item;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -20,7 +21,7 @@ class ItemController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['create', 'update', 'delete'],
+                'only' => ['create', 'update', 'delete', 'like', 'unlike'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -32,6 +33,8 @@ class ItemController extends Controller
                 'class' => VerbFilter::class,
                 'actions' => [
                     'delete' => ['POST'],
+                    'like' => ['POST'],
+                    'unlike' => ['POST'],
                 ],
             ],
         ];
@@ -154,6 +157,49 @@ class ItemController extends Controller
         $model->delete();
         Yii::$app->session->setFlash('success', 'Item removido.');
         return $this->redirect(['index', 'colecaoId' => $colecaoId]);
+    }
+
+    public function actionLike(int $id): Response
+    {
+        $item = $this->findModel($id);
+        $item->ensureCanView();
+
+        // Check if already liked by this user
+        $gosto = Gosto::findOne([
+            'item_id' => $item->id,
+            'user_id' => Yii::$app->user->id
+        ]);
+
+        if (!$gosto) {
+            $gosto = new Gosto([
+                'item_id' => $item->id,
+                'user_id' => Yii::$app->user->id
+            ]);
+            if (!$gosto->save()) {
+                Yii::$app->session->setFlash('error', 'Erro ao gostar: ' . print_r($gosto->errors, true));
+            }
+        }
+
+        return $this->redirect(Yii::$app->request->referrer ?: ['colecao/view', 'id' => $item->colecao_id]);
+    }
+
+    public function actionUnlike(int $id): Response
+    {
+        $item = $this->findModel($id);
+        $item->ensureCanView();
+
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
+
+        // Use deleteAll to ensure we only delete based on the composite key (item + user)
+        // This avoids issues if the primary key 'id' is not unique (e.g. all 0)
+        Gosto::deleteAll([
+            'item_id' => $item->id,
+            'user_id' => Yii::$app->user->id
+        ]);
+
+        return $this->redirect(Yii::$app->request->referrer ?: ['colecao/view', 'id' => $item->colecao_id]);
     }
 
     protected function findModel(int $id): Item

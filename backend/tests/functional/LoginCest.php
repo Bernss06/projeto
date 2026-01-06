@@ -3,42 +3,57 @@
 namespace backend\tests\functional;
 
 use backend\tests\FunctionalTester;
-use common\fixtures\UserFixture;
+use common\models\User;
 
-/**
- * Class LoginCest
- */
 class LoginCest
 {
-    /**
-     * Load fixtures before db transaction begin
-     * Called in _before()
-     * @see \Codeception\Module\Yii2::_before()
-     * @see \Codeception\Module\Yii2::loadFixtures()
-     * @return array
-     */
-    public function _fixtures()
+    public function _before(FunctionalTester $I)
     {
-        return [
-            'user' => [
-                'class' => UserFixture::class,
-                'dataFile' => codecept_data_dir() . 'login_data.php'
-            ]
-        ];
+        // cleanup handled by Yii2 module transaction rollback
+        
+        // Cria um utilizador temporário na BD para testar o login
+        $I->haveRecord(User::class, [
+            'username' => 'admin_teste',
+            'email' => 'teste@teste.com',
+            'status' => 10,
+            'password_hash' => \Yii::$app->security->generatePasswordHash('admin123'),
+            'created_at' => time(),
+            'updated_at' => time(),
+        ]);
+        
+        $user = User::findByUsername('admin_teste');
+        $auth = \Yii::$app->authManager;
+        $auth->assign($auth->getPermission('accessBackend'), $user->id);
+        $auth->assign($auth->getRole('admin'), $user->id);
     }
-    
-    /**
-     * @param FunctionalTester $I
-     */
-    public function loginUser(FunctionalTester $I)
-    {
-        $I->amOnRoute('/site/login');
-        $I->fillField('Username', 'erau');
-        $I->fillField('Password', 'password_0');
-        $I->click('login-button');
 
-        $I->see('Logout (erau)', 'form button[type=submit]');
-        $I->dontSeeLink('Login');
-        $I->dontSeeLink('Signup');
+    // TESTE 1: Login com Sucesso (Obrigatório)
+    public function loginComSucesso(FunctionalTester $I)
+    {
+        $I->amOnPage('/site/login'); // Ajusta a rota se necessário
+        $I->see('Sign in to start your session'); // Texto do teu HTML
+        
+        // Preenche o formulário usando os labels ou placeholders
+        $I->fillField('LoginForm[username]', 'admin_teste'); 
+        $I->fillField('LoginForm[password]', 'admin123');
+        
+        $I->click('Sign In'); // Texto do botão
+        
+        // Verifica se entrou (espera ver o username no dashboard)
+        $I->see('admin_teste'); 
+        $I->dontSee('Sign in to start your session');
+    }
+
+    // TESTE 2: Login com Password Errada
+    public function loginComPasswordErrada(FunctionalTester $I)
+    {
+        $I->amOnPage('/site/login');
+        
+        $I->fillField('LoginForm[username]', 'admin_teste');
+        $I->fillField('LoginForm[password]', 'senhaErrada');
+        $I->click('Sign In');
+        
+        // Deve continuar na página de login e mostrar erro
+        $I->see('Incorrect username or password'); // Mensagem padrão do Yii2
     }
 }

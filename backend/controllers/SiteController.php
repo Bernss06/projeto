@@ -36,6 +36,11 @@ class SiteController extends Controller
                     'allow' => true,
                     'roles' => ['@'], 
                 ],
+                [
+                    'actions' => ['index'], 
+                    'allow' => true,
+                    'roles' => ['admin'], 
+                ],
             ],
         ],
         'verbs' => [
@@ -66,27 +71,44 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        // 1. Obter o gestor de autorização
-        $auth = Yii::$app->authManager;
+        // 1. Obter contagens para o dashboard
+        $totalUsers = \common\models\User::find()->count();
+        $totalCollections = \common\models\Colecao::find()->count();
+        $totalItems = \common\models\Item::find()->count();
         
-        // 2. Encontrar todos os IDs de utilizadores com o papel 'admin'
-        // O array retornado é [user_id => RoleObject]
-        $adminUserIds = array_keys($auth->getUserIdsByRole('admin'));
-        
-        // 3. Criar a query: Procurar todos os utilizadores que *NÃO* são admin
-        $query = \common\models\User::find()
-            ->where(['NOT IN', 'id', $adminUserIds])
-            ->orderBy(['created_at' => SORT_DESC]);
+        // 2. Dados para o gráfico: Um gráfico por utilizador (Top 4 utilizadores mais recentes)
+        $users = \common\models\User::find()
+            ->limit(10)
+            ->orderBy(['created_at' => SORT_DESC])
+            ->all();
+
+        $userChartsData = [];
+
+        foreach ($users as $user) {
+            $data = \common\models\Colecao::find()
+                ->alias('c')
+                ->select(['c.nome', 'COUNT(i.id) as item_count'])
+                ->leftJoin(['i' => 'item'], 'i.colecao_id = c.id')
+                ->where(['c.user_id' => $user->id])
+                ->groupBy(['c.id', 'c.nome'])
+                ->orderBy(['item_count' => SORT_DESC])
+                ->limit(5)
+                ->asArray()
+                ->all();
             
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => [
-                'pageSize' => 12, // Mostrar 12 cartões por página
-            ],
-        ]);
-    
+            if (!empty($data)) {
+                $userChartsData[] = [
+                    'username' => $user->username,
+                    'data' => $data
+                ];
+            }
+        }
+
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
+            'totalUsers' => $totalUsers,
+            'totalCollections' => $totalCollections,
+            'totalItems' => $totalItems,
+            'userChartsData' => $userChartsData,
         ]);
     }
 

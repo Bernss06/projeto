@@ -32,9 +32,10 @@ $favoriteSet = array_flip($favoriteIds);
                 <div class="col">
                     <div class="card bg-dark border-secondary h-100 rounded-4 shadow-sm overflow-hidden position-relative">
                         <?= Html::beginForm(['colecao/unfavorite', 'id' => $collection->id], 'post', ['class' => 'favorite-form', 'data-collection-id' => $collection->id]) ?>
-                            <button type="submit" class="favorite-heart favorited" aria-label="Remover dos favoritos">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff0000" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            <button type="submit" class="btn btn-link p-0 text-decoration-none" aria-label="Remover dos favoritos">
+                                <!-- Solid Yellow Star -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                                 </svg>
                             </button>
                         <?= Html::endForm() ?>

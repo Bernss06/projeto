@@ -126,7 +126,7 @@ class Item extends ActiveRecord
         if ($this->categoria_id === null || (int)$this->categoria_id === 0) {
             return 'Sem categoria';
         }
-        return $this->categoria?->nome ?? 'Sem categoria';
+        return $this->categoria->nome ?? 'Sem categoria';
     }
 
     public function getImagemUrl(): string
@@ -134,7 +134,7 @@ class Item extends ActiveRecord
         if (!$this->nome_foto) {
             return 'https://via.placeholder.com/400x260?text=Sem+Imagem';
         }
-        return Yii::getAlias('@web/uploads/items/' . $this->nome_foto);
+        return Yii::getAlias('@web/../../frontend/web/uploads/items/' . $this->nome_foto);
     }
 
     public function ensureCanView(): void
@@ -152,6 +152,34 @@ class Item extends ActiveRecord
         if ($colecao === null || !$colecao->canEdit()) {
             throw new ForbiddenHttpException('Você não tem permissão para alterar este item.');
         }
+    }
+
+    /**
+     * Gets query for [[Gosto]].
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGostos()
+    {
+        return $this->hasMany(Gosto::class, ['item_id' => 'id']);
+    }
+
+    /**
+     * Returns the number of likes for this item.
+     * @return int
+     */
+    public function getLikesCount(): int
+    {
+        return (int) $this->getGostos()->count();
+    }
+
+    /**
+     * Checks if the item is liked by a specific user.
+     * @param int $userId
+     * @return bool
+     */
+    public function isLikedBy(int $userId): bool
+    {
+        return $this->getGostos()->where(['user_id' => $userId])->exists();
     }
 }
 

@@ -748,10 +748,9 @@ body.theme-light .item-card:hover {
   padding: 0;
 }
 
-.favorite-heart {
-  background: rgba(0, 0, 0, 0.4);
+.favorite-star {
+  background: transparent;
   border: none;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
@@ -759,40 +758,48 @@ body.theme-light .item-card:hover {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(4px);
   padding: 0;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.favorite-heart:hover {
-  background: rgba(255, 0, 0, 0.2);
+.favorite-star:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.favorite-star:hover {
   transform: scale(1.1);
+  background: transparent;
 }
 
-.favorite-heart:active {
+.favorite-star:active {
   transform: scale(0.95);
+  background: transparent;
 }
 
-.favorite-heart svg {
+.favorite-star svg {
   transition: all 0.3s ease;
 }
 
-.favorite-heart.favorited {
-  background: rgba(255, 0, 0, 0.3);
+.favorite-star.favorited {
+  background: transparent;
 }
 
-.favorite-heart.favorited svg {
-  fill: #ff0000;
-  stroke: #ff0000;
-  filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.6));
+
+.favorite-star.favorited svg {
+  fill: #ffc107 !important;
+  stroke: #ffc107 !important;
+  filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.6));
 }
 
-.favorite-heart:not(.favorited) svg {
+.favorite-star:not(.favorited) svg {
   fill: none;
   stroke: #ffffff;
 }
 
-.favorite-heart:not(.favorited):hover svg {
-  stroke: #ff0000;
-  fill: rgba(255, 0, 0, 0.2);
+.favorite-star:not(.favorited):hover svg {
+  stroke: #ffc107;
+  fill: rgba(255, 193, 7, 0.2);
 }
 

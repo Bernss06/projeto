@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var common\models\Colecao $model */
 
 $this->title = 'Editar Coleção';
-$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['mine']];
+$this->params['breadcrumbs'][] = ['label' => 'Minhas Coleções', 'url' => ['site/dashboard']];
 $this->params['breadcrumbs'][] = ['label' => $model->nome, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Editar';
 ?>

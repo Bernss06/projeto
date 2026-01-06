@@ -4,7 +4,7 @@ namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\common\models\Colecao;
+
 
 /**
  * ColecaoSearch represents the model behind the search form of `app\common\models\Colecao`.

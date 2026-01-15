@@ -50,6 +50,16 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+
+                // Login
+                'POST login' => 'auth/login',
+
+                // Logout
+                'POST logout' => 'auth/logout',
+
+                // Register
+                'POST register' => 'auth/register',
+
                 // Users
                 [
                     'class' => 'yii\rest\UrlRule',

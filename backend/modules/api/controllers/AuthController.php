@@ -44,9 +44,17 @@ class AuthController extends Controller
             return $model->errors;
         }
 
-        return [
-            'message' => 'Usuário registrado com sucesso',
-            'user_id' => $user->id
-        ];
+        // No teu AuthController.php, na actionLogin:
+
+        if ($model->login()) {
+            $user = $model->getUser(); // Pega no objeto User
+            return [
+                'user_id' => $user->id,
+                'username' => $user->username,
+                // ESTA LINHA É OBRIGATÓRIA:
+                'auth_key' => $user->auth_key, 
+            ];
+        }
+        
     }
 }

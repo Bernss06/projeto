@@ -33,6 +33,18 @@ class ColecaoController extends ActiveController
         throw new \yii\web\NotFoundHttpException("O utilizador $userid não possui coleções.");
     }
 
+    // Pegar as Coleções Públicas
+    public function actionPublicas(){
+        $model = new $this->modelClass;
+        $recs = $model->find()->where(['status' => 1])->asArray()->all();
+
+        if (!empty($recs)) {
+            return $recs; // achou coleções
+        }
+
+        throw new \yii\web\NotFoundHttpException("Não existem coleções públicas no momento.");
+    }
+
     // Contagem de Coleções no Total
     public function actionCount(){
         $colecoesmodel = new $this->modelClass;

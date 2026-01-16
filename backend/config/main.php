@@ -84,6 +84,7 @@ return [
                         'GET count/itens/{colecaoid}' => 'countitenscolecao',
                         'GET user/{userid}' => 'colecaoporuser',
                         'GET itens/{colecaoid}' => 'itensporcolecao',
+                        'GET publicas' => 'publicas',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',

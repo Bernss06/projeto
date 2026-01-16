@@ -26,7 +26,7 @@ class ColecaoController extends Controller
                     'rules' => [
                         [
                             'allow' => true,
-                            'roles' => ['manageAllColecoes'], // Only authenticated users
+                            'roles' => ['admin'], // Only authenticated users
                         ],
                     ],
                 ],

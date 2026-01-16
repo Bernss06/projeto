@@ -12,6 +12,7 @@ class AuthController extends Controller
 
     public function actionLogin()
 {
+    
     $model = new \common\models\LoginForm();
     $model->load(Yii::$app->request->post(), '');
 
@@ -31,8 +32,7 @@ class AuthController extends Controller
             'status' => 'sucesso',
             'user_id' => $user->id,
             'username' => $user->username,
-            // Agora temos a certeza absoluta que isto não vai vazio
-            'auth_key' => $user->auth_key, 
+            'auth_key' => $user->auth_key, // OBRIGATÓRIO: Enviar a chave
         ];
     } else {
         Yii::$app->response->statusCode = 401;

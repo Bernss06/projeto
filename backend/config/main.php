@@ -165,6 +165,16 @@ return [
                     ],
                 ],
 
+                // Matematica
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['api/matematica'],
+                    'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET raizdois' => 'raizdois',
+                    ],
+                ],
+
                 // Regras normais do backend (mantém estas)
                 //'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',

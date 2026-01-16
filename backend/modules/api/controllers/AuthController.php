@@ -9,35 +9,34 @@ use backend\modules\api\models\RegisterForm;
 
 class AuthController extends Controller
 {
-   public function actionLogin()
+
+    public function actionLogin()
 {
-    // Cria o modelo de login (que valida user/pass)
     $model = new \common\models\LoginForm();
-    
-    // Carrega os dados que vieram do Android (POST)
     $model->load(Yii::$app->request->post(), '');
 
     if ($model->login()) {
-        // Pega no utilizador que acabou de logar
         $user = $model->getUser();
-        
-        // --- AQUI ESTÁ A MAGIA ---
+
+        // --- INÍCIO DA CORREÇÃO ---
+        // Se este utilizador não tiver auth_key (porque foi criado manualmente),
+        // vamos gerar uma agora mesmo e salvar na BD!
+        if (empty($user->auth_key)) {
+            $user->generateAuthKey();
+            $user->save(false); // Salva ignorando outras validações
+        }
+        // --- FIM DA CORREÇÃO ---
+
         return [
             'status' => 'sucesso',
-            'message' => 'Login efetuado com sucesso',
             'user_id' => $user->id,
             'username' => $user->username,
-            // OBRIGATÓRIO: Enviar a chave
+            // Agora temos a certeza absoluta que isto não vai vazio
             'auth_key' => $user->auth_key, 
         ];
     } else {
-        // Se falhar
         Yii::$app->response->statusCode = 401;
-        return [
-            'status' => 'erro',
-            'message' => 'Credenciais incorretas',
-            'errors' => $model->errors
-        ];
+        return ['message' => 'Login falhou'];
     }
 }
 

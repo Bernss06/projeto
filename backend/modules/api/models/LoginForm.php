@@ -7,7 +7,7 @@ use common\models\User;
 
 class LoginForm extends Model
 {
-    public $email;
+    public $username;
     public $password;
 
     /**
@@ -21,8 +21,8 @@ class LoginForm extends Model
     public function rules()
     {
         return [
-            [['email', 'password'], 'required'],
-            ['email', 'email'],
+            [['username', 'password'], 'required'],
+            ['username', 'email'],
             ['password', 'string', 'min' => 6],
             ['password', 'validatePassword'],
         ];
@@ -45,13 +45,13 @@ class LoginForm extends Model
     }
 
     /**
-     * Retorna o usuário pelo email
+     * Retorna o usuário pelo username
      */
     public function getUser()
     {
         if ($this->_user === null) {
             $this->_user = User::find()
-                ->where(['email' => $this->email])
+                ->where(['username' => $this->username])
                 ->one();
         }
 

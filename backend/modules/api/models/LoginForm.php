@@ -1,0 +1,60 @@
+<?php
+
+namespace backend\modules\api\models;
+
+use yii\base\Model;
+use common\models\User;
+
+class LoginForm extends Model
+{
+    public $email;
+    public $password;
+
+    /**
+     * @var User|null
+     */
+    private $_user = null;
+
+    /**
+     * Regras de validação
+     */
+    public function rules()
+    {
+        return [
+            [['email', 'password'], 'required'],
+            ['email', 'email'],
+            ['password', 'string', 'min' => 6],
+            ['password', 'validatePassword'],
+        ];
+    }
+
+    /**
+     * Valida a senha com hash
+     */
+    public function validatePassword($attribute, $params)
+    {
+        if ($this->hasErrors()) {
+            return;
+        }
+
+        $user = $this->getUser();
+
+        if (!$user || !$user->validatePassword($this->password)) {
+            $this->addError($attribute, 'Email ou senha inválidos.');
+        }
+    }
+
+    /**
+     * Retorna o usuário pelo email
+     */
+    public function getUser()
+    {
+        if ($this->_user === null) {
+            $this->_user = User::find()
+                ->where(['email' => $this->email])
+                ->one();
+        }
+
+        return $this->_user;
+    }
+}

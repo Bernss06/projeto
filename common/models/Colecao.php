@@ -6,6 +6,7 @@ use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\ForbiddenHttpException;
+use app\mosquitto\phpMQTT;
 
 class Colecao extends ActiveRecord
 {
@@ -15,6 +16,52 @@ class Colecao extends ActiveRecord
      * @var bool|int
      */
     public $is_public = 0;
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $data = new \stdClass();
+        $data->id = $this->id;
+        $data->nome = $this->nome;
+        $data->descricao = $this->descricao;
+        $data->user_id = $this->user_id;
+        $data->status = $this->user_id;
+
+        $json = json_encode($data);
+
+        if ($insert)
+            $this->publishMosquitto("INSERT", $json);
+        else
+            $this->publishMosquitto("UPDATE", $json);
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+
+        $data = new \stdClass();
+        $data->id = $this->id;
+
+        $json = json_encode($data);
+
+        $this->publishMosquitto("DELETE", $json);
+    }
+
+    public function publishMosquitto($topic, $msg)
+    {
+        $server = "127.0.0.1";
+        $port = 1883;
+        $client_id = "php-publisher";
+
+        $mqtt = new \app\mosquitto\phpMQTT($server, $port, $client_id);
+
+        if ($mqtt->connect()) {
+            $mqtt->publish($topic, $msg, 0);
+            $mqtt->close();
+        }
+    }
+
 
     public static function tableName()
     {

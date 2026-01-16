@@ -50,6 +50,16 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+
+                // Login
+                'POST login' => 'auth/login',
+
+                // Logout
+                'POST logout' => 'auth/logout',
+
+                // Register
+                'POST register' => 'auth/register',
+
                 // Users
                 [
                     'class' => 'yii\rest\UrlRule',
@@ -74,6 +84,7 @@ return [
                         'GET count/itens/{colecaoid}' => 'countitenscolecao',
                         'GET user/{userid}' => 'colecaoporuser',
                         'GET itens/{colecaoid}' => 'itensporcolecao',
+                        'GET publicas' => 'publicas',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',

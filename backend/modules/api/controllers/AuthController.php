@@ -9,28 +9,37 @@ use backend\modules\api\models\RegisterForm;
 
 class AuthController extends Controller
 {
-    public function actionLogin()
-    {
-        $model = new LoginForm();
-        $model->load(Yii::$app->request->post(), '');
+   public function actionLogin()
+{
+    // Cria o modelo de login (que valida user/pass)
+    $model = new \common\models\LoginForm();
+    
+    // Carrega os dados que vieram do Android (POST)
+    $model->load(Yii::$app->request->post(), '');
 
-        if (!$model->validate()) {
-            Yii::$app->response->statusCode = 401;
-            return $model->errors;
-        }
-
+    if ($model->login()) {
+        // Pega no utilizador que acabou de logar
+        $user = $model->getUser();
+        
+        // --- AQUI ESTÁ A MAGIA ---
         return [
+            'status' => 'sucesso',
             'message' => 'Login efetuado com sucesso',
-            'user_id' => $model->getUser()->id
+            'user_id' => $user->id,
+            'username' => $user->username,
+            // OBRIGATÓRIO: Enviar a chave
+            'auth_key' => $user->auth_key, 
         ];
-    }
-
-    public function actionLogout()
-    {
+    } else {
+        // Se falhar
+        Yii::$app->response->statusCode = 401;
         return [
-            'message' => 'Logout realizado com sucesso'
+            'status' => 'erro',
+            'message' => 'Credenciais incorretas',
+            'errors' => $model->errors
         ];
     }
+}
 
     public function actionRegister()
     {
@@ -44,17 +53,9 @@ class AuthController extends Controller
             return $model->errors;
         }
 
-        // No teu AuthController.php, na actionLogin:
-
-        if ($model->login()) {
-            $user = $model->getUser(); // Pega no objeto User
-            return [
-                'user_id' => $user->id,
-                'username' => $user->username,
-                // ESTA LINHA É OBRIGATÓRIA:
-                'auth_key' => $user->auth_key, 
-            ];
-        }
-        
+        return [
+            'message' => 'Usuário registrado com sucesso',
+            'user_id' => $user->id
+        ];
     }
 }

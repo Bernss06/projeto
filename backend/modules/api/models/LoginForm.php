@@ -40,7 +40,7 @@ class LoginForm extends Model
         $user = $this->getUser();
 
         if (!$user || !$user->validatePassword($this->password)) {
-            $this->addError($attribute, 'Email ou senha inválidos.');
+            $this->addError($attribute, 'Username ou senha inválidos.');
         }
     }
 

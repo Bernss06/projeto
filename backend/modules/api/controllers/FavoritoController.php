@@ -2,6 +2,7 @@
 
 namespace backend\modules\api\controllers;
 
+use Yii;
 use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 use common\models\Favorito;

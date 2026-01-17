@@ -22,7 +22,6 @@ class AuthController extends Controller
             // 2. Enviamos o user_id e a auth_key.
             return [
                 'status' => 'sucesso',
-                'user_id' => $user->id,
                 'username' => $user->username,
                 'auth_key' => $user->auth_key, 
             ];

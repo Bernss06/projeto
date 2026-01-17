@@ -133,8 +133,13 @@ return [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => ['api/favorito'],
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET user/{userid}'   => 'poruser',
+                        'POST add'            => 'addcomentario',
+                    ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',
+                        '{userid}' => '<userid:\\d+>',
                     ],
                 ],
 

@@ -11,34 +11,27 @@ class AuthController extends Controller
 {
 
     public function actionLogin()
-{
-    
-    $model = new \common\models\LoginForm();
-    $model->load(Yii::$app->request->post(), '');
+    {
+        $model = new \common\models\LoginForm();
+        $model->load(Yii::$app->request->post(), '');
 
-    if ($model->login()) {
-        $user = $model->getUser();
+        if ($model->login()) {
+            $user = $model->getUser();
 
-        // --- INÍCIO DA CORREÇÃO ---
-        // Se este utilizador não tiver auth_key (porque foi criado manualmente),
-        // vamos gerar uma agora mesmo e salvar na BD!
-        if (empty($user->auth_key)) {
-            $user->generateAuthKey();
-            $user->save(false); // Salva ignorando outras validações
+            // REVERTIDO: Removemos a parte que tentava gerar e salvar a chave
+            // para evitar o erro de servidor (500).
+
+            return [
+                'status' => 'sucesso',
+                'user_id' => $user->id,
+                'username' => $user->username,
+                'auth_key' => $user->auth_key, // Envia a chave se ela existir
+            ];
+        } else {
+            Yii::$app->response->statusCode = 401;
+            return ['message' => 'Login falhou'];
         }
-        // --- FIM DA CORREÇÃO ---
-
-        return [
-            'status' => 'sucesso',
-            'user_id' => $user->id,
-            'username' => $user->username,
-            'auth_key' => $user->auth_key, // OBRIGATÓRIO: Enviar a chave
-        ];
-    } else {
-        Yii::$app->response->statusCode = 401;
-        return ['message' => 'Login falhou'];
     }
-}
 
     public function actionRegister()
     {

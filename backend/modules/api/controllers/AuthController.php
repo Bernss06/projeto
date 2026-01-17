@@ -25,9 +25,6 @@ class AuthController extends Controller
                 'username' => $user->username,
                 'auth_key' => $user->auth_key, 
             ];
-        } else {
-            Yii::$app->response->statusCode = 401;
-            return ['message' => 'Login falhou'];
         }
     }
 

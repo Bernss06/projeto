@@ -16,11 +16,16 @@ class ColecaoController extends ActiveController
         $behaviors['authenticator'] = [
             'class' => QueryParamAuth::class,
             'tokenParam' => 'token',
+            'except' => [
+                'publicas',
+                'count',
+                'countitenscolecao',
+                'itensporcolecao'
+            ],
         ];
 
         return $behaviors;
     }
-
     // Pegar as Coleções de um utilizador pelo seu Id
     public function actionColecaoporuser($userid){
         $model = new $this->modelClass;

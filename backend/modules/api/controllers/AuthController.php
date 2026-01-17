@@ -28,6 +28,7 @@ class AuthController extends Controller
         return [
             'message' => 'Login efetuado com sucesso',
             'user_id' => $user->id,
+            'username' => $user->username,
             'auth_key' => $user->auth_key
         ];
     }

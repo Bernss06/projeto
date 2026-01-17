@@ -17,15 +17,18 @@ class AuthController extends Controller
         if ($model->login()) {
             $user = $model->getUser();
 
-            // CÓDIGO SEGURO: Devolve os dados sem tentar gravar nada na BD
+            // --- CORREÇÃO: Código limpo ---
+            // 1. Removemos o $user->save(false) para não dar erro 500.
+            // 2. Enviamos o user_id e a auth_key.
             return [
                 'status' => 'sucesso',
                 'user_id' => $user->id,
                 'username' => $user->username,
-                'auth_key' => $user->auth_key,
+                'auth_key' => $user->auth_key, 
             ];
         } else {
-            // FALTAVA ISTO: Se o login falhar, avisar o Android
+            // --- CORREÇÃO: O Else que faltava ---
+            // Sem isto, se a senha estiver errada, a app crasha.
             Yii::$app->response->statusCode = 401;
             return ['message' => 'Credenciais incorretas'];
         }

@@ -136,7 +136,7 @@ return [
                     'extraPatterns' => [
                         'GET user/{userid}'   => 'poruser',
                         'POST add'            => 'add',
-                        'POST remover'            => 'remover',
+                        'POST remover'        => 'remover',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',

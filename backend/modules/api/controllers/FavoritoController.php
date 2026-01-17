@@ -80,7 +80,7 @@ class FavoritoController extends ActiveController
         return ['message' => 'Erro ao salvar favorito'];
     }
 
-    public function actionRemove()
+    public function actionRemover()
     {
         $colecaoId = Yii::$app->request->post('colecao_id');
 

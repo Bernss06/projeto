@@ -19,9 +19,16 @@ class AuthController extends Controller
             return $model->errors;
         }
 
+        $user = $model->getUser();
+
+        // gera novo token a cada login
+        $user->generateAuthKey();
+        $user->save(false);
+
         return [
             'message' => 'Login efetuado com sucesso',
-            'user_id' => $model->getUser()->id
+            'user_id' => $user->id,
+            'auth_key' => $user->auth_key
         ];
     }
 

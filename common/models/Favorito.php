@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use app\common\models\Colecao;
+use common\models\Colecao;
 use Yii;
 
 /**

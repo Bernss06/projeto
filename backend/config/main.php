@@ -135,7 +135,7 @@ return [
                     'pluralize' => false,
                     'extraPatterns' => [
                         'GET user/{userid}'   => 'poruser',
-                        'POST add'            => 'addcomentario',
+                        'POST add'            => 'add',
                     ],
                     'tokens' => [
                         '{id}' => '<id:\\d+>',

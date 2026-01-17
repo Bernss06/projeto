@@ -80,4 +80,33 @@ class FavoritoController extends ActiveController
         return ['message' => 'Erro ao salvar favorito'];
     }
 
+    public function actionRemove()
+    {
+        $colecaoId = Yii::$app->request->post('colecao_id');
+
+        if (!$colecaoId) {
+            throw new BadRequestHttpException('colecao_id obrigatório');
+        }
+
+        // 👇 USER VEM DO TOKEN
+        $userId = Yii::$app->user->id;
+
+        $favorito = Favorito::find()
+            ->where([
+                'user_id' => $userId,
+                'colecao_id' => $colecaoId
+            ])
+            ->one();
+
+        if ($favorito === null) {
+            throw new NotFoundHttpException('Favorito não encontrado');
+        }
+
+        $favorito->delete();
+
+        return [
+            'message' => 'Favorito removido com sucesso'
+        ];
+    }
+
 }

@@ -6,6 +6,8 @@ use Yii;
 use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 use common\models\Favorito;
+use yii\web\BadRequestHttpException;
+use yii\web\NotFoundHttpException;
 
 class FavoritoController extends ActiveController
 {

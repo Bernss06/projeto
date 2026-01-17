@@ -12,7 +12,7 @@ class AuthController extends Controller
     public function actionLogin()
     {
         $model = new \common\models\LoginForm();
-        $model->load(Yii::$app->request->post(), '');
+        $model->load(Yii::$app->request->post());
 
         if ($model->login()) {
             $user = $model->getUser();

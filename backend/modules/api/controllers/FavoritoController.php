@@ -30,9 +30,7 @@ class FavoritoController extends ActiveController
             ->all();
 
         if (empty($favoritos)) {
-            throw new NotFoundHttpException(
-                'Este utilizador não tem favoritos.'
-            );
+            return [];
         }
 
         $resultado = [];

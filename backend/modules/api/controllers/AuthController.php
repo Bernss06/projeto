@@ -18,14 +18,12 @@ class AuthController extends Controller
         if ($model->login()) {
             $user = $model->getUser();
 
-            // REVERTIDO: Removemos a parte que tentava gerar e salvar a chave
-            // para evitar o erro de servidor (500).
-
+            // CÓDIGO SEGURO: Apenas lê o que já existe, não tenta escrever.
             return [
                 'status' => 'sucesso',
                 'user_id' => $user->id,
                 'username' => $user->username,
-                'auth_key' => $user->auth_key, // Envia a chave se ela existir
+                'auth_key' => $user->auth_key, 
             ];
         } else {
             Yii::$app->response->statusCode = 401;

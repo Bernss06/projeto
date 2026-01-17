@@ -9,7 +9,6 @@ use backend\modules\api\models\RegisterForm;
 
 class AuthController extends Controller
 {
-
     public function actionLogin()
     {
         $model = new \common\models\LoginForm();
@@ -18,13 +17,17 @@ class AuthController extends Controller
         if ($model->login()) {
             $user = $model->getUser();
 
-            // CÓDIGO SEGURO: Apenas lê o que já existe, não tenta escrever.
+            // CÓDIGO SEGURO: Devolve os dados sem tentar gravar nada na BD
             return [
                 'status' => 'sucesso',
                 'user_id' => $user->id,
                 'username' => $user->username,
-                'auth_key' => $user->auth_key, 
+                'auth_key' => $user->auth_key,
             ];
+        } else {
+            // FALTAVA ISTO: Se o login falhar, avisar o Android
+            Yii::$app->response->statusCode = 401;
+            return ['message' => 'Credenciais incorretas'];
         }
     }
 

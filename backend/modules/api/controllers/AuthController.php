@@ -25,11 +25,6 @@ class AuthController extends Controller
                 'username' => $user->username,
                 'auth_key' => $user->auth_key, 
             ];
-        } else {
-            // --- CORREÇÃO: O Else que faltava ---
-            // Sem isto, se a senha estiver errada, a app crasha.
-            Yii::$app->response->statusCode = 401;
-            return ['message' => 'Credenciais incorretas'];
         }
     }
 

@@ -4,6 +4,7 @@ namespace backend\modules\api\controllers;
 
 use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
+use common\models\Favorito;
 
 class FavoritoController extends ActiveController
 {

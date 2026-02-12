@@ -10,27 +10,33 @@ class AuthController extends Controller
 {
     public function actionLogin()
     {
-        $model = new \common\models\LoginForm();
-        $model->load(Yii::$app->request->post());
+        $model = new LoginForm();
+        $model->load(Yii::$app->request->post(), '');
 
-        if ($model->login()) {
-            $user = $model->getUser();
-
-            // --- CORREÇÃO: Código limpo ---
-            // 1. Removemos o $user->save(false) para não dar erro 500.
-            // 2. Enviamos o user_id e a auth_key.
-            return [
-                'status' => 'sucesso',
-                'user_id' => $user->id,
-                'username' => $user->username,
-                'auth_key' => $user->auth_key,
-            ];
-        } else {
-            // --- CORREÇÃO: O Else que faltava ---
-            // Sem isto, se a senha estiver errada, a app crasha.
+        if (!$model->validate()) {
             Yii::$app->response->statusCode = 401;
-            return ['message' => 'Credenciais incorretas'];
+            return $model->errors;
         }
+
+        $user = $model->getUser();
+
+        // gera novo token a cada login
+        $user->generateAuthKey();
+        $user->save(false);
+
+        return [
+            'message' => 'Login efetuado com sucesso',
+            'user_id' => $user->id,
+            'username' => $user->username,
+            'auth_key' => $user->auth_key
+        ];
+    }
+
+    public function actionLogout()
+    {
+        return [
+            'message' => 'Logout realizado com sucesso'
+        ];
     }
 
     public function actionRegister()

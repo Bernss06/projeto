@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use app\common\models\Colecao;
+use common\models\Colecao;
 use Yii;
 
 /**
@@ -96,7 +96,7 @@ class Favorito extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getCoelcao()
+    public function getColecao()
     {
         return $this->hasOne(Colecao::class, ['id' => 'colecao_id']);
     }

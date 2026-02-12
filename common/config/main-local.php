@@ -6,7 +6,7 @@ return [
             'class' => \yii\db\Connection::class,
             'dsn' => 'mysql:host=localhost;dbname=projeto',
             'username' => 'root',
-            'password' => '',
+            'password' => 'bernss',
             'charset' => 'utf8',
         ],
         'mailer' => [

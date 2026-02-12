@@ -18,19 +18,25 @@ $identity = Yii::$app->user->identity;
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item mr-2">
-            <span class="user-badge">
-                <img src="<?= $identity->getProfilePictureUrl() ?>" class="img-circle elevation-1 mr-1" alt="User Image" style="width: 25px; height: 25px; object-fit: cover;">
-                <?= $identity->username ?>
-            </span>
-        </li>
-        <li class="nav-item">
-            <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], [
-                'data-method' => 'post', 
-                'class' => 'nav-link', 
-                'title' => 'Terminar Sessão'
-            ]) ?>
-        </li>
+        <?php if ($identity): ?>
+            <li class="nav-item mr-2">
+                <span class="user-badge">
+                    <img src="<?= $identity->getProfilePictureUrl() ?>" class="img-circle elevation-1 mr-1" alt="User Image" style="width: 25px; height: 25px; object-fit: cover;">
+                    <?= Html::encode($identity->username) ?>
+                </span>
+            </li>
+            <li class="nav-item">
+                <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], [
+                    'data-method' => 'post', 
+                    'class' => 'nav-link', 
+                    'title' => 'Terminar Sessão'
+                ]) ?>
+            </li>
+        <?php else: ?>
+            <li class="nav-item">
+                <?= Html::a('Login', ['/site/login'], ['class' => 'nav-link']) ?>
+            </li>
+        <?php endif; ?>
         <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button" title="Ecrã Completo">
                 <i class="fas fa-expand-arrows-alt"></i>

@@ -33179,3 +33179,789 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1768583132.0569
     'REQUEST_TIME' => 1768583132
 ]
+2026-01-17 17:36:35 [::1][-][ab2d30d5464b12f54b43fe173bc774fe][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), NULL)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\projeto\common\models\User.php(219): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#40 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(445): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(269): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(241): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\ActiveRecord.php(198): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\projeto\common\models\User.php(219): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(729): common\models\User::findIdentity(1)
+#16 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(207): yii\web\User->renewAuthStatus()
+#17 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\User.php(385): yii\web\User->getIdentity()
+#18 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#19 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(84): yii\base\Component->__get('isGuest')
+#20 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(425): ReflectionClass->newInstanceArgs(Array)
+#23 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(265): yii\BaseYii::createObject(Array)
+#26 C:\wamp64\www\projeto\vendor\yiisoft\yii2-debug\src\Module.php(237): yii\debug\Module->initPanels()
+#27 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\debug\Module->init()
+#28 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(164): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(417): ReflectionClass->newInstanceArgs(Array)
+#31 C:\wamp64\www\projeto\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 C:\wamp64\www\projeto\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#34 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#35 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#36 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#37 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#38 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#39 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#40 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: NO)
+)
+
+2026-01-17 17:36:35 [::1][-][ab2d30d5464b12f54b43fe173bc774fe][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'ab2d30d5464b12f54b43fe173bc774fe'
+    '_identity-backend' => '9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I\",2592000]\";}'
+    '_csrf-backend' => 'c5c990a1435b1260f8d404acaf9b3edbc77ad59702c8657a4ac15ee33c7dcc2ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"aoMGSZdnr5dBMCoMoc6IGFt_6ZSvU928\";}'
+    'advanced-frontend' => 'd5efa877a850107d5a562c2234512db8'
+    '_identity-frontend' => 'f09d6bd4bf60eabfb0950df86a56cbb7c68fba7fb4341c6edd27891d20bcb01fa:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[13,\"CGSObbYRvtUkEKQs3ZGWgpv-Mr5wzj9Q\",2592000]\";}'
+    '_csrf-frontend' => 'e16d583f4c2756a3a2d39e6dcc762d9f1bfe7bcee1e7401f425e3318ba47a887a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7A7GNf_1rY68Q27xtibmC11uDIs5cJNZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+    '__id' => 1
+    '__authKey' => 'ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I'
+    'success' => 'User has been activated successfully.'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=ab2d30d5464b12f54b43fe173bc774fe; _identity-backend=9db6b74a4455cb6d819fd58f54b12c025ddad36d1a88bf710e2217e376578ab6a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ujJAEUF-AY_DLyAEY3tyuR9yw0pTyV4I%22%2C2592000%5D%22%3B%7D; _csrf-backend=c5c990a1435b1260f8d404acaf9b3edbc77ad59702c8657a4ac15ee33c7dcc2ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22aoMGSZdnr5dBMCoMoc6IGFt_6ZSvU928%22%3B%7D; advanced-frontend=d5efa877a850107d5a562c2234512db8; _identity-frontend=f09d6bd4bf60eabfb0950df86a56cbb7c68fba7fb4341c6edd27891d20bcb01fa%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B13%2C%22CGSObbYRvtUkEKQs3ZGWgpv-Mr5wzj9Q%22%2C2592000%5D%22%3B%7D; _csrf-frontend=e16d583f4c2756a3a2d39e6dcc762d9f1bfe7bcee1e7401f425e3318ba47a887a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227A7GNf_1rY68Q27xtibmC11uDIs5cJNZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '64286'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1768671395.5898
+    'REQUEST_TIME' => 1768671395
+]
+2026-01-22 15:13:51 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:13:50 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54729'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094830.5327
+    'REQUEST_TIME' => 1769094830
+]
+2026-01-22 15:13:51 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:13:51 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54729'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094831.1312
+    'REQUEST_TIME' => 1769094831
+]
+2026-01-22 15:13:52 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:13:52 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54729'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094832.3448
+    'REQUEST_TIME' => 1769094832
+]
+2026-01-22 15:13:52 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:13:52 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54729'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094832.3825
+    'REQUEST_TIME' => 1769094832
+]
+2026-01-22 15:14:31 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:14:31 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54765'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094871.6078
+    'REQUEST_TIME' => 1769094871
+]
+2026-01-22 15:14:31 [192.168.72.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.72.1
+2026-01-22 15:14:31 [192.168.72.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json; charset=utf-8'
+    'HTTP_USER_AGENT' => 'Dalvik/2.1.0 (Linux; U; Android 16; sdk_gphone64_x86_64 Build/BE2A.250530.026.D1)'
+    'HTTP_HOST' => '192.168.72.1'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'CONTENT_LENGTH' => '42'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at 192.168.72.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => '192.168.72.1'
+    'SERVER_ADDR' => '192.168.72.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.72.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '54765'
+    'REDIRECT_URL' => '/projeto/backend/web/api/auth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/api/auth/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1769094871.6677
+    'REQUEST_TIME' => 1769094871
+]
+2026-02-10 19:06:16 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/dashboard in C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php:155
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('dashboard', Array)
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/dashboard', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2026-02-10 19:06:16 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'dff37b354854bc15c78e84338663e8a6'
+    '_csrf-backend' => '195fbb714c2f7c9f556282918464c1e76fd51759be2754e2830e8e81edab09c5a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4-KdyIMFLf4Jjdk7LOrBCYpOYsX2oKYj\";}'
+    'advanced-frontend' => 'c365b5b5b800703f7fcb951a9956466c'
+    '_csrf-frontend' => '0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/Bernardo_Lopes_2241563/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=dff37b354854bc15c78e84338663e8a6; _csrf-backend=195fbb714c2f7c9f556282918464c1e76fd51759be2754e2830e8e81edab09c5a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224-KdyIMFLf4Jjdk7LOrBCYpOYsX2oKYj%22%3B%7D; advanced-frontend=c365b5b5b800703f7fcb951a9956466c; _csrf-frontend=0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '60528'
+    'REDIRECT_URL' => '/projeto/backend/web/site/dashboard'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/dashboard'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770750376.6279
+    'REQUEST_TIME' => 1770750376
+]
+2026-02-10 19:06:25 [::1][-][dff37b354854bc15c78e84338663e8a6][error][Error] Error: Call to a member function getProfilePictureUrl() on null in C:\wamp64\www\projeto\backend\views\layouts\navbar.php:23
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\wamp64\\www\\p...', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\wamp64\\www\\p...', Array, NULL)
+#3 C:\wamp64\www\projeto\backend\views\layouts\main.php(35): yii\base\View->render('navbar', Array)
+#4 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\p...')
+#5 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\wamp64\\www\\p...', Array)
+#6 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\wamp64\\www\\p...', Array, Object(backend\controllers\SiteController))
+#7 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('<div class="sit...')
+#8 C:\wamp64\www\projeto\backend\controllers\SiteController.php(167): yii\base\Controller->render('signup', Array)
+#9 [internal function]: backend\controllers\SiteController->actionSignup()
+#10 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#12 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('signup', Array)
+#13 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#14 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2026-02-10 19:06:25 [::1][-][dff37b354854bc15c78e84338663e8a6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'dff37b354854bc15c78e84338663e8a6'
+    'advanced-frontend' => 'c365b5b5b800703f7fcb951a9956466c'
+    '_csrf-frontend' => '0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A\";}'
+    '_csrf-backend' => 'df081c21c188e374090758fdf062cc86c383d713682b93d8e2855bc2d66b999ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"6la-bG2E6otUJNB8a-kRAkutvgoHtAzW\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/projeto/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=dff37b354854bc15c78e84338663e8a6; advanced-frontend=c365b5b5b800703f7fcb951a9956466c; _csrf-frontend=0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A%22%3B%7D; _csrf-backend=df081c21c188e374090758fdf062cc86c383d713682b93d8e2855bc2d66b999ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%226la-bG2E6otUJNB8a-kRAkutvgoHtAzW%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '59363'
+    'REDIRECT_URL' => '/projeto/backend/web/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/signup'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770750385.0219
+    'REQUEST_TIME' => 1770750385
+]
+2026-02-12 16:25:38 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Controller.php:320
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('login', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#5 {main}
+2026-02-12 16:25:37 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'aJ6WHtjTBl0PpThYt_Rpl1a1qXSE8Nbf6dez3Bs5nOpe8vczupQ0GDnKTA39uiuvN5jCJsWbo6ufsNyUb3jmvQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'Bernas2006'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'c365b5b5b800703f7fcb951a9956466c'
+    '_csrf-frontend' => '0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A\";}'
+    'sidebar-collapse' => 'false'
+    'advanced-backend' => '716957e0fdf5dfa2d40c120278c3c99b'
+    '_identity-backend' => '3a3009fe3eff4e18ef8cbc5c782d1a771eea666ecdb58079ce04e88a4701996aa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"0aAcvfW2ByOeHXwdaqM5Ih7cAGTh6Ro7\",2592000]\";}'
+    '_csrf-backend' => '1715505ae1bb47347b8924593ffae3b8192a6a0251785c393fb8018605ec40dba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"5CKFFfXFqZZvYsCRNnF0B7yOGyd9mlhO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/Bernardo_Lopes_2241563/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '199'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=c365b5b5b800703f7fcb951a9956466c; _csrf-frontend=0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A%22%3B%7D; sidebar-collapse=false; advanced-backend=716957e0fdf5dfa2d40c120278c3c99b; _identity-backend=3a3009fe3eff4e18ef8cbc5c782d1a771eea666ecdb58079ce04e88a4701996aa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%220aAcvfW2ByOeHXwdaqM5Ih7cAGTh6Ro7%22%2C2592000%5D%22%3B%7D; _csrf-backend=1715505ae1bb47347b8924593ffae3b8192a6a0251785c393fb8018605ec40dba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%225CKFFfXFqZZvYsCRNnF0B7yOGyd9mlhO%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '53039'
+    'REDIRECT_URL' => '/projeto/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770913536.9811
+    'REQUEST_TIME' => 1770913536
+]
+2026-02-12 16:28:31 [::1][-][dc12885d3de69f3ca9b3e246660f0804][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Controller.php:320
+Stack trace:
+#0 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('login', Array)
+#2 C:\wamp64\www\projeto\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 C:\wamp64\www\projeto\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 C:\wamp64\www\projeto\backend\web\index.php(18): yii\base\Application->run()
+#5 {main}
+2026-02-12 16:28:31 [::1][-][dc12885d3de69f3ca9b3e246660f0804][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'aJ6WHtjTBl0PpThYt_Rpl1a1qXSE8Nbf6dez3Bs5nOpe8vczupQ0GDnKTA39uiuvN5jCJsWbo6ufsNyUb3jmvQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'Bernas2006'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'c365b5b5b800703f7fcb951a9956466c'
+    '_csrf-frontend' => '0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A\";}'
+    'sidebar-collapse' => 'false'
+    '_identity-backend' => '3a3009fe3eff4e18ef8cbc5c782d1a771eea666ecdb58079ce04e88a4701996aa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"0aAcvfW2ByOeHXwdaqM5Ih7cAGTh6Ro7\",2592000]\";}'
+    '_csrf-backend' => '1715505ae1bb47347b8924593ffae3b8192a6a0251785c393fb8018605ec40dba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"5CKFFfXFqZZvYsCRNnF0B7yOGyd9mlhO\";}'
+    'advanced-backend' => 'dc12885d3de69f3ca9b3e246660f0804'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/Bernardo_Lopes_2241563/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '199'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/projeto/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=c365b5b5b800703f7fcb951a9956466c; _csrf-frontend=0e7b7bec296a4032851f5a15a8fd1ec4663e5cfd51ee61a4b9ac2e8277c7b731a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22C0VXfEq-qZbZSxXyKWJpk0YqugcX-r4A%22%3B%7D; sidebar-collapse=false; _identity-backend=3a3009fe3eff4e18ef8cbc5c782d1a771eea666ecdb58079ce04e88a4701996aa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%220aAcvfW2ByOeHXwdaqM5Ih7cAGTh6Ro7%22%2C2592000%5D%22%3B%7D; _csrf-backend=1715505ae1bb47347b8924593ffae3b8192a6a0251785c393fb8018605ec40dba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%225CKFFfXFqZZvYsCRNnF0B7yOGyd9mlhO%22%3B%7D; advanced-backend=dc12885d3de69f3ca9b3e246660f0804'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php8.1.31;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\dotnet\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\TDM-GCC-64\\bin;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.62 (Win64) PHP/8.4.13 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/projeto/backend/web/index.php'
+    'REMOTE_PORT' => '50710'
+    'REDIRECT_URL' => '/projeto/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projeto/backend/web/site/login'
+    'SCRIPT_NAME' => '/projeto/backend/web/index.php'
+    'PHP_SELF' => '/projeto/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1770913711.1578
+    'REQUEST_TIME' => 1770913711
+]

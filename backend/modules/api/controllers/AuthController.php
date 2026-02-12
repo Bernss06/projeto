@@ -4,7 +4,6 @@ namespace backend\modules\api\controllers;
 
 use yii\rest\Controller;
 use Yii;
-use backend\modules\api\models\LoginForm;
 use backend\modules\api\models\RegisterForm;
 
 class AuthController extends Controller

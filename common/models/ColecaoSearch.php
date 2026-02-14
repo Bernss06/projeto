@@ -71,4 +71,15 @@ class ColecaoSearch extends Colecao
 
         return $dataProvider;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function beforeValidate()
+    {
+        $oldStatus = $this->status;
+        $result = parent::beforeValidate();
+        $this->status = $oldStatus;
+        return $result;
+    }
 }
